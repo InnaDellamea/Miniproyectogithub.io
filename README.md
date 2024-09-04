@@ -41,7 +41,9 @@ Documento PDF:
 (AGREGAR UNA PEQUE;A DESCRIPCION)
 [Interfaces de la app RECETARIO.pdf](https://github.com/user-attachments/files/16874330/Interfaces.de.la.app.RECETARIO.pdf)
 
-## INFORME FINAL:
+## 
+
+INFORME FINAL:
 
 [Informe de Trabajo del Mini proyecto.pdf](https://github.com/user-attachments/files/16874427/Informe.de.Trabajo.del.Mini.proyecto.pdf)
 
