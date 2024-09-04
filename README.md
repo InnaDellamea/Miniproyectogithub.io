@@ -1,1 +1,2 @@
-### TRELLO
+## MINI-PROYECTO: RECETARIO
+Un programa de recetas es una herramienta digital diseñada para ayudar a los usuarios a descubrir, organizar y preparar platos. Ofrece una colección de recetas categorizadas por tipo de comida, ingredientes o dificultad, proporcionando instrucciones paso a paso, listas de ingredientes y características adicionales como temporizador, una opcion de "mis recetas" donde se pueden agregar recetas propias, personalizadas según las preferencias del usuario. Ideal para cocineros de todos los niveles, desde principiantes hasta expertos.
