@@ -1201,7 +1201,7 @@ def abrir_ventana_dulce():
         'candara', 12), command=brownie)
     
     
-#abre venta de MIS RECETAS (FALTA CARGAR LO DE ROBER)
+#abre venta de MIS RECETAS
 def abrir_ventana_mis_rece():
     ventana_saludo = tk.Tk()
     ventana_saludo.title("Mis Recetas")
