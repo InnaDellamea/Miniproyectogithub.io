@@ -1222,7 +1222,7 @@ def abrir_ventana_dulce():
 
 
 # abre ventana de MIS RECETAS
-#funcion mis recetas
+#agregar funcion mis recetas
 def abrir_ventana_mis_rece():
     ventana_saludo = tk.Tk()
     ventana_saludo.title("Mis Recetas")
@@ -1231,14 +1231,14 @@ def abrir_ventana_mis_rece():
     recetas = {}  # las recetas que se agreguen se añaden en este conjunto
 
     # creamos el frame de la ventana y lo asociamos a ventana_saludo
-    frame = tk.Frame(ventana_saludo, bg="#a25cd3")
+    frame = tk.Frame(ventana_saludo, bg="#FFCCD5")
     frame.pack(fill=tk.BOTH, expand=True)
 
     # usamos canvas para modificar de forma más facil el diseño del marco
-    canvas = tk.Canvas(frame, bg="#a25cd3")
+    canvas = tk.Canvas(frame, bg="#FFCCD5")
     scrollbar = tk.Scrollbar(frame, orient="vertical",
                              command=canvas.yview)  # el scrollbar
-    scrollbar_marco = tk.Frame(canvas, bg="#a25cd3")
+    scrollbar_marco = tk.Frame(canvas, bg="#FFCCD5")
 
     scrollbar_marco.bind("<Configure>", lambda e: canvas.configure(
         scrollregion=canvas.bbox("all")))
@@ -1250,7 +1250,7 @@ def abrir_ventana_mis_rece():
     scrollbar.pack(side="right", fill="y")
 
     title_label = tk.Label(scrollbar_marco, text="MIS RECETAS", padx=200, pady=30, font=(
-        "Arial", 24), bg="#a25cd3")  # label mis recetas
+        "Arial", 24), bg="#FFCCD5")  # label mis recetas
     title_label.grid(row=0, column=0, columnspan=3, pady=10)
 
     def añadir_receta():
@@ -1289,7 +1289,7 @@ def abrir_ventana_mis_rece():
         editar_ventana.resizable(False, False)
         editar_ventana.configure(bg="#adaaa8")
 
-        bloc_notas = tk.Text(editar_ventana, bg="#a25cd3", font=("Arial"))
+        bloc_notas = tk.Text(editar_ventana, bg="#FFCCD5", font=("Arial"))
         bloc_notas.insert(tk.END, recetas[nombre_receta])
         bloc_notas.pack(expand=True, fill=tk.BOTH)
 
