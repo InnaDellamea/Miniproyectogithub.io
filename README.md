@@ -10,16 +10,16 @@ Screenshots
 Features
 + PROMPT DE RECETARIO: Donde se coloca el nombre de usuario para comenzar a interactuar con la aplicación.
 
-*ENTRADA: Donde se pueden elegir entre salado y dulce con recetas por default y mis recetas para agregar las personalizadas
++ENTRADA: Donde se pueden elegir entre salado y dulce con recetas por default y mis recetas para agregar las personalizadas
 
-*SALADA: grilla de recetas saladas que preestablecidas en la aplicación.
++SALADA: grilla de recetas saladas que preestablecidas en la aplicación.
 
-*DULCE: una lista de recetas, que despliegan a la vez un menú y mostrar las recetas.
++DULCE: una lista de recetas, que despliegan a la vez un menú y mostrar las recetas.
 
-*MIS RECETAS: donde se pueden agregar las recetas personalizadas.
++MIS RECETAS: donde se pueden agregar las recetas personalizadas.
 
-*MENU: una lista donde se pueden acceder a OPCIONES como TEMPORIZADOR y Acerca de.
++MENU: una lista donde se pueden acceder a OPCIONES como TEMPORIZADOR y Acerca de.
 
-*TEMPORIZADOR: una mini-aplicación de un cronómetro funcional en horas, minutos y segundos.
++TEMPORIZADOR: una mini-aplicación de un cronómetro funcional en horas, minutos y segundos.
 
-*ACERCA DE: una ventana que se desplaza con la información general de cada uno de los integrantes y participes del mini-proyecto.
++ACERCA DE: una ventana que se desplaza con la información general de cada uno de los integrantes y participes del mini-proyecto.
