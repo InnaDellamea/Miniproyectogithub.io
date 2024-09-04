@@ -1201,19 +1201,19 @@ def abrir_ventana_dulce():
         'candara', 12), command=brownie)
     
     
-#abre venta de MIS RECETAS
+#abre ventana de MIS RECETAS
 def abrir_ventana_mis_rece():
     ventana_saludo = tk.Tk()
     ventana_saludo.title("Mis Recetas")
     ventana_saludo.geometry("670x700+300+0")
 
-    recetas = {}
+    recetas = {} #las recetas que se agreguen se añaden en este conjunto
 
-    frame = tk.Frame(ventana_saludo, bg="#a25cd3")
+    frame = tk.Frame(ventana_saludo, bg="#a25cd3") #creamos el frame de la ventana y lo asociamos a ventana_saludo
     frame.pack(fill=tk.BOTH, expand=True)
 
-    canvas = tk.Canvas(frame, bg="#a25cd3")
-    scrollbar = tk.Scrollbar(frame, orient="vertical", command=canvas.yview)
+    canvas = tk.Canvas(frame, bg="#a25cd3") #usamos canvas para modificar de forma más facil el diseño del marco
+    scrollbar = tk.Scrollbar(frame, orient="vertical", command=canvas.yview) #el scrollbar
     scrollbar_marco = tk.Frame(canvas, bg="#a25cd3")
 
     scrollbar_marco.bind("<Configure>",lambda e: canvas.configure(scrollregion=canvas.bbox("all")))
@@ -1224,11 +1224,11 @@ def abrir_ventana_mis_rece():
     canvas.pack(side="left", fill="both", expand=True)
     scrollbar.pack(side="right", fill="y")
 
-    title_label = tk.Label(scrollbar_marco, text="MIS RECETAS", padx=200, pady=30, font=("Arial", 24), bg="#a25cd3")
+    title_label = tk.Label(scrollbar_marco, text="MIS RECETAS", padx=200, pady=30, font=("Arial", 24), bg="#a25cd3") #label mis recetas
     title_label.grid(row=0, column=0, columnspan=3, pady=10)
 
 
-    def añadir_receta():
+    def añadir_receta(): 
         nombre_receta = simpledialog.askstring("Nueva Receta", "Nombre de la receta:")
         if nombre_receta:
             recetas[nombre_receta] = ""
@@ -1237,12 +1237,12 @@ def abrir_ventana_mis_rece():
     añadir_boton = tk.Button(scrollbar_marco, text="+", width=14, height=4, command=añadir_receta, font=("Arial"), bg="#a0a0a0")
     añadir_boton.grid(row=1, column=0, pady=10)
 
-    def actualizar_recetas():
+    def actualizar_recetas(): #cuando se crea la receta se actualiza la cantidad ya creadas y se agrega el boton
         for widget in scrollbar_marco.winfo_children():
             if isinstance(widget, tk.Button) and widget != añadir_boton:
                 widget.destroy()
 
-        row, column = 1, 0
+        row, column = 1, 0 #se colocan en orden los botones
         for recipe in recetas:
             button = tk.Button(scrollbar_marco, text=recipe, width=16, height=5, command=lambda r=recipe: editar_receta(r), bg="#a0a0a0")
             button.grid(row=row, column=column, padx=5, pady=5)
@@ -1253,7 +1253,7 @@ def abrir_ventana_mis_rece():
 
         añadir_boton.grid(row=row, column=column, padx=5, pady=10)
 
-    def editar_receta(nombre_receta):
+    def editar_receta(nombre_receta): #esta funcion permite al entrar a la receta creada, poder editarla como si fuera un bloc de notas
         editar_ventana = tk.Toplevel(ventana_saludo)
         editar_ventana.title(nombre_receta)
         editar_ventana.geometry("670x700+300+0")
@@ -1281,7 +1281,7 @@ def abrir_ventana_mis_rece():
 
 
 
-#abre venta de mis recetas 
+#abre ventana de mis recetas 
 def botonvolver():
     pass
     
