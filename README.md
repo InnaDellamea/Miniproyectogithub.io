@@ -12,14 +12,26 @@ Features
 
 + ENTRADA: Donde se pueden elegir entre salado y dulce con recetas por default y mis recetas para agregar las personalizadas
 
-+ SALADA: grilla de recetas saladas que preestablecidas en la aplicación.
++ SALADA: Una sección dedicada a recetas saladas, desde platos principales hasta aperitivos.
 
-+ DULCE: una lista de recetas, que despliegan a la vez un menú y mostrar las recetas.
++ DULCE: Una sección especial para recetas dulces, incluyendo postres, pasteles, y más.
 
-+ MIS RECETAS: donde se pueden agregar las recetas personalizadas.
-
++ MIS RECETAS: Permite a los usuarios agregar y guardar sus propias recetas en un archivo personal, creando su propio recetario personalizado.
+  
 + MENU: una lista donde se pueden acceder a OPCIONES como TEMPORIZADOR y Acerca de.
 
-+ TEMPORIZADOR: una mini-aplicación de un cronómetro funcional en horas, minutos y segundos.
++ TEMPORIZADOR: Incluye un temporizador útil para controlar el tiempo de cocción, que se puede configurar directamente desde la app mientras se sigue una receta.
 
 + ACERCA DE: una ventana que se desplaza con la información general de cada uno de los integrantes y participes del mini-proyecto.
+  
++ INTERFAZ INTUITIVA: Diseño fácil de usar, ideal tanto para cocineros principiantes como para chefs experimentados.
+
+
+
+
+
+
+
+
+
+
