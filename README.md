@@ -8,9 +8,9 @@ Screenshots
 ![Captura de pantalla (133)](https://github.com/user-attachments/assets/b14f4f79-f385-4c3f-a849-976564ffd163)
 
 Features
-+ PROMPT DE RECETARIO: Donde se coloca el nombre de usuario para comenzar a interactuar con la aplicación.
++ PROMPT DE RECETARIO: Se ingresa el nombre de usuario para comenzar a interactuar con la aplicación.
 
-+ ENTRADA: Donde se pueden elegir entre salado y dulce con recetas por default y mis recetas para agregar las personalizadas
++ ENTRADA: Interfaz de inicio, aquí se pueden elegir entre las opciones de salado, dulce que contiene recetas por default y mis recetas para agregar las personalizadas
 
 + SALADA: Una sección dedicada a recetas saladas, desde platos principales hasta aperitivos.
 
@@ -18,11 +18,11 @@ Features
 
 + MIS RECETAS: Permite a los usuarios agregar y guardar sus propias recetas en un archivo personal, creando su propio recetario personalizado.
   
-+ MENU: una lista donde se pueden acceder a OPCIONES como TEMPORIZADOR y Acerca de.
++ MENU: Una lista donde se pueden acceder a OPCIONES como TEMPORIZADOR y Acerca de.
 
 + TEMPORIZADOR: Incluye un temporizador útil para controlar el tiempo de cocción, que se puede configurar directamente desde la app mientras se sigue una receta.
 
-+ ACERCA DE: una ventana que se desplaza con la información general de cada uno de los integrantes y participes del mini-proyecto.
++ ACERCA DE: Una ventana que se desplaza con la información general de cada uno de los integrantes y participes del mini-proyecto.
   
 + INTERFAZ INTUITIVA: Diseño fácil de usar, ideal tanto para cocineros principiantes como para chefs experimentados.
 
