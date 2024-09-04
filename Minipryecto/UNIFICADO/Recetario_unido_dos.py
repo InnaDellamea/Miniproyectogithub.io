@@ -1221,6 +1221,7 @@ def abrir_ventana_dulce():
 
 
 # abre ventana de MIS RECETAS
+#funcion mis recetas
 def abrir_ventana_mis_rece():
     ventana_saludo = tk.Tk()
     ventana_saludo.title("Mis Recetas")
