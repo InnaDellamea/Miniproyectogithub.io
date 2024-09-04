@@ -7,7 +7,7 @@ Screenshots
 
 ![Captura de pantalla (133)](https://github.com/user-attachments/assets/b14f4f79-f385-4c3f-a849-976564ffd163)
 
-Features
+Caracteristicas:
 + PROMPT DE RECETARIO: Se ingresa el nombre de usuario para comenzar a interactuar con la aplicación.
 
 + ENTRADA: Interfaz de inicio, aquí se pueden elegir entre las opciones de salado, dulce que contiene recetas por default y mis recetas para agregar las personalizadas
@@ -28,6 +28,8 @@ Features
 
 
 
+Metodologia agil:
+Para realizar este proyecto utilizamos "trello"  para organizar tareas mediante listas y tarjetas para gestionar y colaborar. Donde se agregaron todos los "por hacer" que habia que realzar y cada uno pudo seleccionar la tarea que cada 
 
 
 
