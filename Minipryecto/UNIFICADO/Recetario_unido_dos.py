@@ -3,6 +3,7 @@ from io import StringIO
 from logging import config
 import tkinter as tk
 import time
+from PIL import Image, ImageTk
 from typing import Self
 from tkinter import messagebox, simpledialog
 from tkinter import Scrollbar, Text
@@ -1522,23 +1523,22 @@ Gracias por confiar en COWORKING. Estamos emocionados de llevar sus proyectos al
 
 # Crear la ventana principal (Lobby)
 
-# Configuración de la ventana principal
+# Configuración de la ventana principal (ANA)
 ventana = tk.Tk()
 ventana.title("Recetario")
 ventana.geometry("670x700+300+0")
 ventana.resizable(0, 0)
 
-# Campo usuario
-label_usuario = tk.Label(ventana, text="Usuario",
-                         foreground="black", font=("Courier", 12, 'bold'))
-label_usuario.place(x=200, y=500)  # Ajusta la posición de la etiqueta
+ventana.iconbitmap(r"C:\Users\braiu\OneDrive\Escritorio\Ana\Informatorio\Recetario\Imagenes\convertido4.ico")
 
-# Agregar texto a la ventana con un Label
-mensaje = tk.Label(ventana, text="Hola, soy tu chef personal, por favor ingresa tu nombre y presiona OK para continuar",
-                   font=("Courier", 12), foreground="black", wraplength=400, justify="left")
-# Ajustar la posición para que esté centrado y sea legible
-mensaje.place(x=150, y=400)
+# Carga la imagen de fondo
+fondo = ImageTk.PhotoImage(Image.open("C:\\Users\\braiu\\OneDrive\\Escritorio\\Ana\\Miniproyectogithub.io-1\\Minipryecto\\UNIFICADO\\IMAGENES\\FONDO1.png").resize((670,700)))
 
+
+
+# Crea y empaqueta la imagen de fondo
+label_fondo = tk.Label(ventana, image=fondo)
+label_fondo.place(relwidth=1, relheight=1) 
 
 # Ejemplo de entrada de usuario
 entrada_usuario = PlaceholderEntry(
