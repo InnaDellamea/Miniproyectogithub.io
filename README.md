@@ -29,8 +29,11 @@ Caracteristicas:
 
 
 Metodologia agil:
-Para realizar este proyecto utilizamos "trello"  para organizar tareas mediante listas y tarjetas para gestionar y colaborar. Donde se agregaron todos los "por hacer" que habia que realzar y cada uno pudo seleccionar la tarea que cada 
+Para realizar este proyecto utilizamos "Trello" para organizar tareas mediante listas y tarjetas, facilitando la gestión y colaboración del equipo. En Trello, se crearon listas para cada fase del proyecto, y en ellas se agregaron todos los "por hacer" necesarios. Cada integrante seleccionaba una tarea pendiente, la movía a la lista de "En progreso" mientras la trabajaba, y finalmente la trasladaba a "Hecho" una vez completada. Esto nos permitió mantener una visión clara del avance del proyecto y asegurarnos de que todas las tareas fueran asignadas y completadas de manera eficiente.
 
+
+
+![Captura de pantalla (128)](https://github.com/user-attachments/assets/3343a08b-aa8b-4c6d-bf04-e4240994da91)
 
 
 
