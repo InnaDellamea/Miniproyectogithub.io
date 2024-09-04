@@ -38,8 +38,7 @@ Para realizar este proyecto utilizamos "Trello" para organizar tareas mediante l
 
 
 Documento PDF:
-
-
+(AGREGAR UNA PEQUE;A DESCRIPCION)
 [Interfaces de la app RECETARIO.pdf](https://github.com/user-attachments/files/16874330/Interfaces.de.la.app.RECETARIO.pdf)
 
 
