@@ -1,4 +1,3 @@
-from cgitb import text
 from io import StringIO
 from logging import config
 import tkinter as tk
@@ -42,26 +41,29 @@ class PlaceholderEntry(tk.Entry):
 # Crea una nueva ventana que recibe el nombre de usuario
 # abre ventana de SALADO
 
-
 def abrir_ventana_salado():
-    ventana_saludo = tk.Tk()
+    ventana_saludo = tk.Toplevel()
     ventana_saludo.title("Ventana de Salado")
     ventana_saludo.geometry("670x700+300+0")
+    # ventana_saludo.configure(bg='lightblue')
+
+# Cargar la imagen de fondo
+    try:
+        imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/FONDO3.png")
+        imagen_fondo = imagen_fondo.resize((670, 700), Image.Resampling.LANCZOS)
+        fondo_ventana_saludo = ImageTk.PhotoImage(imagen_fondo)
+        
+        # Crear un label para la imagen de fondo y agregarlo a la ventana
+        label_fondo = tk.Label(ventana_saludo, image=fondo_ventana_saludo)
+        label_fondo.place(relwidth=1, relheight=1)
+        
+        # Mantener una referencia a la imagen
+        ventana_saludo.fondo_ventana_saludo = fondo_ventana_saludo
+    except Exception as e:
+        print(f"Error al cargar la imagen: {e}")
+        # Si hay un error, continúa sin la imagen de fondo
 
     # ---------------------------- RECETAS SALADAS (Cami) ----------------------------
-    # tituto de recetas saladas
-    texto_recetas_saladas = tk.Label(
-        ventana_saludo, text="Recetas saladas", font=("nunito", 28, "bold")
-    )
-    texto_recetas_saladas.pack()
-    texto_recetas_saladas.place(x=195, y=40)
-
-    # subtitulo: elige una receta
-    texto_elige_receta = tk.Label(
-        ventana_saludo, text="Elige la receta:", font=("nunito", 20)
-    )
-    texto_elige_receta.pack()
-    texto_elige_receta.place(x=250, y=120)
 
     def milanesa_napo():
         ventana_mila_napo = tk.Toplevel()
@@ -72,10 +74,12 @@ def abrir_ventana_salado():
         titulo = tk.Label(
             ventana_mila_napo,
             text="""Milanesas a la napolitana 🍕""",
-            font=("nunito", 20),
+            font=("Roboto Condensed", 18),
+            foreground="black"
         )
         titulo.pack()
         titulo.place(x=195, y=40)
+
         #   INGREDIENTES
         ingredientes = tk.Label(
             ventana_mila_napo,
@@ -656,199 +660,186 @@ Mezclar con los fideos cocidos y servir con queso rallado.""",
         preparacion.pack()
         preparacion.place(x=15, y=430)
 
-    # Botones de recetas saladas
+#----------------------------------------------------- Botones de recetas saladas----------------------------------------------------------------
+
+    STYLES_salado = {
+    "font": ("Roboto Condensed", 12),
+    "width": 20,
+    "height": 3,
+    "fg": "white",
+    "bg": "#1B1270",
+    "borderwidth": 0,
+    "relief": "flat",
+    "activebackground": "#1B1270",
+    "activeforeground": "gold"
+}
 
     # Boton 1: Milanesas a la napo
     boton_receta_uno = tk.Button(
         ventana_saludo,
         text="""Milanesas a la 
     napolitana""",
-        font=("nunito", 12),
-        width=20,
-        height=3,
         command=milanesa_napo,
+        **STYLES_salado
     )
     boton_receta_uno.pack()  # para que se vea
     # para que aparezca dentro de la ventana
-    boton_receta_uno.place(x=50, y=200)
+    boton_receta_uno.place(x=55, y=205)
 
     # Boton 2: Empanadas de carne
     boton_receta_dos = tk.Button(
         ventana_saludo,
         text="""Empanadas de 
     carne""",
-        font=("nunito", 12),
-        width=20,
-        height=3,
         command=empanadas_carne,
+        **STYLES_salado
     )
     boton_receta_dos.pack()  # para que se vea
     # para que aparezca dentro de la ventana
-    boton_receta_dos.place(x=250, y=200)
+    boton_receta_dos.place(x=260, y=205)
 
     # Boton 3: Milanesas de poll
     boton_receta_tres = tk.Button(
         ventana_saludo,
         text="""Milanesas de 
     pollo""",
-        font=("nunito", 12),
-        width=20,
-        height=3,
         command=milanesa_pollo,
+        **STYLES_salado 
     )
     boton_receta_tres.pack()  # para que se vea
     # para que aparezca dentro de la ventana
-    boton_receta_tres.place(x=450, y=200)
+    boton_receta_tres.place(x=460, y=205)
 
     # Boton 4: Asado con ensalada criolla
     boton_receta_cuatro = tk.Button(
         ventana_saludo,
         text="""Asado con 
     ensalada criolla""",
-        font=("nunito", 12),
-        width=20,
-        height=3,
         command=asado_ensalada,
+        **STYLES_salado
     )
     boton_receta_cuatro.pack()  # para que se vea
     # para que aparezca dentro de la ventana
-    boton_receta_cuatro.place(x=50, y=300)
+    boton_receta_cuatro.place(x=55, y=305)
 
     # Boton 5: Lentejas guisadas
     boton_receta_cinco = tk.Button(
         ventana_saludo,
         text="Lentejas guisadas",
-        font=("nunito", 12),
-        width=20,
-        height=3,
         command=lentejas_guisadas,
+        **STYLES_salado
     )
     boton_receta_cinco.pack()  # para que se vea
     # para que aparezca dentro de la ventana
-    boton_receta_cinco.place(x=250, y=300)
+    boton_receta_cinco.place(x=260, y=305)
 
     # Boton 6: Pastas con salsa bolognesa
     boton_receta_seis = tk.Button(
         ventana_saludo,
         text="""Pastas con 
     salsa bolognesa""",
-        font=("nunito", 12),
-        width=20,
-        height=3,
         command=pastas_bolognesa,
+        **STYLES_salado
     )
     boton_receta_seis.pack()  # para que se vea
     # para que aparezca dentro de la ventana
-    boton_receta_seis.place(x=450, y=300)
+    boton_receta_seis.place(x=460, y=305)
 
     # Boton 7: Pollo al horno con papas
     boton_receta_siete = tk.Button(
         ventana_saludo,
         text="""Pollo al horno 
     con papas""",
-        font=("nunito", 12),
-        width=20,
-        height=3,
         command=pollo_papas,
+        **STYLES_salado
     )
     boton_receta_siete.pack()  # para que se vea
     # para que aparezca dentro de la ventana
-    boton_receta_siete.place(x=50, y=400)
+    boton_receta_siete.place(x=55, y=405)
 
     # Boton 8: Empanadas de jamon y queso
     boton_receta_ocho = tk.Button(
         ventana_saludo,
         text="""Empanadas de 
     jamon y queso""",
-        font=("nunito", 12),
-        width=20,
-        height=3,
         command=empanadas_jyq,
+        **STYLES_salado
     )
     boton_receta_ocho.pack()  # para que se vea
     # para que aparezca dentro de la ventana
-    boton_receta_ocho.place(x=250, y=400)
+    boton_receta_ocho.place(x=260, y=405)
 
     # Boton 9: Tarta de espinaca y queso
     boton_receta_nueve = tk.Button(
         ventana_saludo,
         text="""Tarta espinaca 
     y queso""",
-        font=("nunito", 12),
-        width=20,
-        height=3,
         command=tarta_espinaca,
+        **STYLES_salado
     )
     boton_receta_nueve.pack()  # para que se vea
     # para que aparezca dentro de la ventana
-    boton_receta_nueve.place(x=450, y=400)
+    boton_receta_nueve.place(x=465, y=410)
 
     # Boton 10: Guiso de res con papas
     boton_receta_diez = tk.Button(
         ventana_saludo,
         text="""Guiso de res 
     con papas""",
-        font=("nunito", 12),
-        width=20,
-        height=3,
         command=guiso_res,
+        **STYLES_salado
     )
     boton_receta_diez.pack()  # para que se vea
     # para que aparezca dentro de la ventana
-    boton_receta_diez.place(x=50, y=500)
+    boton_receta_diez.place(x=55, y=508)
 
     # Boton 11: Quiche de jamon y queso
     boton_receta_once = tk.Button(
         ventana_saludo,
         text="""Quiche de 
     jamon y queso""",
-        font=("nunito", 12),
-        width=20,
-        height=3,
         command=quiche_jyq,
+        **STYLES_salado
     )
     boton_receta_once.pack()  # para que se vea
     # para que aparezca dentro de la ventana
-    boton_receta_once.place(x=250, y=500)
+    boton_receta_once.place(x=260, y=510)
 
     # Boton 12: Fideos con tuco
     boton_receta_doce = tk.Button(
         ventana_saludo,
         text="Fideos con tuco",
-        font=("nunito", 12),
-        width=20,
-        height=3,
         command=fideos_tuco,
+        **STYLES_salado
     )
     boton_receta_doce.pack()  # para que se vea
     # para que aparezca dentro de la ventana
-    boton_receta_doce.place(x=450, y=500)
+    boton_receta_doce.place(x=460, y=510)
 
+
+    # ---------------------------- RECETAS DULCES (Ile) ----------------------------
 
 # abre ventana de DULCE
 def abrir_ventana_dulce():
-    ventana_saludo = tk.Tk()
+    ventana_saludo = tk.Toplevel()
     ventana_saludo.title("Ventana de Dulce")
     ventana_saludo.geometry("670x700+300+0")
 
-    # ---------------------------- RECETAS DULCES (Ile) ----------------------------
-    titulo = tk.Label(
-        ventana_saludo,
-        text="🧁 Recetas Dulces 🧁",
-        bg="pink",
-        font=("candara", 28, "bold"),
-    )
-    titulo.pack()
-    titulo.place(x=180, y=80)
-
-    subtitulo = tk.Label(
-        ventana_saludo,
-        text="Selecciona una opción:",
-        bg="pink",
-        font=("candara", 20, "bold"),
-    )
-    subtitulo.pack()
-    subtitulo.place(x=200, y=150)
+# Cargar la imagen de fondo
+    try:
+        imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/FONDO4.png")
+        imagen_fondo = imagen_fondo.resize((670, 700), Image.Resampling.LANCZOS)
+        fondo_ventana_saludo = ImageTk.PhotoImage(imagen_fondo)
+        
+        # Crear un label para la imagen de fondo y agregarlo a la ventana
+        label_fondo = tk.Label(ventana_saludo, image=fondo_ventana_saludo)
+        label_fondo.place(relwidth=1, relheight=1)
+        
+        # Mantener una referencia a la imagen
+        ventana_saludo.fondo_ventana_saludo = fondo_ventana_saludo
+    except Exception as e:
+        print(f"Error al cargar la imagen: {e}")
+        # Si hay un error, continúa sin la imagen de fondo
 
     # ---------------------------- Crema de Limón ----------------------------
 
@@ -1525,81 +1516,167 @@ def abrir_ventana_dulce():
         )
         boton_cerrar.place(x=450, y=550)
 
-    # Botones de recetas dulces
-    boton1 = tk.Menubutton(
-        ventana_saludo, text="1) Sin Horno🍧", font=("candara", 20), bd=5
-    )
-    boton1.place(x=250, y=220)
-    menu = tk.Menu(boton1)
-    boton1.config(menu=menu, bg="pink")
-    menu.add_command(
-        label="Crema de Limón 🍋", font=("candara", 12), command=cremaDeLimon
-    )
-    menu.add_command(label="Vasito Oreo 🍪", font=("candara", 12), command=VasitoOreo)
-    menu.add_command(label="Crepes 🫓", font=("candara", 12), command=Crepes)
 
-    boton2 = tk.Menubutton(
-        ventana_saludo, text="2) Al Micro🍮", font=("candara", 20), bd=5
-    )
-    boton2.place(x=250, y=290)
-    menu = tk.Menu(boton2)
-    boton2.config(menu=menu, bg="pink")
-    menu.add_command(
-        label="Galletas de Avena🍪", font=("candara", 12), command=galletasDeAvena
-    )
-    menu.add_command(label="Budín de Pan🍮", font=("candara", 12), command=budinDePan)
-    menu.add_command(label="Flan🍮", font=("candara", 12), command=flan)
+#----------------------------------------------------- Botones de recetas dulces----------------------------------------------------------------
 
-    boton3 = tk.Menubutton(
-        ventana_saludo, text="3) Sin Azúcar🍰", font=("candara", 20), bd=5
-    )
-    boton3.place(x=250, y=370)
-    menu = tk.Menu(boton3)
-    boton3.config(menu=menu, bg="pink")
-    menu.add_command(
-        label="Tarta de yogur al Horno 🥧", font=("candara", 12), command=tartaDeYogur
-    )
-    menu.add_command(
-        label="Tarta de Naranja🍊", font=("candara", 12), command=tartaDeNaranja
-    )
-    menu.add_command(
-        label="Postrecito de Chocolate🍫", font=("candara", 12), command=choco
-    )
+    STYLES = {
+    "font": ("Roboto Condensed", 12),
+    "width": 20,
+    "height": 3,
+    "fg": "white",
+    "bg": "#863808",
+    "borderwidth": 0,
+    "relief": "flat",
+    "activebackground": "#863808",
+    "activeforeground": "gold"
+}
 
-    boton4 = tk.Menubutton(
-        ventana_saludo, text="4) Económicas🥐", font=("candara", 20), bd=5
-    )
-    boton4.place(x=250, y=450)
-    menu = tk.Menu(boton4)
-    boton4.config(menu=menu, bg="pink")
-    menu.add_command(
-        label="Arroz con Leche 🥣", font=("candara", 12), command=arrozCLeche
-    )
-    menu.add_command(
-        label="Gelatina de Fresa 🍓", font=("candara", 12), command=gelatina
-    )
-    menu.add_command(label="Brownie 🍫", font=("candara", 12), command=brownie)
+# Boton 1: 'Crema de Limón 🍋
+    boton_receta_uno = tk.Button(ventana_saludo, 
+                                text=''''Crema de Limón 🍋''',
+                                command=cremaDeLimon,
+                                **STYLES)
+    boton_receta_uno.pack()  # para que se vea
+# para que aparezca dentro de la ventana
+    boton_receta_uno.place(x=55, y=205)
+
+
+# Boton 2: Vasito Oreo 🍪
+    boton_receta_dos = tk.Button(ventana_saludo, 
+                                text='''Vasito Oreo 🍪''', 
+                                command=VasitoOreo,
+                                **STYLES)
+    boton_receta_dos.pack()  # para que se vea
+# para que aparezca dentro de la ventana
+    boton_receta_dos.place(x=258, y=205)
+
+
+# Boton 3: Crepes 🫓
+    boton_receta_tres = tk.Button(ventana_saludo, 
+                            text='''Crepes 🫓''',
+                            command=Crepes,
+                            **STYLES)
+    boton_receta_tres.pack()  # para que se vea
+# para que aparezca dentro de la ventana
+    boton_receta_tres.place(x=460, y=205)
+
+
+# Boton 4: Galletas de Avena🍪
+    boton_receta_cuatro = tk.Button(ventana_saludo, 
+                                text='''Galletas de Avena🍪''', 
+                                command=galletasDeAvena,
+                                **STYLES)
+    boton_receta_cuatro.pack()  # para que se vea
+# para que aparezca dentro de la ventana
+    boton_receta_cuatro.place(x=55, y=305)
+
+# Boton 5: Budín de Pan🍮
+    boton_receta_cinco = tk.Button(ventana_saludo, 
+                                text="Budín de Pan🍮", 
+                                command=budinDePan,
+                                **STYLES)
+    boton_receta_cinco.pack()  # para que se vea
+# para que aparezca dentro de la ventana
+    boton_receta_cinco.place(x=258, y=305)
+
+# Boton 6: Flan🍮
+    boton_receta_seis = tk.Button(ventana_saludo, 
+                                text='''Flan🍮''', 
+                                command=flan,
+                                **STYLES)
+    boton_receta_seis.pack()  # para que se vea
+# para que aparezca dentro de la ventana
+    boton_receta_seis.place(x=460, y=305)
+
+# Boton 7: Tarta de yogur al Horno 🥧
+    boton_receta_siete = tk.Button(ventana_saludo, 
+                                text='''Tarta de yogur al Horno 🥧''', 
+                                command=tartaDeYogur,
+                                **STYLES)
+    boton_receta_siete.pack()  # para que se vea
+# para que aparezca dentro de la ventana
+    boton_receta_siete.place(x=55, y=406)
+
+# Boton 8: Tarta de Naranja🍊
+    boton_receta_ocho = tk.Button(ventana_saludo, 
+                                text='''Tarta de Naranja🍊''', 
+                                command=tartaDeNaranja,
+                                **STYLES)
+    boton_receta_ocho.pack()  # para que se vea
+# para que aparezca dentro de la ventana
+    boton_receta_ocho.place(x=258, y=405)
+
+# Boton 9: Postrecito de Chocolate🍫
+    boton_receta_nueve = tk.Button(ventana_saludo, 
+                                text='''Postrecito de Chocolate🍫''', 
+                                command=choco,
+                                **STYLES)
+    boton_receta_nueve.pack()  # para que se vea
+# para que aparezca dentro de la ventana
+    boton_receta_nueve.place(x=460, y=405)
+
+# Boton 10: Arroz con Leche 🥣
+    boton_receta_diez = tk.Button(ventana_saludo, 
+                                text='''Arroz con Leche 🥣''', 
+                                command=arrozCLeche,
+                                **STYLES)
+    boton_receta_diez.pack()  # para que se vea
+# para que aparezca dentro de la ventana
+    boton_receta_diez.place(x=55, y=510)
+
+# Boton 11: Gelatina de Frutilla 🍓
+    boton_receta_once = tk.Button(ventana_saludo, 
+                                text='''Gelatina de Frutilla 🍓''', 
+                                command=gelatina,
+                                **STYLES)
+    boton_receta_once.pack()  # para que se vea
+# para que aparezca dentro de la ventana
+    boton_receta_once.place(x=258, y=510)
+
+# Boton 12: 'Brownie 🍫'
+    boton_receta_doce = tk.Button(ventana_saludo, 
+                                text='Brownie 🍫', 
+                                command=brownie,
+                                **STYLES)
+    boton_receta_doce.pack()  # para que se vea
+# para que aparezca dentro de la ventana
+    boton_receta_doce.place(x=460, y=510)
 
 
 # abre ventana de MIS RECETAS
-# agregar funcion mis recetas
 def abrir_ventana_mis_rece():
-    ventana_saludo = tk.Tk()
+    ventana_saludo = tk.Toplevel()
     ventana_saludo.title("Mis Recetas")
     ventana_saludo.geometry("670x700+300+0")
+
+# # Cargar la imagen de fondo
+#     try:
+#         imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/FONDO5.png")
+#         imagen_fondo = imagen_fondo.resize((670, 700), Image.Resampling.LANCZOS)
+#         fondo_ventana_saludo = ImageTk.PhotoImage(imagen_fondo)
+        
+#         # Crear un label para la imagen de fondo y agregarlo a la ventana
+#         label_fondo = tk.Label(ventana_saludo, image=fondo_ventana_saludo)
+#         label_fondo.place(relwidth=1, relheight=1)
+        
+#         # Mantener una referencia a la imagen
+#         ventana_saludo.fondo_ventana_saludo = fondo_ventana_saludo
+#     except Exception as e:
+#         print(f"Error al cargar la imagen: {e}")
+#         # Si hay un error, continúa sin la imagen de fondo
 
     recetas = {}  # las recetas que se agreguen se añaden en este conjunto
 
     # creamos el frame de la ventana y lo asociamos a ventana_saludo
-    frame = tk.Frame(ventana_saludo, bg="#FFCCD5")
+    frame = tk.Frame(ventana_saludo, bg="#40A6EE")
     frame.pack(fill=tk.BOTH, expand=True)
 
     # usamos canvas para modificar de forma más facil el diseño del marco
-    canvas = tk.Canvas(frame, bg="#FFCCD5")
+    canvas = tk.Canvas(frame, bg="#40A6EE")
     scrollbar = tk.Scrollbar(
         frame, orient="vertical", command=canvas.yview
     )  # el scrollbar
-    scrollbar_marco = tk.Frame(canvas, bg="#FFCCD5")
+    scrollbar_marco = tk.Frame(canvas, bg="#40A6EE")
 
     scrollbar_marco.bind(
         "<Configure>", lambda e: canvas.configure(scrollregion=canvas.bbox("all"))
@@ -1616,8 +1693,8 @@ def abrir_ventana_mis_rece():
         text="MIS RECETAS",
         padx=200,
         pady=30,
-        font=("Arial", 24),
-        bg="#FFCCD5",
+        font=("Roboto Condensed", 30),
+        bg="#40A6EE",
     )  # label mis recetas
     title_label.grid(row=0, column=0, columnspan=3, pady=10)
 
@@ -1669,7 +1746,7 @@ def abrir_ventana_mis_rece():
         editar_ventana.resizable(False, False)
         editar_ventana.configure(bg="#adaaa8")
 
-        bloc_notas = tk.Text(editar_ventana, bg="#FFCCD5", font=("Arial"))
+        bloc_notas = tk.Text(editar_ventana, bg="#40A6EE", font=("Arial"))
         bloc_notas.insert(tk.END, recetas[nombre_receta])
         bloc_notas.pack(expand=True, fill=tk.BOTH)
 
@@ -1699,7 +1776,7 @@ def abrir_ventana_mis_rece():
         actualizar_recetas()
 
 
-# abre ventana de mis recetas
+# Cierra ventana mis recetas
 def botonvolver():
     pass
 
@@ -1712,12 +1789,13 @@ def abrir_ventana_saludo(nombre):
     ventana_saludo = tk.Toplevel()
     ventana_saludo.title("Entrada")
     ventana_saludo.geometry("670x700+300+0")
-
-    # Cargar la imagen de fondo
+    nombre_capitalizado = nombre.capitalize()
+    
+    #Cargar la imagen de fondo
     from PIL import Image, ImageTk
 
     try:
-        fondo2 = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/FONDO22.png").resize(
+        fondo2 = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/FONDO2.png").resize(
             (670, 700)
         )
         fondo2_tk = ImageTk.PhotoImage(fondo2)
@@ -1743,7 +1821,7 @@ def abrir_ventana_saludo(nombre):
             saludo.set(texto)
 
     saludo.trace("w", agregar_puntos_suspensivos)
-    saludo.set(nombre)  #Inicializar StringVar con el valor del nombre
+    saludo.set(nombre_capitalizado)  #Inicializar StringVar con el valor del nombre
 
 #Crear el Label que usa el StringVar
     etiqueta_saludo = tk.Label(
@@ -1779,33 +1857,45 @@ def abrir_ventana_saludo(nombre):
         bg="#2B0E54",
         fg="white",
         font=("Roboto Condensed", 12, "bold"),
+        borderwidth=0,
+        activebackground="#2B0E54",
+        activeforeground="gold",
+        relief="flat",
         width=15,
         height=5,
         command=abrir_ventana_salado,
     )
-    btn_salado.place(x=70, y=420)
+    btn_salado.place(x=58, y=432)
     btn_dulce = tk.Button(
         ventana_saludo,
         text="Dulce",
         bg="#2B0E54",
         fg="white",
         font=("Roboto Condensed", 12, "bold"),
+        borderwidth=0,
+        activebackground="#2B0E54",
+        activeforeground="gold",
+        relief="flat",
         width=15,
         height=5,
         command=abrir_ventana_dulce,
     )
-    btn_dulce.place(x=270, y=420)
+    btn_dulce.place(x=272, y=432)
     btn_mis_rece = tk.Button(
         ventana_saludo,
         text="Mis recetas",
         bg="#2B0E54",
         fg="white",
         font=("Roboto Condensed", 12, "bold"),
+        borderwidth=0,
+        activebackground="#2B0E54",
+        activeforeground="gold",
+        relief="flat",
         width=15,
         height=5,
         command=abrir_ventana_mis_rece,
     )
-    btn_mis_rece.place(x=470, y=420)
+    btn_mis_rece.place(x=483, y=432)
 
 
 # Función para mostrar el temporizador
@@ -2045,8 +2135,8 @@ boton_ok = tk.Button(
     bg="#380039",
     borderwidth=0,
     relief="flat",
-    activebackground="gold",
-    activeforeground="black",
+    activebackground="#380039",
+    activeforeground="white",
     font=("Roboto Condensed", 15),
 )
 boton_ok.place(x=482, y=500, width=50, height=50)  # Ajusta la posición del botón
