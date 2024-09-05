@@ -45,7 +45,7 @@ def abrir_ventana_salado():
     ventana_saludo = tk.Toplevel()
     ventana_saludo.title("Ventana de Salado")
     ventana_saludo.geometry("670x700+300+0")
-    # ventana_saludo.configure(bg='lightblue')
+    ventana_saludo.resizable(width=False, height=False)
 
 # Cargar la imagen de fondo
     try:
@@ -63,12 +63,13 @@ def abrir_ventana_salado():
         print(f"Error al cargar la imagen: {e}")
         # Si hay un error, continúa sin la imagen de fondo
 
-    # ---------------------------- RECETAS SALADAS (Cami) ----------------------------
+    # ------------------------------------------------------- RECETAS SALADAS (Cami) ---------------------------------------------------------------------------
 
     def milanesa_napo():
         ventana_mila_napo = tk.Toplevel()
         ventana_mila_napo.title("Milanesas a la napolitana")
         ventana_mila_napo.geometry("670x700+300+0")
+        ventana_mila_napo.resizable(width=False, height=False)
 
         #   TITULO DE LA RECETA
         titulo = tk.Label(
@@ -121,6 +122,7 @@ Hornear durante 10-15 minutos o hasta que el queso esté fundido y dorado.""",
         ventana_empanadas_carne = tk.Toplevel()
         ventana_empanadas_carne.title("Empanadas de carne")
         ventana_empanadas_carne.geometry("670x700+300+0")
+        ventana_empanadas_carne.resizable(width=False, height=False)
 
         #   TITULO DE LA RECETA
         titulo = tk.Label(
@@ -172,6 +174,7 @@ Hornear a 200°C durante 15-20 minutos o hasta que estén doradas.""",
         ventana_milanesas_pollo = tk.Toplevel()
         ventana_milanesas_pollo.title("Milanesas de pollo")
         ventana_milanesas_pollo.geometry("670x700+300+0")
+        ventana_milanesas_pollo.resizable(width=False, height=False)
 
         #   TITULO DE LA RECETA
         titulo = tk.Label(
@@ -219,6 +222,7 @@ Freír en aceite caliente hasta dorar y cocinar completamente. Servir con limón
         ventana_asado_con_ensalada = tk.Toplevel()
         ventana_asado_con_ensalada.title("Asado con ensalada criolla")
         ventana_asado_con_ensalada.geometry("670x700+300+0")
+        ventana_asado_con_ensalada.resizable(width=False, height=False)
 
         #   TITULO DE LA RECETA
         titulo = tk.Label(
@@ -271,6 +275,7 @@ Añadir vinagre, aceite, sal y pimienta. Mezclar bien y servir con el asado.""",
         ventana_lentejas_guisadas = tk.Toplevel()
         ventana_lentejas_guisadas.title("Lentejas guisadas")
         ventana_lentejas_guisadas.geometry("670x700+300+0")
+        ventana_lentejas_guisadas.resizable(width=False, height=False)
 
         #   TITULO DE LA RECETA
         titulo = tk.Label(
@@ -321,6 +326,7 @@ tiernas. Ajustar la sazón.""",
         ventana_pastas_bolognesa = tk.Toplevel()
         ventana_pastas_bolognesa.title("Pastas con salsa bolognesa")
         ventana_pastas_bolognesa.geometry("670x700+300+0")
+        ventana_pastas_bolognesa.resizable(width=False, height=False)
 
         #   TITULO DE LA RECETA
         titulo = tk.Label(
@@ -372,6 +378,7 @@ Mezclar con la pasta cocida y servir con queso rallado.""",
         ventana_pollo_papas = tk.Toplevel()
         ventana_pollo_papas.title("Pollo al horno con papas")
         ventana_pollo_papas.geometry("670x700+300+0")
+        ventana_pollo_papas.resizable(width=False, height=False)
 
         #   TITULO DE LA RECETA
         titulo = tk.Label(
@@ -419,6 +426,7 @@ o hasta que el pollo esté bien cocido y las papas estén tiernas.""",
         ventana_empanada_jyq = tk.Toplevel()
         ventana_empanada_jyq.title("Empanadas de jamon y queso")
         ventana_empanada_jyq.geometry("670x700+300+0")
+        ventana_empanada_jyq.resizable(width=False, height=False)
 
         #   TITULO DE LA RECETA
         titulo = tk.Label(
@@ -463,6 +471,7 @@ hasta que estén doradas.""",
         ventana_tarta_espinaca = tk.Toplevel()
         ventana_tarta_espinaca.title("Tarta de espinaca y queso")
         ventana_tarta_espinaca.geometry("670x700+300+0")
+        ventana_tarta_espinaca.resizable(width=False, height=False)
 
         #   TITULO DE LA RECETA
         titulo = tk.Label(
@@ -513,6 +522,7 @@ de espinacas y hornear durante 30-35 minutos.""",
         ventana_guiso_res = tk.Toplevel()
         ventana_guiso_res.title("Guiso de res con papas")
         ventana_guiso_res.geometry("670x700+300+0")
+        ventana_guiso_res.resizable(width=False, height=False)
 
         #   TITULO DE LA RECETA
         titulo = tk.Label(
@@ -561,6 +571,8 @@ las papas estén tiernas.""",
         ventana_quiche_jyq = tk.Toplevel()
         ventana_quiche_jyq.title("Quiche de jamon y queso")
         ventana_quiche_jyq.geometry("670x700+300+0")
+        ventana_quiche_jyq.resizable(width=False, height=False)
+
 
         #   TITULO DE LA RECETA
         titulo = tk.Label(
@@ -609,6 +621,8 @@ mezcla y hornear durante 35-40 minutos.
         ventana_fideos_tuco = tk.Toplevel()
         ventana_fideos_tuco.title("Fideos con tuco")
         ventana_fideos_tuco.geometry("670x700+300+0")
+        ventana_fideos_tuco.resizable(width=False, height=False)
+
 
         #   TITULO DE LA RECETA
         titulo = tk.Label(
@@ -817,13 +831,14 @@ Mezclar con los fideos cocidos y servir con queso rallado.""",
     boton_receta_doce.place(x=460, y=510)
 
 
-    # ---------------------------- RECETAS DULCES (Ile) ----------------------------
+    # ---------------------------------------------------------RECETAS DULCES (Ile) -----------------------------------------------------------------------------
 
 # abre ventana de DULCE
 def abrir_ventana_dulce():
     ventana_saludo = tk.Toplevel()
     ventana_saludo.title("Ventana de Dulce")
     ventana_saludo.geometry("670x700+300+0")
+    ventana_saludo.resizable(width=False, height=False)
 
 # Cargar la imagen de fondo
     try:
@@ -841,7 +856,7 @@ def abrir_ventana_dulce():
         print(f"Error al cargar la imagen: {e}")
         # Si hay un error, continúa sin la imagen de fondo
 
-    # ---------------------------- Crema de Limón ----------------------------
+    # ------------------------------------------------------FUNCIONES RECETAS DULCES -------------------------------------------------------------------------
 
     def cremaDeLimon():
         cremaDeLimon = tk.Toplevel()
@@ -850,6 +865,7 @@ def abrir_ventana_dulce():
         cremaDeLimon.focus()
         cremaDeLimon.grab_set()
         cremaDeLimon.config(cursor="heart")
+        cremaDeLimon.resizable(width=False, height=False)
 
         nombreReceta = tk.Label(
             cremaDeLimon, text='"Crema de Limón🍋' "", font=("candara", 20)
@@ -896,6 +912,7 @@ def abrir_ventana_dulce():
         VasitoOreo.focus()
         VasitoOreo.grab_set()
         VasitoOreo.config(cursor="heart")
+        VasitoOreo.resizable(width=False, height=False)
 
         nombreReceta = tk.Label(
             VasitoOreo, text='"Vasito Oreo🍪' "", font=("candara", 20)
@@ -946,6 +963,7 @@ def abrir_ventana_dulce():
         Crepes.focus()
         Crepes.grab_set()
         Crepes.config(cursor="heart")
+        Crepes.resizable(width=False, height=False)
 
         nombreReceta = tk.Label(Crepes, text='"Crepes 🫓"', font=("candara", 20))
         nombreReceta.pack()
@@ -1007,6 +1025,7 @@ def abrir_ventana_dulce():
         galletasDeAvena.focus()
         galletasDeAvena.grab_set()
         galletasDeAvena.config(cursor="heart")
+        galletasDeAvena.resizable(width=False, height=False)
 
         nombreReceta = tk.Label(
             galletasDeAvena, text='"Galletas de Avena🍪' "", font=("candara", 20)
@@ -1070,6 +1089,7 @@ def abrir_ventana_dulce():
         budinDePan.focus()
         budinDePan.grab_set()
         budinDePan.config(cursor="heart")
+        budinDePan.resizable(width=False, height=False)
 
         nombreReceta = tk.Label(
             budinDePan, text='"Budín de Pan🍮' "", font=("candara", 20)
@@ -1133,6 +1153,8 @@ def abrir_ventana_dulce():
         flan.focus()
         flan.grab_set()
         flan.config(cursor="heart")
+        flan.resizable(width=False, height=False)
+
 
         nombreReceta = tk.Label(flan, text='"Flan🍮' "", font=("candara", 20))
         nombreReceta.pack()
@@ -1191,6 +1213,8 @@ def abrir_ventana_dulce():
         tartaDeYogur.focus()
         tartaDeYogur.grab_set()
         tartaDeYogur.config(cursor="heart")
+        tartaDeYogur.resizable(width=False, height=False)
+
 
         nombreReceta = tk.Label(
             tartaDeYogur, text='"Tarta de Yogur🥧' "", font=("candara", 20)
@@ -1242,6 +1266,8 @@ def abrir_ventana_dulce():
         tartaDeNaranja.focus()
         tartaDeNaranja.grab_set()
         tartaDeNaranja.config(cursor="heart")
+        tartaDeNaranja.resizable(width=False, height=False)
+
 
         nombreReceta = tk.Label(
             tartaDeNaranja, text='"Tarta de Naranja🍊' "", font=("candara", 20)
@@ -1299,6 +1325,8 @@ def abrir_ventana_dulce():
         choco.focus()
         choco.grab_set()
         choco.config(cursor="heart")
+        choco.resizable(width=False, height=False)
+
 
         nombreReceta = tk.Label(
             choco, text='"Postre de Chocolate🍫"', font=("candara", 20)
@@ -1348,8 +1376,6 @@ def abrir_ventana_dulce():
         )
         boton_cerrar.place(x=450, y=550)
 
-    # ---------------Receta Arroz Con Leche ----
-
     def arrozCLeche():
         arrozCLeche = tk.Toplevel()
         arrozCLeche.title("Arroz con Leche🥣")
@@ -1357,6 +1383,8 @@ def abrir_ventana_dulce():
         arrozCLeche.focus()
         arrozCLeche.grab_set()
         arrozCLeche.config(cursor="heart")
+        arrozCLeche.resizable(width=False, height=False)
+
 
         nombreReceta = tk.Label(
             arrozCLeche, text='"Arroz con Leche🥣' "", font=("candara", 20)
@@ -1416,6 +1444,8 @@ def abrir_ventana_dulce():
         gelatina.focus()
         gelatina.grab_set()
         gelatina.config(cursor="heart")
+        gelatina.resizable(width=False, height=False)
+
 
         nombreReceta = tk.Label(
             gelatina, text='"Gelatina de Fresa🍓' "", font=("candara", 20)
@@ -1474,6 +1504,8 @@ def abrir_ventana_dulce():
         brownie.focus()
         brownie.grab_set()
         brownie.config(cursor="heart")
+        brownie.resizable(width=False, height=False)
+
 
         nombreReceta = tk.Label(brownie, text='"Brownie 🍫' "", font=("candara", 20))
         nombreReceta.pack()
@@ -1648,35 +1680,20 @@ def abrir_ventana_mis_rece():
     ventana_saludo = tk.Toplevel()
     ventana_saludo.title("Mis Recetas")
     ventana_saludo.geometry("670x700+300+0")
-
-# # Cargar la imagen de fondo
-#     try:
-#         imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/FONDO5.png")
-#         imagen_fondo = imagen_fondo.resize((670, 700), Image.Resampling.LANCZOS)
-#         fondo_ventana_saludo = ImageTk.PhotoImage(imagen_fondo)
-        
-#         # Crear un label para la imagen de fondo y agregarlo a la ventana
-#         label_fondo = tk.Label(ventana_saludo, image=fondo_ventana_saludo)
-#         label_fondo.place(relwidth=1, relheight=1)
-        
-#         # Mantener una referencia a la imagen
-#         ventana_saludo.fondo_ventana_saludo = fondo_ventana_saludo
-#     except Exception as e:
-#         print(f"Error al cargar la imagen: {e}")
-#         # Si hay un error, continúa sin la imagen de fondo
+    ventana_saludo.resizable(width=False, height=False)
 
     recetas = {}  # las recetas que se agreguen se añaden en este conjunto
 
     # creamos el frame de la ventana y lo asociamos a ventana_saludo
-    frame = tk.Frame(ventana_saludo, bg="#40A6EE")
+    frame = tk.Frame(ventana_saludo, bg="#E6E6E6")
     frame.pack(fill=tk.BOTH, expand=True)
 
     # usamos canvas para modificar de forma más facil el diseño del marco
-    canvas = tk.Canvas(frame, bg="#40A6EE")
+    canvas = tk.Canvas(frame, bg="#E6E6E6")
     scrollbar = tk.Scrollbar(
         frame, orient="vertical", command=canvas.yview
     )  # el scrollbar
-    scrollbar_marco = tk.Frame(canvas, bg="#40A6EE")
+    scrollbar_marco = tk.Frame(canvas, bg="#E6E6E6")
 
     scrollbar_marco.bind(
         "<Configure>", lambda e: canvas.configure(scrollregion=canvas.bbox("all"))
@@ -1694,7 +1711,7 @@ def abrir_ventana_mis_rece():
         padx=200,
         pady=30,
         font=("Roboto Condensed", 30),
-        bg="#40A6EE",
+        bg="#E6E6E6",
     )  # label mis recetas
     title_label.grid(row=0, column=0, columnspan=3, pady=10)
 
@@ -1710,8 +1727,11 @@ def abrir_ventana_mis_rece():
         width=14,
         height=4,
         command=añadir_receta,
-        font=("Arial"),
-        bg="#a0a0a0",
+        font= ("Roboto Condensed", 12),
+        fg= "black",
+        bg= "#FFFFFF",
+        borderwidth= 2,
+        activeforeground= "gold"
     )
     añadir_boton.grid(row=1, column=0, pady=10)
 
@@ -1720,7 +1740,7 @@ def abrir_ventana_mis_rece():
             if isinstance(widget, tk.Button) and widget != añadir_boton:
                 widget.destroy()
 
-        row, column = 1, 0  # se colocan en orden los botones
+        row, column = 1, 0  #coloca en orden los botones
         for recipe in recetas:
             button = tk.Button(
                 scrollbar_marco,
@@ -1728,7 +1748,7 @@ def abrir_ventana_mis_rece():
                 width=16,
                 height=5,
                 command=lambda r=recipe: editar_receta(r),
-                bg="#a0a0a0",
+                bg="#7585F1",
             )
             button.grid(row=row, column=column, padx=5, pady=5)
             column += 1
@@ -1738,15 +1758,16 @@ def abrir_ventana_mis_rece():
 
         añadir_boton.grid(row=row, column=column, padx=5, pady=10)
 
-    # esta funcion permite al entrar a la receta creada, poder editarla como si fuera un bloc de notas
+# esta funcion permite al entrar a la receta creada, poder editarla como si fuera un bloc de notas
     def editar_receta(nombre_receta):
         editar_ventana = tk.Toplevel(ventana_saludo)
         editar_ventana.title(nombre_receta)
         editar_ventana.geometry("670x700+300+0")
         editar_ventana.resizable(False, False)
         editar_ventana.configure(bg="#adaaa8")
+        ventana.resizable(width=False, height=False)
 
-        bloc_notas = tk.Text(editar_ventana, bg="#40A6EE", font=("Arial"))
+        bloc_notas = tk.Text(editar_ventana, bg="#E6E6E6", font=("Arial"))
         bloc_notas.insert(tk.END, recetas[nombre_receta])
         bloc_notas.pack(expand=True, fill=tk.BOTH)
 
@@ -1790,7 +1811,8 @@ def abrir_ventana_saludo(nombre):
     ventana_saludo.title("Entrada")
     ventana_saludo.geometry("670x700+300+0")
     nombre_capitalizado = nombre.capitalize()
-    
+    ventana_saludo.resizable(width=False, height=False)
+
     #Cargar la imagen de fondo
     from PIL import Image, ImageTk
 
@@ -1902,98 +1924,82 @@ def abrir_ventana_saludo(nombre):
 
 
 def mostrar_temporizador():
-    # Crea una nueva ventana para el temporizador
-    temporizador_ventana = tk.Tk()
+    temporizador_ventana = tk.Toplevel()  # Usar Toplevel en lugar de Tk
     temporizador_ventana.title("Temporizador")
-    temporizador_ventana.geometry("300x300")
+    temporizador_ventana.geometry("300x300+300+0")
     temporizador_ventana.config(bg="#D8BFD8")
+    temporizador_ventana.resizable(width=False, height=False)
 
-    # Variables para almacenar tiempo
     hora = tk.StringVar(value="00")
     minuto = tk.StringVar(value="00")
     segundo = tk.StringVar(value="00")
 
-    # Campos de entrada de tiempo
-    horaEntry = tk.Entry(
-        temporizador_ventana,
-        width=3,
-        font=("Arial", 18),
-        textvariable=hora,
-        bg="#c799e1",
-    )
+    horaEntry = tk.Entry(temporizador_ventana, width=3, font=("Arial", 18), textvariable=hora, bg="#c799e1")
     horaEntry.place(x=80, y=20)
-    minutoEntry = tk.Entry(
-        temporizador_ventana,
-        width=3,
-        font=("Arial", 18),
-        textvariable=minuto,
-        bg="#c799e1",
-    )
+    minutoEntry = tk.Entry(temporizador_ventana, width=3, font=("Arial", 18), textvariable=minuto, bg="#c799e1")
     minutoEntry.place(x=130, y=20)
-    segundoEntry = tk.Entry(
-        temporizador_ventana,
-        width=3,
-        font=("Arial", 18),
-        textvariable=segundo,
-        bg="#c799e1",
-    )
+    segundoEntry = tk.Entry(temporizador_ventana, width=3, font=("Arial", 18), textvariable=segundo, bg="#c799e1")
     segundoEntry.place(x=180, y=20)
-    # Variables para el temporizador
-    temp = 0
+
+    tiempo_total = 0
     no_pausado = True
 
-    # Función para iniciar el temporizador
     def submit():
-        nonlocal temp, no_pausado
+        nonlocal tiempo_total, no_pausado
         no_pausado = True
 
         try:
-            temp = int(hora.get()) * 3600 + int(minuto.get()) * 60 + int(segundo.get())
-        except ValueError:
-            messagebox.showerror("Error", "Por favor, ingresa un valor correcto")
-            return
-
-        # Inicia el temporizador con after
-        countdown()
+            h = int(hora.get())
+            m = int(minuto.get())
+            s = int(segundo.get())
+            tiempo_total = h * 3600 + m * 60 + s
+            if tiempo_total <= 0:
+                raise ValueError("El tiempo debe ser mayor que cero")
+            countdown()
+        except ValueError as e:
+            messagebox.showerror("Error", str(e))
 
     def countdown():
-        nonlocal temp
-        if temp > 0 and no_pausado:
-            mins, secs = divmod(temp, 60)
-            horas_locales = 0
-            if mins >= 60:
-                horas_locales, mins = divmod(mins, 60)
-            hora.set(f"{horas_locales:02}")
-            minuto.set(f"{mins:02}")
-            segundo.set(f"{secs:02}")
-            temp -= 1
-            # Llama a countdown después de 1 segundo
+        nonlocal tiempo_total
+        if tiempo_total > 0 and no_pausado:
+            mins, secs = divmod(tiempo_total, 60)
+            horas, mins = divmod(mins, 60)
+            hora.set(f"{horas:02d}")
+            minuto.set(f"{mins:02d}")
+            segundo.set(f"{secs:02d}")
+            tiempo_total -= 1
             temporizador_ventana.after(1000, countdown)
-        elif temp <= 0:
+        elif tiempo_total <= 0:
             messagebox.showinfo("Tiempo terminado", "¡El tiempo se ha agotado!")
+            reset()
 
-    # Función para detener el temporizador
     def stop():
-        nonlocal temp
-        temp = 0
+        nonlocal no_pausado
+        no_pausado = False
+
+    def reset():
+        nonlocal tiempo_total, no_pausado
+        tiempo_total = 0
+        no_pausado = False
         hora.set("00")
         minuto.set("00")
         segundo.set("00")
 
     def pausa():
         nonlocal no_pausado
-        no_pausado = False
+        no_pausado = not no_pausado
+        if no_pausado:
+            countdown()
 
-    # Botones para controlar el temporizador
-    btn_start = tk.Button(
-        temporizador_ventana, text="Establecer el tiempo", bd="5", command=submit
-    )
+    btn_start = tk.Button(temporizador_ventana, text="Iniciar", bd="5", command=submit)
     btn_stop = tk.Button(temporizador_ventana, text="Detener", bd="5", command=stop)
-    btn_pause = tk.Button(temporizador_ventana, text="Pausa", bd="5", command=pausa)
+    btn_pause = tk.Button(temporizador_ventana, text="Pausar/Reanudar", bd="5", command=pausa)
+    btn_reset = tk.Button(temporizador_ventana, text="Reiniciar", bd="5", command=reset)
+
     btn_start.place(x=90, y=60)
     btn_stop.place(x=90, y=100)
     btn_pause.place(x=90, y=140)
-
+    btn_reset.place(x=90, y=180)
 
 # Función para cerrar una ventana
 
@@ -2009,7 +2015,8 @@ def mostrar_acerca_de():
     # Crear la ventana "Acerca de"
     ventana_acerca_de = tk.Tk()
     ventana_acerca_de.title("Acerca de")
-    ventana_acerca_de.geometry("670x700")
+    ventana_acerca_de.geometry("670x700+300+0")
+    ventana_acerca_de.resizable(width=False, height=False)
 
     # Crear un Frame para el texto con scroll
     frame_texto = tk.Frame(ventana_acerca_de)
@@ -2089,7 +2096,7 @@ Gracias por confiar en COWORKING. Estamos emocionados de llevar sus proyectos al
 ventana = tk.Tk()
 ventana.title("Recetario")
 ventana.geometry("670x700+300+0")
-ventana.resizable(0, 0)
+ventana.resizable(width=False, height=False)
 
 
 # Carga la imagen de fondo
