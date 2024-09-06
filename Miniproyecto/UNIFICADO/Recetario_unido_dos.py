@@ -1681,19 +1681,34 @@ def abrir_ventana_mis_rece():
     ventana_saludo.title("Mis Recetas")
     ventana_saludo.geometry("670x700+300+0")
     ventana_saludo.resizable(width=False, height=False)
+    
+    # Cargar la imagen de fondo
+    try:
+        imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/FONDO5.png")
+        imagen_fondo = imagen_fondo.resize((670, 700), Image.Resampling.LANCZOS)
+        fondo_ventana_saludo = ImageTk.PhotoImage(imagen_fondo)
+        
+        # Crear un label para la imagen de fondo y agregarlo a la ventana
+        label_fondo = tk.Label(ventana_saludo, image=fondo_ventana_saludo)
+        label_fondo.place(x=0, y=0, relwidth=1, relheight=1)
+        
+        # Mantener una referencia a la imagen
+        ventana_saludo.fondo_ventana_saludo = fondo_ventana_saludo
+        
+        print("Imagen de fondo cargada con éxito")
+    except Exception as e:
+        print(f"Error al cargar la imagen: {e}")
 
     recetas = {}  # las recetas que se agreguen se añaden en este conjunto
 
-    # creamos el frame de la ventana y lo asociamos a ventana_saludo
-    frame = tk.Frame(ventana_saludo, bg="#E6E6E6")
-    frame.pack(fill=tk.BOTH, expand=True)
+    # Creamos el frame de la ventana y lo asociamos a ventana_saludo
+    frame = tk.Frame(ventana_saludo, bg='#2DC0A3')
+    frame.place(x=42.5, y=150, width=585, height=530)
 
-    # usamos canvas para modificar de forma más facil el diseño del marco
-    canvas = tk.Canvas(frame, bg="#E6E6E6")
-    scrollbar = tk.Scrollbar(
-        frame, orient="vertical", command=canvas.yview
-    )  # el scrollbar
-    scrollbar_marco = tk.Frame(canvas, bg="#E6E6E6")
+    # Usamos canvas para modificar de forma más fácil el diseño del marco
+    canvas = tk.Canvas(frame, bg='#2DC0A3')
+    scrollbar = tk.Scrollbar(frame, orient="vertical", command=canvas.yview)
+    scrollbar_marco = tk.Frame(canvas, bg='#2DC0A3')
 
     scrollbar_marco.bind(
         "<Configure>", lambda e: canvas.configure(scrollregion=canvas.bbox("all"))
@@ -1707,12 +1722,9 @@ def abrir_ventana_mis_rece():
 
     title_label = tk.Label(
         scrollbar_marco,
-        text="MIS RECETAS",
-        padx=200,
-        pady=30,
-        font=("Roboto Condensed", 30),
-        bg="#E6E6E6",
-    )  # label mis recetas
+        bg='white',
+        fg='white' 
+    )
     title_label.grid(row=0, column=0, columnspan=3, pady=10)
 
     def añadir_receta():
@@ -1724,16 +1736,43 @@ def abrir_ventana_mis_rece():
     añadir_boton = tk.Button(
         scrollbar_marco,
         text="+",
-        width=14,
-        height=4,
+        width=10,
+        height=2,
         command=añadir_receta,
-        font= ("Roboto Condensed", 12),
-        fg= "black",
-        bg= "#FFFFFF",
-        borderwidth= 2,
-        activeforeground= "gold"
+        font=("Roboto Condensed", 14),
+        fg="white",
+        bg="#2B5353", 
+        activebackground="#2B0E54",
+        relief=tk.FLAT
     )
-    añadir_boton.grid(row=1, column=0, pady=10)
+    añadir_boton.grid(row=1, column=1, pady=10)
+
+    def actualizar_recetas():
+        for widget in scrollbar_marco.winfo_children():
+            if isinstance(widget, tk.Button) and widget != añadir_boton:
+                widget.destroy()
+
+        row, column = 2, 0
+        for recipe in recetas:
+            button = tk.Button(
+                scrollbar_marco,
+                text=recipe,
+                width=10,
+                height=2,
+                command=lambda r=recipe: editar_receta(r),
+                bg="#3A7373",
+                fg="white",
+                font=("Roboto Condensed", 10),
+                relief=tk.FLAT,
+                activebackground="#2B5353"
+            )
+            button.grid(row=row, column=column, padx=5, pady=5)
+            column += 1
+            if column == 3:
+                column = 0
+                row += 1
+
+        añadir_boton.grid(row=row, column=column, padx=5, pady=10)
 
     def actualizar_recetas():  # cuando se crea la receta se actualiza la cantidad ya creadas y se agrega el boton
         for widget in scrollbar_marco.winfo_children():
@@ -1764,10 +1803,10 @@ def abrir_ventana_mis_rece():
         editar_ventana.title(nombre_receta)
         editar_ventana.geometry("670x700+300+0")
         editar_ventana.resizable(False, False)
-        editar_ventana.configure(bg="#adaaa8")
+        editar_ventana.configure(bg="#2DC0A3")
         ventana.resizable(width=False, height=False)
 
-        bloc_notas = tk.Text(editar_ventana, bg="#E6E6E6", font=("Arial"))
+        bloc_notas = tk.Text(editar_ventana, bg="#C3E8E6", font=("Arial"))
         bloc_notas.insert(tk.END, recetas[nombre_receta])
         bloc_notas.pack(expand=True, fill=tk.BOTH)
 
@@ -1777,6 +1816,9 @@ def abrir_ventana_mis_rece():
             command=lambda: guardar_receta(
                 nombre_receta, bloc_notas.get("1.0", tk.END)
             ),
+            bg="#009A92", 
+            activebackground="white",
+            relief=tk.FLAT
         )
         boton_guardar.pack(side=tk.LEFT, padx=10, pady=10)
 
@@ -1784,6 +1826,9 @@ def abrir_ventana_mis_rece():
             editar_ventana,
             text="Eliminar",
             command=lambda: eliminar_receta(nombre_receta, editar_ventana),
+            bg="#009A92", 
+            activebackground="white",
+            relief=tk.FLAT
         )
         boton_borrar.pack(side=tk.RIGHT, padx=10, pady=10)
 
@@ -1796,6 +1841,7 @@ def abrir_ventana_mis_rece():
         ventana.destroy()
         actualizar_recetas()
 
+    print("Ventana 'Mis Recetas' creada")
 
 # Cierra ventana mis recetas
 def botonvolver():
@@ -2009,34 +2055,55 @@ def cerrar_ventana(ventana):
 
 
 # Función para mostrar la ventana "Acerca de"
-
-
 def mostrar_acerca_de():
-    # Crear la ventana "Acerca de"
-    ventana_acerca_de = tk.Tk()
+    ventana_acerca_de = tk.Toplevel()
     ventana_acerca_de.title("Acerca de")
     ventana_acerca_de.geometry("670x700+300+0")
     ventana_acerca_de.resizable(width=False, height=False)
 
+    # Cargar la imagen de fondo
+    try:
+        imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/FONDO7.png")
+        imagen_fondo = imagen_fondo.resize((670, 700), Image.Resampling.LANCZOS)
+        fondo_ventana = ImageTk.PhotoImage(imagen_fondo)
+        
+        label_fondo = tk.Label(ventana_acerca_de, image=fondo_ventana)
+        label_fondo.place(x=0, y=0, relwidth=1, relheight=1)
+        
+        # Mantener una referencia a la imagen
+        ventana_acerca_de.fondo_ventana = fondo_ventana
+        
+        print("Imagen de fondo cargada con éxito")
+    except Exception as e:
+        print(f"Error al cargar la imagen de fondo: {e}")
+
     # Crear un Frame para el texto con scroll
-    frame_texto = tk.Frame(ventana_acerca_de)
-    # Posiciona el Frame en el centro
-    frame_texto.place(relx=0.5, rely=0.5, anchor="center")
+    frame_texto = tk.Frame(ventana_acerca_de, bg='#300039')
+    frame_texto.place(x=42.5, y=150, width=585, height=530)
 
     # Crear un Text con Scrollbar
-    scrollbar = Scrollbar(frame_texto)
+    texto_container = tk.Frame(frame_texto, bg='#300039')
+    texto_container.pack(fill=tk.BOTH, expand=True, padx=20, pady=20)
+
+    scrollbar = tk.Scrollbar(texto_container)
     scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
 
-    texto = Text(
-        frame_texto, height=25, width=70, wrap=tk.WORD, yscrollcommand=scrollbar.set
+    texto = tk.Text(
+        texto_container,
+        height=20,
+        width=60,
+        wrap=tk.WORD,
+        yscrollcommand=scrollbar.set,
+        font=("Roboto Condensed", 12),
+        bg='#300039',
+        fg='white',
+        border=0
     )
-    texto.pack(side=tk.LEFT, fill=tk.BOTH)
+    texto.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
     scrollbar.config(command=texto.yview)
 
-    # Agregar un texto de ejemplo
-    texto.insert(
-        tk.END,
-        """Somos COWORKING, una empresa joven y dinámica dedicada al desarrollo web, compuesta por un talentoso equipo de estudiantes del Informatorio, quienes representan las nuevas promesas en la industria de la programación.
+    # Agregar el contenido
+    contenido = """Somos COWORKING, una empresa joven y dinámica dedicada al desarrollo web, compuesta por un talentoso equipo de estudiantes del Informatorio, quienes representan las nuevas promesas en la industria de la programación.
 
 Nuestro Equipo:
 Pablo Sabadini: Con una pasión por la innovación y el desarrollo front-end, Pablo se asegura de que cada proyecto tenga una interfaz intuitiva y atractiva.
@@ -2055,10 +2122,10 @@ Roberto Galeano: Roberto es nuestro ingeniero de software, que combina conocimie
 
 Eduina Nicole Dellamea: Experta en gestión de proyectos, Eduina coordina al equipo para asegurar que cada entrega sea oportuna y cumpla con los objetivos del cliente.
 
-Nuestra Misión
+Nuestra Misión:
 En COWORKING, nuestra misión es desarrollar soluciones web que no solo cumplan, sino que superen las expectativas de nuestros clientes. Trabajamos en equipo para combinar nuestras fortalezas y crear productos que son funcionales, estéticamente agradables y de alta calidad.
 
-Nuestros Valores
+Nuestros Valores:
 Innovación: Estamos comprometidos a estar a la vanguardia de la tecnología, adoptando las últimas tendencias y herramientas en desarrollo web.
 
 Colaboración: Creemos que las mejores soluciones nacen de un esfuerzo conjunto, tanto dentro de nuestro equipo como en estrecha colaboración con nuestros clientes.
@@ -2067,30 +2134,40 @@ Calidad: Nos enorgullece entregar productos que son confiables, seguros y constr
 
 Crecimiento Continuo: Como estudiantes del Informatorio, estamos en un aprendizaje constante, lo que nos permite adaptarnos rápidamente a las necesidades cambiantes del mercado.
 
-Lo Que Nos Diferencia
+Lo Que Nos Diferencia:
 Compromiso con la Excelencia: Cada miembro de COWORKING aporta su experiencia y dedicación, lo que nos permite ofrecer soluciones de desarrollo web que destacan por su calidad y creatividad.
 
 Enfoque Personalizado: Nos aseguramos de entender las necesidades específicas de cada cliente, brindando soluciones hechas a medida.
 
 Futuro Prometedor: Como jóvenes talentos en la programación, nuestro enfoque fresco y actualizado nos permite abordar los desafíos desde una perspectiva innovadora.
 
-Gracias por confiar en COWORKING. Estamos emocionados de llevar sus proyectos al siguiente nivel con nuestra pasión y habilidades en desarrollo web. ¡Juntos, construiremos el futuro digital!""",
-    )
-    texto.config(font=("arial", 11), state=tk.DISABLED)
+Gracias por confiar en COWORKING. Estamos emocionados de llevar sus proyectos al siguiente nivel con nuestra pasión y habilidades en desarrollo web. ¡Juntos, construiremos el futuro digital!"""
 
-    # Botón Volver (cierra la ventana "Acerca de")
+    texto.insert(tk.END, contenido)
+    texto.config(state=tk.DISABLED)
+
+    # Botón Volver
     btn_cerrar = tk.Button(
-        ventana_acerca_de,
+        frame_texto,
         text="Volver",
-        command=lambda: cerrar_ventana(ventana_acerca_de),
+        command=ventana_acerca_de.destroy,
+        bg="#4A0E4E", 
+        fg="white",
+        activebackground="#5C1262", 
+        activeforeground="white",
+        font=("Roboto Condensed", 12, "bold"),
+        relief=tk.FLAT,
+        padx=20,
+        pady=10
     )
-    btn_cerrar.place(relx=0.8, rely=0.9, anchor="center")
+    btn_cerrar.pack(side=tk.BOTTOM, pady=20)
+
+    # Asegurarse de que la ventana se mantenga en primer plano
+    ventana_acerca_de.transient(ventana_acerca_de.master)
+    ventana_acerca_de.grab_set()
+    ventana_acerca_de.wait_window(ventana_acerca_de)
 
 
-# btn.pack(x=150, y=400)
-
-
-# Crear la ventana principal (Lobby)
 
 # Configuración de la ventana principal (ANA)
 ventana = tk.Tk()
