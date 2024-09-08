@@ -6,6 +6,8 @@ from PIL import Image, ImageTk
 from typing import Self
 from tkinter import messagebox, simpledialog
 from tkinter import Scrollbar, Text
+import traceback
+
 
 # Placeholder para la entrada de usuario
 
@@ -66,361 +68,170 @@ def abrir_ventana_salado():
     # ------------------------------------------------------- RECETAS SALADAS (Cami) ---------------------------------------------------------------------------
 
     def milanesa_napo():
-        ventana_mila_napo = tk.Toplevel()
-        ventana_mila_napo.title("Milanesas a la napolitana")
-        ventana_mila_napo.geometry("670x700+300+0")
-        ventana_mila_napo.resizable(width=False, height=False)
+        try:
+            ventana_mila_napo = tk.Toplevel()
+            ventana_mila_napo.title("Milanesas a la napolitana")
+            ventana_mila_napo.geometry("670x700+300+0")
+            ventana_mila_napo.resizable(width=False, height=False)
 
-        #   TITULO DE LA RECETA
-        titulo = tk.Label(
-            ventana_mila_napo,
-            text="""Milanesas a la napolitana 🍕""",
-            font=("Roboto Condensed", 18),
-            foreground="black"
-        )
-        titulo.pack()
-        titulo.place(x=195, y=40)
+            # Cargar la imagen de fondo
+            imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Milas napo.png")
+            imagen_fondo = imagen_fondo.resize((670, 700), Image.Resampling.LANCZOS)
+            fondo_ventana = ImageTk.PhotoImage(imagen_fondo)
+        
+            label_fondo = tk.Label(ventana_mila_napo, image=fondo_ventana)
+            label_fondo.place(x=0, y=0, relwidth=1, relheight=1)
+        
+            ventana_mila_napo.fondo_ventana = fondo_ventana
+        
+            print("Ventana de milanesas creada con éxito")
+        except Exception as e:
+            print(f"Error en milanesa_napo: {e}")
+            print(traceback.format_exc())
 
-        #   INGREDIENTES
-        ingredientes = tk.Label(
-            ventana_mila_napo,
-            text="""Ingredientes:
-
-4 milanesas de carne de res
-1 taza de pan rallado
-1/2 taza de queso rallado
-1 huevo
-1 taza de salsa de tomate
-100 g de jamón cocido
-Aceite para freír
-Sal y pimienta al gusto""",
-            justify="left",
-            font=("nunito", 12),
-        )
-        ingredientes.pack()
-        ingredientes.place(x=15, y=100)
-
-        #   PREPARACIÓN
-        preparación = tk.Label(
-            ventana_mila_napo,
-            text="""Preparación:
-
-Batir el huevo en un plato y mezclar el pan rallado con el queso rallado en otro.
-Pasar las milanesas por el huevo y luego por la mezcla de pan rallado y queso.
-Freír en aceite caliente hasta dorar y cocinar completamente. Colocar sobre papel 
-absorbente.
-Precalentar el horno a 180°C. Colocar las milanesas en una fuente para horno, cubrir 
-con salsa de tomate, una loncha de jamón y más queso rallado.
-Hornear durante 10-15 minutos o hasta que el queso esté fundido y dorado.""",
-            justify="left",
-            font=("nunito", 12),
-        )
-        preparación.pack()
-        preparación.place(x=15, y=350)
 
     def empanadas_carne():
-        ventana_empanadas_carne = tk.Toplevel()
-        ventana_empanadas_carne.title("Empanadas de carne")
-        ventana_empanadas_carne.geometry("670x700+300+0")
-        ventana_empanadas_carne.resizable(width=False, height=False)
+        try:
+            ventana_empanadas_carne = tk.Toplevel()
+            ventana_empanadas_carne.title("Empanadas de carne")
+            ventana_empanadas_carne.geometry("670x700+300+0")
+            ventana_empanadas_carne.resizable(width=False, height=False)
+            
+            # Cargar la imagen de fondo
+            imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Empanadas de carne.png")
+            imagen_fondo = imagen_fondo.resize((670, 700), Image.Resampling.LANCZOS)
+            fondo_ventana = ImageTk.PhotoImage(imagen_fondo)
+            
+            label_fondo = tk.Label(ventana_empanadas_carne, image=fondo_ventana)
+            label_fondo.place(x=0, y=0, relwidth=1, relheight=1)
+            
+            ventana_empanadas_carne.fondo_ventana = fondo_ventana
 
-        #   TITULO DE LA RECETA
-        titulo = tk.Label(
-            ventana_empanadas_carne,
-            text="""Empanadas de carne 🥟""",
-            font=("nunito", 20),
-        )
-        titulo.pack()
-        titulo.place(x=195, y=40)
-        #   INGREDIENTES
-        ingredientes = tk.Label(
-            ventana_empanadas_carne,
-            text="""Ingredientes:
+            print("Ventana de Empanadas de carne creada con éxito")
+        except Exception as e:
+            print(f"Error en empanadas_carne: {e}")
+            print(traceback.format_exc())
 
-500 g de carne de res picada
-1 cebolla picada
-1 pimiento rojo picado
-2 huevos duros picados
-10 aceitunas verdes picadas
-1 cucharadita de comino
-1 cucharadita de pimentón
-Sal y pimienta al gusto
-Masa para empanadas (puedes comprarla ya hecha o hacerla en casa)""",
-            justify="left",
-            font=("nunito", 12),
-        )
-        ingredientes.pack()
-        ingredientes.place(x=15, y=100)
-
-        #   PREPARACIÓN
-        preparacion = tk.Label(
-            ventana_empanadas_carne,
-            text="""Preparación:
-
-Sofreír la cebolla y el pimiento en una sartén con un poco de aceite hasta que 
-estén tiernos.
-Añadir la carne y cocinar hasta que esté bien dorada. Incorporar los huevos, 
-aceitunas, comino, pimentón, sal y pimienta. Mezclar bien.
-Dejar enfriar el relleno. Colocar una cucharada del relleno en cada disco de 
-masa para empanadas, cerrar y sellar los bordes con un tenedor.
-Hornear a 200°C durante 15-20 minutos o hasta que estén doradas.""",
-            justify="left",
-            font=("nunito", 12),
-        )
-        preparacion.pack()
-        preparacion.place(x=15, y=350)
 
     def milanesa_pollo():
-        ventana_milanesas_pollo = tk.Toplevel()
-        ventana_milanesas_pollo.title("Milanesas de pollo")
-        ventana_milanesas_pollo.geometry("670x700+300+0")
-        ventana_milanesas_pollo.resizable(width=False, height=False)
+        try:
+            ventana_milanesas_pollo = tk.Toplevel()
+            ventana_milanesas_pollo.title("Milanesas de pollo")
+            ventana_milanesas_pollo.geometry("670x700+300+0")
+            ventana_milanesas_pollo.resizable(width=False, height=False)
+            
+            # Cargar la imagen de fondo
+            imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Milanesas de pollo.png")
+            imagen_fondo = imagen_fondo.resize((670, 700), Image.Resampling.LANCZOS)
+            fondo_ventana = ImageTk.PhotoImage(imagen_fondo)
+            
+            label_fondo = tk.Label(ventana_milanesas_pollo, image=fondo_ventana)
+            label_fondo.place(x=0, y=0, relwidth=1, relheight=1)
+            
+            ventana_milanesas_pollo.fondo_ventana = fondo_ventana
 
-        #   TITULO DE LA RECETA
-        titulo = tk.Label(
-            ventana_milanesas_pollo,
-            text="""Milanesas de pollo 🍗""",
-            font=("nunito", 20),
-        )
-        titulo.pack()
-        titulo.place(x=195, y=40)
+            print("Ventana de Milanesas de pollo creada con éxito")
+        except Exception as e:
+            print(f"Error en milanesa_pollo: {e}")
+            print(traceback.format_exc())
 
-        #   INGREDIENTES
-        ingredientes = tk.Label(
-            ventana_milanesas_pollo,
-            text="""Ingredientes:
-
-4 pechugas de pollo
-1 taza de pan rallado
-1/2 taza de queso rallado
-1 huevo
-Sal y pimienta al gusto
-Aceite para freír""",
-            justify="left",
-            font=("nunito", 12),
-        )
-        ingredientes.pack()
-        ingredientes.place(x=15, y=100)
-
-        #   PREPARACIÓN
-        preparacion = tk.Label(
-            ventana_milanesas_pollo,
-            text="""Preparación:
-
-Aplastar las pechugas de pollo para que queden más finas. Salpimentar.
-Batir el huevo y mezclar el pan rallado con el queso rallado.
-Pasar las pechugas por el huevo y luego por la mezcla de pan rallado.
-Freír en aceite caliente hasta dorar y cocinar completamente. Servir con limón.
-""",
-            justify="left",
-            font=("nunito", 12),
-        )
-        preparacion.pack()
-        preparacion.place(x=15, y=350)
 
     def asado_ensalada():
-        ventana_asado_con_ensalada = tk.Toplevel()
-        ventana_asado_con_ensalada.title("Asado con ensalada criolla")
-        ventana_asado_con_ensalada.geometry("670x700+300+0")
-        ventana_asado_con_ensalada.resizable(width=False, height=False)
+        try:
+            ventana_asado_con_ensalada = tk.Toplevel()
+            ventana_asado_con_ensalada.title("Asado con ensalada criolla")
+            ventana_asado_con_ensalada.geometry("670x700+300+0")
+            ventana_asado_con_ensalada.resizable(width=False, height=False)
 
-        #   TITULO DE LA RECETA
-        titulo = tk.Label(
-            ventana_asado_con_ensalada,
-            text="""Asado con ensalada criolla 🥩""",
-            font=("nunito", 20),
-        )
-        titulo.pack()
-        titulo.place(x=195, y=40)
+            # Cargar la imagen de fondo
+            imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Asado.png")
+            imagen_fondo = imagen_fondo.resize((670, 700), Image.Resampling.LANCZOS)
+            fondo_ventana = ImageTk.PhotoImage(imagen_fondo)
+            
+            label_fondo = tk.Label(ventana_asado_con_ensalada, image=fondo_ventana)
+            label_fondo.place(x=0, y=0, relwidth=1, relheight=1)
+            
+            ventana_asado_con_ensalada.fondo_ventana = fondo_ventana
 
-        #   INGREDIENTES
-        ingredientes = tk.Label(
-            ventana_asado_con_ensalada,
-            text="""Ingredientes:
+            print("Ventana de Asado creada con éxito")
+        except Exception as e:
+            print(f"Error en asado_ensalada: {e}")
+            print(traceback.format_exc())
 
-1 kg de costillas de res
-Sal y pimienta al gusto
-1 cucharada de pimentón
-Ensalada Criolla:
 
-2 tomates grandes, picados
-1 cebolla, picada
-1 pimiento verde, picado
-1 pepino, picado
-2 cucharadas de vinagre
-3 cucharadas de aceite de oliva
-Sal y pimienta al gusto""",
-            justify="left",
-            font=("nunito", 12),
-        )
-        ingredientes.pack()
-        ingredientes.place(x=15, y=100)
-
-        #   PREPARACIÓN
-        preparacion = tk.Label(
-            ventana_asado_con_ensalada,
-            text="""Preparación:
-
-Salpimentar las costillas y espolvorear con pimentón. Cocinar a la parrilla a fuego 
-medio durante 40-50 minutos, girando ocasionalmente.
-Para la ensalada, mezclar los tomates, cebolla, pimiento y pepino en un bol.
-Añadir vinagre, aceite, sal y pimienta. Mezclar bien y servir con el asado.""",
-            justify="left",
-            font=("nunito", 12),
-        )
-        preparacion.pack()
-        preparacion.place(x=15, y=440)
 
     def lentejas_guisadas():
-        ventana_lentejas_guisadas = tk.Toplevel()
-        ventana_lentejas_guisadas.title("Lentejas guisadas")
-        ventana_lentejas_guisadas.geometry("670x700+300+0")
-        ventana_lentejas_guisadas.resizable(width=False, height=False)
+        try:
+            ventana_lentejas_guisadas = tk.Toplevel()
+            ventana_lentejas_guisadas.title("Lentejas guisadas")
+            ventana_lentejas_guisadas.geometry("670x700+300+0")
+            ventana_lentejas_guisadas.resizable(width=False, height=False)
+            
+            # Cargar la imagen de fondo
+            imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Lentejas guisadas.png")
+            imagen_fondo = imagen_fondo.resize((670, 700), Image.Resampling.LANCZOS)
+            fondo_ventana = ImageTk.PhotoImage(imagen_fondo)
+            
+            label_fondo = tk.Label(ventana_lentejas_guisadas, image=fondo_ventana)
+            label_fondo.place(x=0, y=0, relwidth=1, relheight=1)
+            
+            ventana_lentejas_guisadas.fondo_ventana = fondo_ventana
 
-        #   TITULO DE LA RECETA
-        titulo = tk.Label(
-            ventana_lentejas_guisadas,
-            text="""Lentejas guisadas 🍵""",
-            font=("nunito", 20),
-        )
-        titulo.pack()
-        titulo.place(x=195, y=40)
+            print("Ventana de Lentejas guisadas creada con éxito")
+        except Exception as e:
+            print(f"Error en lentejas_guisadas: {e}")
+            print(traceback.format_exc())
 
-        #   INGREDIENTES
-        ingredientes = tk.Label(
-            ventana_lentejas_guisadas,
-            text="""Ingredientes:
 
-1 taza de lentejas
-1 cebolla picada
-1 zanahoria picada
-2 dientes de ajo picados
-1 pimiento verde picado
-1 litro de caldo de verduras
-1 cucharada de pimentón
-Sal y pimienta al gusto
-Aceite de oliva""",
-            justify="left",
-            font=("nunito", 12),
-        )
-        ingredientes.pack()
-        ingredientes.place(x=15, y=100)
 
-        #   PREPARACIÓN
-        preparacion = tk.Label(
-            ventana_lentejas_guisadas,
-            text="""Preparación:
-
-Sofreír la cebolla, zanahoria, ajo y pimiento en aceite hasta que 
-estén tiernos.
-Añadir las lentejas, el pimentón, el caldo, sal y pimienta. Cocinar a 
-fuego lento durante 30-40 minutos, o hasta que las lentejas estén 
-tiernas. Ajustar la sazón.""",
-            justify="left",
-            font=("nunito", 12),
-        )
-        preparacion.pack()
-        preparacion.place(x=15, y=350)
 
     def pastas_bolognesa():
-        ventana_pastas_bolognesa = tk.Toplevel()
-        ventana_pastas_bolognesa.title("Pastas con salsa bolognesa")
-        ventana_pastas_bolognesa.geometry("670x700+300+0")
-        ventana_pastas_bolognesa.resizable(width=False, height=False)
+        try:
+            ventana_pastas_bolognesa = tk.Toplevel()
+            ventana_pastas_bolognesa.title("Pastas con salsa bolognesa")
+            ventana_pastas_bolognesa.geometry("670x700+300+0")
+            ventana_pastas_bolognesa.resizable(width=False, height=False)
+            
+            # Cargar la imagen de fondo
+            imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Pastas bolognesa.png")
+            imagen_fondo = imagen_fondo.resize((670, 700), Image.Resampling.LANCZOS)
+            fondo_ventana = ImageTk.PhotoImage(imagen_fondo)
+            
+            label_fondo = tk.Label(ventana_pastas_bolognesa, image=fondo_ventana)
+            label_fondo.place(x=0, y=0, relwidth=1, relheight=1)
+            
+            ventana_pastas_bolognesa.fondo_ventana = fondo_ventana
 
-        #   TITULO DE LA RECETA
-        titulo = tk.Label(
-            ventana_pastas_bolognesa,
-            text="""Pastas con salsa bolognesa 🍝""",
-            font=("nunito", 20),
-        )
-        titulo.pack()
-        titulo.place(x=195, y=40)
+            print("Ventana de Pastas bolognesa creada con éxito")
+        except Exception as e:
+            print(f"Error en pastas_bolognesa: {e}")
+            print(traceback.format_exc())
 
-        #   INGREDIENTES
-        ingredientes = tk.Label(
-            ventana_pastas_bolognesa,
-            text="""Ingredientes:
 
-250 g de pasta (espaguetis, penne, etc.)
-300 g de carne picada de res
-1 cebolla picada
-2 dientes de ajo picados
-1 zanahoria picada
-400 g de salsa de tomate
-1 cucharadita de orégano
-Sal y pimienta al gusto
-Queso rallado para servir""",
-            justify="left",
-            font=("nunito", 12),
-        )
-        ingredientes.pack()
-        ingredientes.place(x=15, y=100)
-
-        #   PREPARACIÓN
-        preparacion = tk.Label(
-            ventana_pastas_bolognesa,
-            text="""Preparación:
-
-Cocinar la pasta según las instrucciones del paquete.
-Sofreír la cebolla, ajo y zanahoria en una sartén con aceite hasta que 
-estén tiernos. Añadir la carne y cocinar hasta dorar.
-Incorporar la salsa de tomate, orégano, sal y pimienta. Cocinar a fuego 
-lento durante 20 minutos.
-Mezclar con la pasta cocida y servir con queso rallado.""",
-            justify="left",
-            font=("nunito", 12),
-        )
-        preparacion.pack()
-        preparacion.place(x=15, y=350)
 
     def pollo_papas():
-        ventana_pollo_papas = tk.Toplevel()
-        ventana_pollo_papas.title("Pollo al horno con papas")
-        ventana_pollo_papas.geometry("670x700+300+0")
-        ventana_pollo_papas.resizable(width=False, height=False)
+        try:
+            ventana_pollo_papas = tk.Toplevel()
+            ventana_pollo_papas.title("Pollo al horno con papas")
+            ventana_pollo_papas.geometry("670x700+300+0")
+            ventana_pollo_papas.resizable(width=False, height=False)
+            
+            # Cargar la imagen de fondo
+            imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Pollo al horno con papas.png")
+            imagen_fondo = imagen_fondo.resize((670, 700), Image.Resampling.LANCZOS)
+            fondo_ventana = ImageTk.PhotoImage(imagen_fondo)
+            
+            label_fondo = tk.Label(ventana_pollo_papas, image=fondo_ventana)
+            label_fondo.place(x=0, y=0, relwidth=1, relheight=1)
+            
+            ventana_pollo_papas.fondo_ventana = fondo_ventana
 
-        #   TITULO DE LA RECETA
-        titulo = tk.Label(
-            ventana_pollo_papas,
-            text="""Pollo al horno con papas 🍗""",
-            font=("nunito", 20),
-        )
-        titulo.pack()
-        titulo.place(x=195, y=40)
+            print("Ventana de Pollo al horno con papas creada con éxito")
+        except Exception as e:
+            print(f"Error en pollo_papas: {e}")
+            print(traceback.format_exc())
 
-        #   INGREDIENTES
-        ingredientes = tk.Label(
-            ventana_pollo_papas,
-            text="""Ingredientes:
 
-4 muslos de pollo
-4 papas, peladas y cortadas en trozos
-1 cucharadita de romero seco
-3 dientes de ajo picados
-3 cucharadas de aceite de oliva
-Sal y pimienta al gusto""",
-            justify="left",
-            font=("nunito", 12),
-        )
-        ingredientes.pack()
-        ingredientes.place(x=15, y=100)
-
-        #   PREPARACIÓN
-        preparacion = tk.Label(
-            ventana_pollo_papas,
-            text="""Preparación:
-
-Precalentar el horno a 200°C.
-Mezclar el aceite, romero, ajo, sal y pimienta. Frotar la mezcla 
-sobre el pollo y las papas.
-Colocar en una fuente para horno y hornear durante 40-50 minutos, 
-o hasta que el pollo esté bien cocido y las papas estén tiernas.""",
-            justify="left",
-            font=("nunito", 12),
-        )
-        preparacion.pack()
-        preparacion.place(x=15, y=350)
 
     def empanadas_jyq():
         ventana_empanada_jyq = tk.Toplevel()
