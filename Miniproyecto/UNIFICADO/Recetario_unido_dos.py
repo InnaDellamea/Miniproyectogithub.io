@@ -1983,13 +1983,13 @@ Gracias por confiar en COWORKING. Estamos emocionados de llevar sus proyectos al
 # Configuración de la ventana principal (ANA)
 ventana = tk.Tk()
 ventana.title("Recetario")
-ventana.geometry("670x700+300+0")
+ventana.geometry("570x600+300+0")
 ventana.resizable(width=False, height=False)
 
 
 # Carga la imagen de fondo
 fondo = ImageTk.PhotoImage(
-    Image.open("./Miniproyecto/UNIFICADO/IMAGENES/FONDO1.png").resize((670, 700))
+    Image.open("./Miniproyecto/UNIFICADO/IMAGENES/FONDO RECETARIO.png").resize((570, 600))
 )
 
 
@@ -2002,13 +2002,13 @@ entrada_usuario = PlaceholderEntry(
     ventana,
     placeholder="Ej: Juan",
     foreground="white",
-    bg="#380039",
+    bg="#300039",
     borderwidth=0,
     relief="flat",
     font=("Roboto Condensed", 14),
 )
 # Ajusta la posición y tamaño de la entrada
-entrada_usuario.place(x=230, y=500, width=190, height=50)
+entrada_usuario.place(x=195, y=445, width=190, height=50)
 
 # MANEJO DEL BOTON "OK"
 
@@ -2034,7 +2034,7 @@ boton_ok = tk.Button(
     activeforeground="white",
     font=("Roboto Condensed", 15),
 )
-boton_ok.place(x=482, y=500, width=50, height=50)  # Ajusta la posición del botón
+boton_ok.place(x=445, y=445, width=50, height=50)  # Ajusta la posición del botón
 
 
 # Correr la ventana
