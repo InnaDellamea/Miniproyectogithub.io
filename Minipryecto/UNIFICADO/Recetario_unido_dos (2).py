@@ -6,8 +6,6 @@ from PIL import Image, ImageTk
 from typing import Self
 from tkinter import messagebox, simpledialog
 from tkinter import Scrollbar, Text
-import traceback
-
 
 # Placeholder para la entrada de usuario
 
@@ -68,170 +66,361 @@ def abrir_ventana_salado():
     # ------------------------------------------------------- RECETAS SALADAS (Cami) ---------------------------------------------------------------------------
 
     def milanesa_napo():
-        try:
-            ventana_mila_napo = tk.Toplevel()
-            ventana_mila_napo.title("Milanesas a la napolitana")
-            ventana_mila_napo.geometry("670x700+300+0")
-            ventana_mila_napo.resizable(width=False, height=False)
+        ventana_mila_napo = tk.Toplevel()
+        ventana_mila_napo.title("Milanesas a la napolitana")
+        ventana_mila_napo.geometry("670x700+300+0")
+        ventana_mila_napo.resizable(width=False, height=False)
 
-            # Cargar la imagen de fondo
-            imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Milas napo.png")
-            imagen_fondo = imagen_fondo.resize((670, 700), Image.Resampling.LANCZOS)
-            fondo_ventana = ImageTk.PhotoImage(imagen_fondo)
-        
-            label_fondo = tk.Label(ventana_mila_napo, image=fondo_ventana)
-            label_fondo.place(x=0, y=0, relwidth=1, relheight=1)
-        
-            ventana_mila_napo.fondo_ventana = fondo_ventana
-        
-            print("Ventana de milanesas creada con éxito")
-        except Exception as e:
-            print(f"Error en milanesa_napo: {e}")
-            print(traceback.format_exc())
+        #   TITULO DE LA RECETA
+        titulo = tk.Label(
+            ventana_mila_napo,
+            text="""Milanesas a la napolitana 🍕""",
+            font=("Roboto Condensed", 18),
+            foreground="black"
+        )
+        titulo.pack()
+        titulo.place(x=195, y=40)
 
+        #   INGREDIENTES
+        ingredientes = tk.Label(
+            ventana_mila_napo,
+            text="""Ingredientes:
+
+4 milanesas de carne de res
+1 taza de pan rallado
+1/2 taza de queso rallado
+1 huevo
+1 taza de salsa de tomate
+100 g de jamón cocido
+Aceite para freír
+Sal y pimienta al gusto""",
+            justify="left",
+            font=("nunito", 12),
+        )
+        ingredientes.pack()
+        ingredientes.place(x=15, y=100)
+
+        #   PREPARACIÓN
+        preparación = tk.Label(
+            ventana_mila_napo,
+            text="""Preparación:
+
+Batir el huevo en un plato y mezclar el pan rallado con el queso rallado en otro.
+Pasar las milanesas por el huevo y luego por la mezcla de pan rallado y queso.
+Freír en aceite caliente hasta dorar y cocinar completamente. Colocar sobre papel 
+absorbente.
+Precalentar el horno a 180°C. Colocar las milanesas en una fuente para horno, cubrir 
+con salsa de tomate, una loncha de jamón y más queso rallado.
+Hornear durante 10-15 minutos o hasta que el queso esté fundido y dorado.""",
+            justify="left",
+            font=("nunito", 12),
+        )
+        preparación.pack()
+        preparación.place(x=15, y=350)
 
     def empanadas_carne():
-        try:
-            ventana_empanadas_carne = tk.Toplevel()
-            ventana_empanadas_carne.title("Empanadas de carne")
-            ventana_empanadas_carne.geometry("670x700+300+0")
-            ventana_empanadas_carne.resizable(width=False, height=False)
-            
-            # Cargar la imagen de fondo
-            imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Empanadas de carne.png")
-            imagen_fondo = imagen_fondo.resize((670, 700), Image.Resampling.LANCZOS)
-            fondo_ventana = ImageTk.PhotoImage(imagen_fondo)
-            
-            label_fondo = tk.Label(ventana_empanadas_carne, image=fondo_ventana)
-            label_fondo.place(x=0, y=0, relwidth=1, relheight=1)
-            
-            ventana_empanadas_carne.fondo_ventana = fondo_ventana
+        ventana_empanadas_carne = tk.Toplevel()
+        ventana_empanadas_carne.title("Empanadas de carne")
+        ventana_empanadas_carne.geometry("670x700+300+0")
+        ventana_empanadas_carne.resizable(width=False, height=False)
 
-            print("Ventana de Empanadas de carne creada con éxito")
-        except Exception as e:
-            print(f"Error en empanadas_carne: {e}")
-            print(traceback.format_exc())
+        #   TITULO DE LA RECETA
+        titulo = tk.Label(
+            ventana_empanadas_carne,
+            text="""Empanadas de carne 🥟""",
+            font=("nunito", 20),
+        )
+        titulo.pack()
+        titulo.place(x=195, y=40)
+        #   INGREDIENTES
+        ingredientes = tk.Label(
+            ventana_empanadas_carne,
+            text="""Ingredientes:
 
+500 g de carne de res picada
+1 cebolla picada
+1 pimiento rojo picado
+2 huevos duros picados
+10 aceitunas verdes picadas
+1 cucharadita de comino
+1 cucharadita de pimentón
+Sal y pimienta al gusto
+Masa para empanadas (puedes comprarla ya hecha o hacerla en casa)""",
+            justify="left",
+            font=("nunito", 12),
+        )
+        ingredientes.pack()
+        ingredientes.place(x=15, y=100)
+
+        #   PREPARACIÓN
+        preparacion = tk.Label(
+            ventana_empanadas_carne,
+            text="""Preparación:
+
+Sofreír la cebolla y el pimiento en una sartén con un poco de aceite hasta que 
+estén tiernos.
+Añadir la carne y cocinar hasta que esté bien dorada. Incorporar los huevos, 
+aceitunas, comino, pimentón, sal y pimienta. Mezclar bien.
+Dejar enfriar el relleno. Colocar una cucharada del relleno en cada disco de 
+masa para empanadas, cerrar y sellar los bordes con un tenedor.
+Hornear a 200°C durante 15-20 minutos o hasta que estén doradas.""",
+            justify="left",
+            font=("nunito", 12),
+        )
+        preparacion.pack()
+        preparacion.place(x=15, y=350)
 
     def milanesa_pollo():
-        try:
-            ventana_milanesas_pollo = tk.Toplevel()
-            ventana_milanesas_pollo.title("Milanesas de pollo")
-            ventana_milanesas_pollo.geometry("670x700+300+0")
-            ventana_milanesas_pollo.resizable(width=False, height=False)
-            
-            # Cargar la imagen de fondo
-            imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Milanesas de pollo.png")
-            imagen_fondo = imagen_fondo.resize((670, 700), Image.Resampling.LANCZOS)
-            fondo_ventana = ImageTk.PhotoImage(imagen_fondo)
-            
-            label_fondo = tk.Label(ventana_milanesas_pollo, image=fondo_ventana)
-            label_fondo.place(x=0, y=0, relwidth=1, relheight=1)
-            
-            ventana_milanesas_pollo.fondo_ventana = fondo_ventana
+        ventana_milanesas_pollo = tk.Toplevel()
+        ventana_milanesas_pollo.title("Milanesas de pollo")
+        ventana_milanesas_pollo.geometry("670x700+300+0")
+        ventana_milanesas_pollo.resizable(width=False, height=False)
 
-            print("Ventana de Milanesas de pollo creada con éxito")
-        except Exception as e:
-            print(f"Error en milanesa_pollo: {e}")
-            print(traceback.format_exc())
+        #   TITULO DE LA RECETA
+        titulo = tk.Label(
+            ventana_milanesas_pollo,
+            text="""Milanesas de pollo 🍗""",
+            font=("nunito", 20),
+        )
+        titulo.pack()
+        titulo.place(x=195, y=40)
 
+        #   INGREDIENTES
+        ingredientes = tk.Label(
+            ventana_milanesas_pollo,
+            text="""Ingredientes:
+
+4 pechugas de pollo
+1 taza de pan rallado
+1/2 taza de queso rallado
+1 huevo
+Sal y pimienta al gusto
+Aceite para freír""",
+            justify="left",
+            font=("nunito", 12),
+        )
+        ingredientes.pack()
+        ingredientes.place(x=15, y=100)
+
+        #   PREPARACIÓN
+        preparacion = tk.Label(
+            ventana_milanesas_pollo,
+            text="""Preparación:
+
+Aplastar las pechugas de pollo para que queden más finas. Salpimentar.
+Batir el huevo y mezclar el pan rallado con el queso rallado.
+Pasar las pechugas por el huevo y luego por la mezcla de pan rallado.
+Freír en aceite caliente hasta dorar y cocinar completamente. Servir con limón.
+""",
+            justify="left",
+            font=("nunito", 12),
+        )
+        preparacion.pack()
+        preparacion.place(x=15, y=350)
 
     def asado_ensalada():
-        try:
-            ventana_asado_con_ensalada = tk.Toplevel()
-            ventana_asado_con_ensalada.title("Asado con ensalada criolla")
-            ventana_asado_con_ensalada.geometry("670x700+300+0")
-            ventana_asado_con_ensalada.resizable(width=False, height=False)
+        ventana_asado_con_ensalada = tk.Toplevel()
+        ventana_asado_con_ensalada.title("Asado con ensalada criolla")
+        ventana_asado_con_ensalada.geometry("670x700+300+0")
+        ventana_asado_con_ensalada.resizable(width=False, height=False)
 
-            # Cargar la imagen de fondo
-            imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Asado.png")
-            imagen_fondo = imagen_fondo.resize((670, 700), Image.Resampling.LANCZOS)
-            fondo_ventana = ImageTk.PhotoImage(imagen_fondo)
-            
-            label_fondo = tk.Label(ventana_asado_con_ensalada, image=fondo_ventana)
-            label_fondo.place(x=0, y=0, relwidth=1, relheight=1)
-            
-            ventana_asado_con_ensalada.fondo_ventana = fondo_ventana
+        #   TITULO DE LA RECETA
+        titulo = tk.Label(
+            ventana_asado_con_ensalada,
+            text="""Asado con ensalada criolla 🥩""",
+            font=("nunito", 20),
+        )
+        titulo.pack()
+        titulo.place(x=195, y=40)
 
-            print("Ventana de Asado creada con éxito")
-        except Exception as e:
-            print(f"Error en asado_ensalada: {e}")
-            print(traceback.format_exc())
+        #   INGREDIENTES
+        ingredientes = tk.Label(
+            ventana_asado_con_ensalada,
+            text="""Ingredientes:
 
+1 kg de costillas de res
+Sal y pimienta al gusto
+1 cucharada de pimentón
+Ensalada Criolla:
 
+2 tomates grandes, picados
+1 cebolla, picada
+1 pimiento verde, picado
+1 pepino, picado
+2 cucharadas de vinagre
+3 cucharadas de aceite de oliva
+Sal y pimienta al gusto""",
+            justify="left",
+            font=("nunito", 12),
+        )
+        ingredientes.pack()
+        ingredientes.place(x=15, y=100)
+
+        #   PREPARACIÓN
+        preparacion = tk.Label(
+            ventana_asado_con_ensalada,
+            text="""Preparación:
+
+Salpimentar las costillas y espolvorear con pimentón. Cocinar a la parrilla a fuego 
+medio durante 40-50 minutos, girando ocasionalmente.
+Para la ensalada, mezclar los tomates, cebolla, pimiento y pepino en un bol.
+Añadir vinagre, aceite, sal y pimienta. Mezclar bien y servir con el asado.""",
+            justify="left",
+            font=("nunito", 12),
+        )
+        preparacion.pack()
+        preparacion.place(x=15, y=440)
 
     def lentejas_guisadas():
-        try:
-            ventana_lentejas_guisadas = tk.Toplevel()
-            ventana_lentejas_guisadas.title("Lentejas guisadas")
-            ventana_lentejas_guisadas.geometry("670x700+300+0")
-            ventana_lentejas_guisadas.resizable(width=False, height=False)
-            
-            # Cargar la imagen de fondo
-            imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Lentejas guisadas.png")
-            imagen_fondo = imagen_fondo.resize((670, 700), Image.Resampling.LANCZOS)
-            fondo_ventana = ImageTk.PhotoImage(imagen_fondo)
-            
-            label_fondo = tk.Label(ventana_lentejas_guisadas, image=fondo_ventana)
-            label_fondo.place(x=0, y=0, relwidth=1, relheight=1)
-            
-            ventana_lentejas_guisadas.fondo_ventana = fondo_ventana
+        ventana_lentejas_guisadas = tk.Toplevel()
+        ventana_lentejas_guisadas.title("Lentejas guisadas")
+        ventana_lentejas_guisadas.geometry("670x700+300+0")
+        ventana_lentejas_guisadas.resizable(width=False, height=False)
 
-            print("Ventana de Lentejas guisadas creada con éxito")
-        except Exception as e:
-            print(f"Error en lentejas_guisadas: {e}")
-            print(traceback.format_exc())
+        #   TITULO DE LA RECETA
+        titulo = tk.Label(
+            ventana_lentejas_guisadas,
+            text="""Lentejas guisadas 🍵""",
+            font=("nunito", 20),
+        )
+        titulo.pack()
+        titulo.place(x=195, y=40)
 
+        #   INGREDIENTES
+        ingredientes = tk.Label(
+            ventana_lentejas_guisadas,
+            text="""Ingredientes:
 
+1 taza de lentejas
+1 cebolla picada
+1 zanahoria picada
+2 dientes de ajo picados
+1 pimiento verde picado
+1 litro de caldo de verduras
+1 cucharada de pimentón
+Sal y pimienta al gusto
+Aceite de oliva""",
+            justify="left",
+            font=("nunito", 12),
+        )
+        ingredientes.pack()
+        ingredientes.place(x=15, y=100)
 
+        #   PREPARACIÓN
+        preparacion = tk.Label(
+            ventana_lentejas_guisadas,
+            text="""Preparación:
+
+Sofreír la cebolla, zanahoria, ajo y pimiento en aceite hasta que 
+estén tiernos.
+Añadir las lentejas, el pimentón, el caldo, sal y pimienta. Cocinar a 
+fuego lento durante 30-40 minutos, o hasta que las lentejas estén 
+tiernas. Ajustar la sazón.""",
+            justify="left",
+            font=("nunito", 12),
+        )
+        preparacion.pack()
+        preparacion.place(x=15, y=350)
 
     def pastas_bolognesa():
-        try:
-            ventana_pastas_bolognesa = tk.Toplevel()
-            ventana_pastas_bolognesa.title("Pastas con salsa bolognesa")
-            ventana_pastas_bolognesa.geometry("670x700+300+0")
-            ventana_pastas_bolognesa.resizable(width=False, height=False)
-            
-            # Cargar la imagen de fondo
-            imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Pastas bolognesa.png")
-            imagen_fondo = imagen_fondo.resize((670, 700), Image.Resampling.LANCZOS)
-            fondo_ventana = ImageTk.PhotoImage(imagen_fondo)
-            
-            label_fondo = tk.Label(ventana_pastas_bolognesa, image=fondo_ventana)
-            label_fondo.place(x=0, y=0, relwidth=1, relheight=1)
-            
-            ventana_pastas_bolognesa.fondo_ventana = fondo_ventana
+        ventana_pastas_bolognesa = tk.Toplevel()
+        ventana_pastas_bolognesa.title("Pastas con salsa bolognesa")
+        ventana_pastas_bolognesa.geometry("670x700+300+0")
+        ventana_pastas_bolognesa.resizable(width=False, height=False)
 
-            print("Ventana de Pastas bolognesa creada con éxito")
-        except Exception as e:
-            print(f"Error en pastas_bolognesa: {e}")
-            print(traceback.format_exc())
+        #   TITULO DE LA RECETA
+        titulo = tk.Label(
+            ventana_pastas_bolognesa,
+            text="""Pastas con salsa bolognesa 🍝""",
+            font=("nunito", 20),
+        )
+        titulo.pack()
+        titulo.place(x=195, y=40)
 
+        #   INGREDIENTES
+        ingredientes = tk.Label(
+            ventana_pastas_bolognesa,
+            text="""Ingredientes:
 
+250 g de pasta (espaguetis, penne, etc.)
+300 g de carne picada de res
+1 cebolla picada
+2 dientes de ajo picados
+1 zanahoria picada
+400 g de salsa de tomate
+1 cucharadita de orégano
+Sal y pimienta al gusto
+Queso rallado para servir""",
+            justify="left",
+            font=("nunito", 12),
+        )
+        ingredientes.pack()
+        ingredientes.place(x=15, y=100)
+
+        #   PREPARACIÓN
+        preparacion = tk.Label(
+            ventana_pastas_bolognesa,
+            text="""Preparación:
+
+Cocinar la pasta según las instrucciones del paquete.
+Sofreír la cebolla, ajo y zanahoria en una sartén con aceite hasta que 
+estén tiernos. Añadir la carne y cocinar hasta dorar.
+Incorporar la salsa de tomate, orégano, sal y pimienta. Cocinar a fuego 
+lento durante 20 minutos.
+Mezclar con la pasta cocida y servir con queso rallado.""",
+            justify="left",
+            font=("nunito", 12),
+        )
+        preparacion.pack()
+        preparacion.place(x=15, y=350)
 
     def pollo_papas():
-        try:
-            ventana_pollo_papas = tk.Toplevel()
-            ventana_pollo_papas.title("Pollo al horno con papas")
-            ventana_pollo_papas.geometry("670x700+300+0")
-            ventana_pollo_papas.resizable(width=False, height=False)
-            
-            # Cargar la imagen de fondo
-            imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Pollo al horno con papas.png")
-            imagen_fondo = imagen_fondo.resize((670, 700), Image.Resampling.LANCZOS)
-            fondo_ventana = ImageTk.PhotoImage(imagen_fondo)
-            
-            label_fondo = tk.Label(ventana_pollo_papas, image=fondo_ventana)
-            label_fondo.place(x=0, y=0, relwidth=1, relheight=1)
-            
-            ventana_pollo_papas.fondo_ventana = fondo_ventana
+        ventana_pollo_papas = tk.Toplevel()
+        ventana_pollo_papas.title("Pollo al horno con papas")
+        ventana_pollo_papas.geometry("670x700+300+0")
+        ventana_pollo_papas.resizable(width=False, height=False)
 
-            print("Ventana de Pollo al horno con papas creada con éxito")
-        except Exception as e:
-            print(f"Error en pollo_papas: {e}")
-            print(traceback.format_exc())
+        #   TITULO DE LA RECETA
+        titulo = tk.Label(
+            ventana_pollo_papas,
+            text="""Pollo al horno con papas 🍗""",
+            font=("nunito", 20),
+        )
+        titulo.pack()
+        titulo.place(x=195, y=40)
 
+        #   INGREDIENTES
+        ingredientes = tk.Label(
+            ventana_pollo_papas,
+            text="""Ingredientes:
 
+4 muslos de pollo
+4 papas, peladas y cortadas en trozos
+1 cucharadita de romero seco
+3 dientes de ajo picados
+3 cucharadas de aceite de oliva
+Sal y pimienta al gusto""",
+            justify="left",
+            font=("nunito", 12),
+        )
+        ingredientes.pack()
+        ingredientes.place(x=15, y=100)
+
+        #   PREPARACIÓN
+        preparacion = tk.Label(
+            ventana_pollo_papas,
+            text="""Preparación:
+
+Precalentar el horno a 200°C.
+Mezclar el aceite, romero, ajo, sal y pimienta. Frotar la mezcla 
+sobre el pollo y las papas.
+Colocar en una fuente para horno y hornear durante 40-50 minutos, 
+o hasta que el pollo esté bien cocido y las papas estén tiernas.""",
+            justify="left",
+            font=("nunito", 12),
+        )
+        preparacion.pack()
+        preparacion.place(x=15, y=350)
 
     def empanadas_jyq():
         ventana_empanada_jyq = tk.Toplevel()
@@ -1492,34 +1681,19 @@ def abrir_ventana_mis_rece():
     ventana_saludo.title("Mis Recetas")
     ventana_saludo.geometry("670x700+300+0")
     ventana_saludo.resizable(width=False, height=False)
-    
-    # Cargar la imagen de fondo
-    try:
-        imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/FONDO5.png")
-        imagen_fondo = imagen_fondo.resize((670, 700), Image.Resampling.LANCZOS)
-        fondo_ventana_saludo = ImageTk.PhotoImage(imagen_fondo)
-        
-        # Crear un label para la imagen de fondo y agregarlo a la ventana
-        label_fondo = tk.Label(ventana_saludo, image=fondo_ventana_saludo)
-        label_fondo.place(x=0, y=0, relwidth=1, relheight=1)
-        
-        # Mantener una referencia a la imagen
-        ventana_saludo.fondo_ventana_saludo = fondo_ventana_saludo
-        
-        print("Imagen de fondo cargada con éxito")
-    except Exception as e:
-        print(f"Error al cargar la imagen: {e}")
 
     recetas = {}  # las recetas que se agreguen se añaden en este conjunto
 
-    # Creamos el frame de la ventana y lo asociamos a ventana_saludo
-    frame = tk.Frame(ventana_saludo, bg='#2DC0A3')
-    frame.place(x=42.5, y=150, width=585, height=530)
+    # creamos el frame de la ventana y lo asociamos a ventana_saludo
+    frame = tk.Frame(ventana_saludo, bg="#E6E6E6")
+    frame.pack(fill=tk.BOTH, expand=True)
 
-    # Usamos canvas para modificar de forma más fácil el diseño del marco
-    canvas = tk.Canvas(frame, bg='#2DC0A3')
-    scrollbar = tk.Scrollbar(frame, orient="vertical", command=canvas.yview)
-    scrollbar_marco = tk.Frame(canvas, bg='#2DC0A3')
+    # usamos canvas para modificar de forma más facil el diseño del marco
+    canvas = tk.Canvas(frame, bg="#E6E6E6")
+    scrollbar = tk.Scrollbar(
+        frame, orient="vertical", command=canvas.yview
+    )  # el scrollbar
+    scrollbar_marco = tk.Frame(canvas, bg="#E6E6E6")
 
     scrollbar_marco.bind(
         "<Configure>", lambda e: canvas.configure(scrollregion=canvas.bbox("all"))
@@ -1533,9 +1707,12 @@ def abrir_ventana_mis_rece():
 
     title_label = tk.Label(
         scrollbar_marco,
-        bg='white',
-        fg='white' 
-    )
+        text="MIS RECETAS",
+        padx=200,
+        pady=30,
+        font=("Roboto Condensed", 30),
+        bg="#E6E6E6",
+    )  # label mis recetas
     title_label.grid(row=0, column=0, columnspan=3, pady=10)
 
     def añadir_receta():
@@ -1547,43 +1724,16 @@ def abrir_ventana_mis_rece():
     añadir_boton = tk.Button(
         scrollbar_marco,
         text="+",
-        width=10,
-        height=2,
+        width=14,
+        height=4,
         command=añadir_receta,
-        font=("Roboto Condensed", 14),
-        fg="white",
-        bg="#2B5353", 
-        activebackground="#2B0E54",
-        relief=tk.FLAT
+        font= ("Roboto Condensed", 12),
+        fg= "black",
+        bg= "#FFFFFF",
+        borderwidth= 2,
+        activeforeground= "gold"
     )
-    añadir_boton.grid(row=1, column=1, pady=10)
-
-    def actualizar_recetas():
-        for widget in scrollbar_marco.winfo_children():
-            if isinstance(widget, tk.Button) and widget != añadir_boton:
-                widget.destroy()
-
-        row, column = 2, 0
-        for recipe in recetas:
-            button = tk.Button(
-                scrollbar_marco,
-                text=recipe,
-                width=10,
-                height=2,
-                command=lambda r=recipe: editar_receta(r),
-                bg="#3A7373",
-                fg="white",
-                font=("Roboto Condensed", 10),
-                relief=tk.FLAT,
-                activebackground="#2B5353"
-            )
-            button.grid(row=row, column=column, padx=5, pady=5)
-            column += 1
-            if column == 3:
-                column = 0
-                row += 1
-
-        añadir_boton.grid(row=row, column=column, padx=5, pady=10)
+    añadir_boton.grid(row=1, column=0, pady=10)
 
     def actualizar_recetas():  # cuando se crea la receta se actualiza la cantidad ya creadas y se agrega el boton
         for widget in scrollbar_marco.winfo_children():
@@ -1614,10 +1764,10 @@ def abrir_ventana_mis_rece():
         editar_ventana.title(nombre_receta)
         editar_ventana.geometry("670x700+300+0")
         editar_ventana.resizable(False, False)
-        editar_ventana.configure(bg="#2DC0A3")
+        editar_ventana.configure(bg="#adaaa8")
         ventana.resizable(width=False, height=False)
 
-        bloc_notas = tk.Text(editar_ventana, bg="#C3E8E6", font=("Arial"))
+        bloc_notas = tk.Text(editar_ventana, bg="#E6E6E6", font=("Arial"))
         bloc_notas.insert(tk.END, recetas[nombre_receta])
         bloc_notas.pack(expand=True, fill=tk.BOTH)
 
@@ -1627,9 +1777,6 @@ def abrir_ventana_mis_rece():
             command=lambda: guardar_receta(
                 nombre_receta, bloc_notas.get("1.0", tk.END)
             ),
-            bg="#009A92", 
-            activebackground="white",
-            relief=tk.FLAT
         )
         boton_guardar.pack(side=tk.LEFT, padx=10, pady=10)
 
@@ -1637,9 +1784,6 @@ def abrir_ventana_mis_rece():
             editar_ventana,
             text="Eliminar",
             command=lambda: eliminar_receta(nombre_receta, editar_ventana),
-            bg="#009A92", 
-            activebackground="white",
-            relief=tk.FLAT
         )
         boton_borrar.pack(side=tk.RIGHT, padx=10, pady=10)
 
@@ -1652,7 +1796,6 @@ def abrir_ventana_mis_rece():
         ventana.destroy()
         actualizar_recetas()
 
-    print("Ventana 'Mis Recetas' creada")
 
 # Cierra ventana mis recetas
 def botonvolver():
@@ -1669,7 +1812,7 @@ def abrir_ventana_saludo(nombre):
     ventana_saludo.geometry("670x700+300+0")
     nombre_capitalizado = nombre.capitalize()
     ventana_saludo.resizable(width=False, height=False)
-
+   
     #Cargar la imagen de fondo
     from PIL import Image, ImageTk
 
@@ -1830,9 +1973,9 @@ def mostrar_temporizador():
             messagebox.showinfo("Tiempo terminado", "¡El tiempo se ha agotado!")
             reset()
 
-    def stop():
-        nonlocal no_pausado
-        no_pausado = False
+    # def stop():
+    #     nonlocal no_pausado
+    #     no_pausado = False
 
     def reset():
         nonlocal tiempo_total, no_pausado
@@ -1848,16 +1991,14 @@ def mostrar_temporizador():
         if no_pausado:
             countdown()
 
-    btn_start = tk.Button(temporizador_ventana, text="Iniciar", bd="5", command=submit)
-    btn_stop = tk.Button(temporizador_ventana, text="Detener", bd="5", command=stop)
-    btn_reset = tk.Button(temporizador_ventana, text="Reiniciar", bd="5", command=reset)
-    #btn_pause = tk.Button(temporizador_ventana, text="Pausar/Reanudar", bd="5", command=pausa)
+    btn_start = tk.Button(temporizador_ventana, text="Establecer el tiempo", bd='5', command=submit)
+    btn_stop = tk.Button(temporizador_ventana, text="Detener", bd='5', command=reset)
+    btn_pause = tk.Button(temporizador_ventana, text="Pausa", bd='5', command=pausa)
 
     btn_start.place(x=90, y=60)
     btn_stop.place(x=90, y=100)
-    btn_reset.place(x=90, y=140)
-    #btn_pause.place(x=90, y=140)
-    
+    btn_pause.place(x=90, y=140)
+   
 
 # Función para cerrar una ventana
 
@@ -1867,55 +2008,34 @@ def cerrar_ventana(ventana):
 
 
 # Función para mostrar la ventana "Acerca de"
+
+
 def mostrar_acerca_de():
-    ventana_acerca_de = tk.Toplevel()
+    # Crear la ventana "Acerca de"
+    ventana_acerca_de = tk.Tk()
     ventana_acerca_de.title("Acerca de")
     ventana_acerca_de.geometry("670x700+300+0")
     ventana_acerca_de.resizable(width=False, height=False)
 
-    # Cargar la imagen de fondo
-    try:
-        imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/FONDO7.png")
-        imagen_fondo = imagen_fondo.resize((670, 700), Image.Resampling.LANCZOS)
-        fondo_ventana = ImageTk.PhotoImage(imagen_fondo)
-        
-        label_fondo = tk.Label(ventana_acerca_de, image=fondo_ventana)
-        label_fondo.place(x=0, y=0, relwidth=1, relheight=1)
-        
-        # Mantener una referencia a la imagen
-        ventana_acerca_de.fondo_ventana = fondo_ventana
-        
-        print("Imagen de fondo cargada con éxito")
-    except Exception as e:
-        print(f"Error al cargar la imagen de fondo: {e}")
-
     # Crear un Frame para el texto con scroll
-    frame_texto = tk.Frame(ventana_acerca_de, bg='#300039')
-    frame_texto.place(x=42.5, y=150, width=585, height=530)
+    frame_texto = tk.Frame(ventana_acerca_de)
+    # Posiciona el Frame en el centro
+    frame_texto.place(relx=0.5, rely=0.5, anchor="center")
 
     # Crear un Text con Scrollbar
-    texto_container = tk.Frame(frame_texto, bg='#300039')
-    texto_container.pack(fill=tk.BOTH, expand=True, padx=20, pady=20)
-
-    scrollbar = tk.Scrollbar(texto_container)
+    scrollbar = Scrollbar(frame_texto)
     scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
 
-    texto = tk.Text(
-        texto_container,
-        height=20,
-        width=60,
-        wrap=tk.WORD,
-        yscrollcommand=scrollbar.set,
-        font=("Roboto Condensed", 12),
-        bg='#300039',
-        fg='white',
-        border=0
+    texto = Text(
+        frame_texto, height=25, width=70, wrap=tk.WORD, yscrollcommand=scrollbar.set
     )
-    texto.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+    texto.pack(side=tk.LEFT, fill=tk.BOTH)
     scrollbar.config(command=texto.yview)
 
-    # Agregar el contenido
-    contenido = """Somos COWORKING, una empresa joven y dinámica dedicada al desarrollo web, compuesta por un talentoso equipo de estudiantes del Informatorio, quienes representan las nuevas promesas en la industria de la programación.
+    # Agregar un texto de ejemplo
+    texto.insert(
+        tk.END,
+        """Somos COWORKING, una empresa joven y dinámica dedicada al desarrollo web, compuesta por un talentoso equipo de estudiantes del Informatorio, quienes representan las nuevas promesas en la industria de la programación.
 
 Nuestro Equipo:
 Pablo Sabadini: Con una pasión por la innovación y el desarrollo front-end, Pablo se asegura de que cada proyecto tenga una interfaz intuitiva y atractiva.
@@ -1934,10 +2054,10 @@ Roberto Galeano: Roberto es nuestro ingeniero de software, que combina conocimie
 
 Eduina Nicole Dellamea: Experta en gestión de proyectos, Eduina coordina al equipo para asegurar que cada entrega sea oportuna y cumpla con los objetivos del cliente.
 
-Nuestra Misión:
+Nuestra Misión
 En COWORKING, nuestra misión es desarrollar soluciones web que no solo cumplan, sino que superen las expectativas de nuestros clientes. Trabajamos en equipo para combinar nuestras fortalezas y crear productos que son funcionales, estéticamente agradables y de alta calidad.
 
-Nuestros Valores:
+Nuestros Valores
 Innovación: Estamos comprometidos a estar a la vanguardia de la tecnología, adoptando las últimas tendencias y herramientas en desarrollo web.
 
 Colaboración: Creemos que las mejores soluciones nacen de un esfuerzo conjunto, tanto dentro de nuestro equipo como en estrecha colaboración con nuestros clientes.
@@ -1946,51 +2066,41 @@ Calidad: Nos enorgullece entregar productos que son confiables, seguros y constr
 
 Crecimiento Continuo: Como estudiantes del Informatorio, estamos en un aprendizaje constante, lo que nos permite adaptarnos rápidamente a las necesidades cambiantes del mercado.
 
-Lo Que Nos Diferencia:
+Lo Que Nos Diferencia
 Compromiso con la Excelencia: Cada miembro de COWORKING aporta su experiencia y dedicación, lo que nos permite ofrecer soluciones de desarrollo web que destacan por su calidad y creatividad.
 
 Enfoque Personalizado: Nos aseguramos de entender las necesidades específicas de cada cliente, brindando soluciones hechas a medida.
 
 Futuro Prometedor: Como jóvenes talentos en la programación, nuestro enfoque fresco y actualizado nos permite abordar los desafíos desde una perspectiva innovadora.
 
-Gracias por confiar en COWORKING. Estamos emocionados de llevar sus proyectos al siguiente nivel con nuestra pasión y habilidades en desarrollo web. ¡Juntos, construiremos el futuro digital!"""
-
-    texto.insert(tk.END, contenido)
-    texto.config(state=tk.DISABLED)
-
-    # Botón Volver
-    btn_cerrar = tk.Button(
-        frame_texto,
-        text="Volver",
-        command=ventana_acerca_de.destroy,
-        bg="#4A0E4E", 
-        fg="white",
-        activebackground="#5C1262", 
-        activeforeground="white",
-        font=("Roboto Condensed", 12, "bold"),
-        relief=tk.FLAT,
-        padx=20,
-        pady=10
+Gracias por confiar en COWORKING. Estamos emocionados de llevar sus proyectos al siguiente nivel con nuestra pasión y habilidades en desarrollo web. ¡Juntos, construiremos el futuro digital!""",
     )
-    btn_cerrar.pack(side=tk.BOTTOM, pady=20)
+    texto.config(font=("arial", 11), state=tk.DISABLED)
 
-    # Asegurarse de que la ventana se mantenga en primer plano
-    ventana_acerca_de.transient(ventana_acerca_de.master)
-    ventana_acerca_de.grab_set()
-    ventana_acerca_de.wait_window(ventana_acerca_de)
+    # Botón Volver (cierra la ventana "Acerca de")
+    btn_cerrar = tk.Button(
+        ventana_acerca_de,
+        text="Volver",
+        command=lambda: cerrar_ventana(ventana_acerca_de),
+    )
+    btn_cerrar.place(relx=0.8, rely=0.9, anchor="center")
 
 
+# btn.pack(x=150, y=400)
+
+
+# Crear la ventana principal (Lobby)
 
 # Configuración de la ventana principal (ANA)
 ventana = tk.Tk()
 ventana.title("Recetario")
-ventana.geometry("570x600+300+0")
+ventana.geometry("670x700+300+0")
 ventana.resizable(width=False, height=False)
 
 
 # Carga la imagen de fondo
 fondo = ImageTk.PhotoImage(
-    Image.open("./Miniproyecto/UNIFICADO/IMAGENES/FONDO RECETARIO.png").resize((570, 600))
+    Image.open("./Miniproyecto/UNIFICADO/IMAGENES/FONDO1.png").resize((670, 700))
 )
 
 
@@ -2003,13 +2113,13 @@ entrada_usuario = PlaceholderEntry(
     ventana,
     placeholder="Ej: Juan",
     foreground="white",
-    bg="#300039",
+    bg="#380039",
     borderwidth=0,
     relief="flat",
     font=("Roboto Condensed", 14),
 )
 # Ajusta la posición y tamaño de la entrada
-entrada_usuario.place(x=195, y=445, width=190, height=50)
+entrada_usuario.place(x=230, y=500, width=190, height=50)
 
 # MANEJO DEL BOTON "OK"
 
@@ -2035,7 +2145,7 @@ boton_ok = tk.Button(
     activeforeground="white",
     font=("Roboto Condensed", 15),
 )
-boton_ok.place(x=445, y=445, width=50, height=50)  # Ajusta la posición del botón
+boton_ok.place(x=482, y=500, width=50, height=50)  # Ajusta la posición del botón
 
 
 # Correr la ventana

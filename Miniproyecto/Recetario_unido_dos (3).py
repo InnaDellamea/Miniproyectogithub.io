@@ -7,7 +7,7 @@ from typing import Self
 from tkinter import messagebox, simpledialog
 from tkinter import Scrollbar, Text
 
-
+# Placeholder para la entrada de usuario
 class PlaceholderEntry(tk.Entry):
     def __init__(self, master=None, placeholder='', *args, **kwargs):
         super().__init__(master, *args, **kwargs)
@@ -1202,7 +1202,7 @@ def abrir_ventana_dulce():
         'candara', 12), command=brownie)
     
     
-#abre venta de MIS RECETAS 
+#abre venta de MIS RECETAS (FALTA CARGAR LO DE ROBER)
 def abrir_ventana_mis_rece():
     ventana_saludo = tk.Tk()
     ventana_saludo.title("Mis Recetas")
@@ -1210,12 +1210,12 @@ def abrir_ventana_mis_rece():
 
     recetas = {}
 
-    frame = tk.Frame(ventana_saludo, bg="#FFCCD5")
+    frame = tk.Frame(ventana_saludo, bg="#a25cd3")
     frame.pack(fill=tk.BOTH, expand=True)
 
-    canvas = tk.Canvas(frame, bg="#FFCCD5")
+    canvas = tk.Canvas(frame, bg="#a25cd3")
     scrollbar = tk.Scrollbar(frame, orient="vertical", command=canvas.yview)
-    scrollbar_marco = tk.Frame(canvas, bg="#FFCCD5")
+    scrollbar_marco = tk.Frame(canvas, bg="#a25cd3")
 
     scrollbar_marco.bind("<Configure>",lambda e: canvas.configure(scrollregion=canvas.bbox("all")))
 
@@ -1225,7 +1225,7 @@ def abrir_ventana_mis_rece():
     canvas.pack(side="left", fill="both", expand=True)
     scrollbar.pack(side="right", fill="y")
 
-    title_label = tk.Label(scrollbar_marco, text="MIS RECETAS", padx=200, pady=30, font=("Arial", 24), bg="#FFCCD5")
+    title_label = tk.Label(scrollbar_marco, text="MIS RECETAS", padx=200, pady=30, font=("Arial", 24), bg="#a25cd3")
     title_label.grid(row=0, column=0, columnspan=3, pady=10)
 
 
