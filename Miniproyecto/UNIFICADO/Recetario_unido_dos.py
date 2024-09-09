@@ -1666,7 +1666,7 @@ def abrir_ventana_saludo(nombre):
     # Crear la ventana secundaria
     ventana_saludo = tk.Toplevel()
     ventana_saludo.title("Entrada")
-    ventana_saludo.geometry("670x700+300+0")
+    ventana_saludo.geometry("570x600+300+0")
     nombre_capitalizado = nombre.capitalize()
     ventana_saludo.resizable(width=False, height=False)
 
@@ -1674,10 +1674,9 @@ def abrir_ventana_saludo(nombre):
     from PIL import Image, ImageTk
 
     try:
-        fondo2 = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/FONDO2.png").resize(
-            (670, 700)
-        )
+        fondo2 = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/FONDO ENTRADA.png").resize((570, 600))
         fondo2_tk = ImageTk.PhotoImage(fondo2)
+
     except Exception as e:
         print(f"Error al cargar la imagen de fondo: {e}")
         return  # sale de la función si no se puede cargar la imagen
@@ -1706,12 +1705,12 @@ def abrir_ventana_saludo(nombre):
     etiqueta_saludo = tk.Label(
         ventana_saludo,
         textvariable=saludo,
-        font=("Roboto Condensed", 18),
+        font=("Roboto Condensed", 16),
         bg="#2B0E54",
         fg="#FFFFFF",
         wraplength=600,  #Ajustar el wraplength si es necesario
     )
-    etiqueta_saludo.place(x=240, y=15)
+    etiqueta_saludo.place(x=205, y=12)
 
 #Creación de la barra de menú
     barra_menu = tk.Menu(ventana_saludo)
@@ -1740,11 +1739,12 @@ def abrir_ventana_saludo(nombre):
         activebackground="#2B0E54",
         activeforeground="gold",
         relief="flat",
-        width=15,
-        height=5,
+        width=12,
+        height=4,
         command=abrir_ventana_salado,
     )
-    btn_salado.place(x=58, y=432)
+    btn_salado.place(x=50, y=373)
+
     btn_dulce = tk.Button(
         ventana_saludo,
         text="Dulce",
@@ -1755,11 +1755,12 @@ def abrir_ventana_saludo(nombre):
         activebackground="#2B0E54",
         activeforeground="gold",
         relief="flat",
-        width=15,
-        height=5,
+        width=12,
+        height=4,
         command=abrir_ventana_dulce,
     )
-    btn_dulce.place(x=272, y=432)
+    btn_dulce.place(x=235, y=373)
+
     btn_mis_rece = tk.Button(
         ventana_saludo,
         text="Mis recetas",
@@ -1770,11 +1771,11 @@ def abrir_ventana_saludo(nombre):
         activebackground="#2B0E54",
         activeforeground="gold",
         relief="flat",
-        width=15,
-        height=5,
+        width=12,
+        height=4,
         command=abrir_ventana_mis_rece,
     )
-    btn_mis_rece.place(x=483, y=432)
+    btn_mis_rece.place(x=415, y=373)
 
 
 # Función para mostrar el temporizador
