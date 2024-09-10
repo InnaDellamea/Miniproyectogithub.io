@@ -1121,7 +1121,7 @@ def abrir_ventana_mis_rece():
                 width=10,
                 height=2,
                 command=lambda r=recipe: editar_receta(r),
-                bg="#3A7373",
+                bg="#00E099",
                 fg="white",
                 font=("Roboto Condensed", 10),
                 relief=tk.FLAT,
