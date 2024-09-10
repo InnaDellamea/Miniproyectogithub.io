@@ -1514,7 +1514,7 @@ Gracias por confiar en COWORKING. Estamos emocionados de llevar sus proyectos al
         frame_texto,
         text="Volver",
         command=ventana_acerca_de.destroy,
-        bg="#4A0E4E", 
+        bg="white", 
         fg="black",
         activebackground="#5C1262", 
         activeforeground="white",
