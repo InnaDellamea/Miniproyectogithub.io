@@ -51,7 +51,7 @@ def abrir_ventana_salado():
 
 # Cargar la imagen de fondo
     try:
-        imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/FONDO RECETAS SALADAS.png")
+        imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/FONDO RECETAS SALADAS2.png")
         imagen_fondo = imagen_fondo.resize((570, 600), Image.Resampling.LANCZOS)
         fondo_ventana_saludo = ImageTk.PhotoImage(imagen_fondo)
         
