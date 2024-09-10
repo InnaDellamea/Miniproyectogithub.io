@@ -39,6 +39,8 @@ class PlaceholderEntry(tk.Entry):
 
     # Crear ventana de saludo
 
+def truncate_text(text, max_length=18):
+    return text[:max_length] + '...' if len(text) > max_length else text
 
 # Crea una nueva ventana que recibe el nombre de usuario
 # abre ventana de SALADO
@@ -500,7 +502,7 @@ def abrir_ventana_dulce():
 
 # Cargar la imagen de fondo
     try:
-        imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/FONDO DULCE.png")
+        imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/FONDO DULCE2.png")
         imagen_fondo = imagen_fondo.resize((570, 600), Image.Resampling.LANCZOS)
         fondo_ventana_saludo = ImageTk.PhotoImage(imagen_fondo)
         
@@ -515,15 +517,6 @@ def abrir_ventana_dulce():
         # Si hay un error, continúa sin la imagen de fondo
 
     # ------------------------------------------------------FUNCIONES RECETAS DULCES -------------------------------------------------------------------------
-    STYLES_boton_dulce = {
-    "font": ("Roboto Condensed", 10),
-    "fg": "white",
-    "bg": "#C6003F",
-    "borderwidth": 0,
-    "relief": "flat",
-    "activebackground": "#FB004F",
-    "activeforeground": "white"
-}
 
     def cremaDeLimon():
         try:
@@ -548,14 +541,6 @@ def abrir_ventana_dulce():
         except Exception as e:
             print(f"Error en cremaDeLimon: {e}")
             print(traceback.format_exc())
-
-        boton_cerrar = tk.Button(
-            cremaDeLimon, 
-            text="Atras", 
-            command=cremaDeLimon.destroy,
-            **STYLES_boton_dulce
-        )
-        boton_cerrar.place(x=450, y=550)
 
 
     def VasitoOreo():
@@ -582,14 +567,6 @@ def abrir_ventana_dulce():
             print(f"Error en VasitoOreo: {e}")
             print(traceback.format_exc())
 
-        boton_cerrar = tk.Button(
-            VasitoOreo, 
-            text="Atras", 
-            command=VasitoOreo.destroy,
-            **STYLES_boton_dulce
-        )
-        boton_cerrar.place(x=450, y=550)
-
 
     def Trufas_de_chocolate():
         try:
@@ -614,14 +591,6 @@ def abrir_ventana_dulce():
         except Exception as e:
             print(f"Error en Trufas_de_chocolate: {e}")
             print(traceback.format_exc())
-
-        boton_cerrar = tk.Button(
-            Trufas_de_chocolate, 
-            text="Atras", 
-            command=Trufas_de_chocolate.destroy,
-            **STYLES_boton_dulce
-        )
-        boton_cerrar.place(x=450, y=558)
 
 
     def galletasDeAvena():
@@ -648,14 +617,6 @@ def abrir_ventana_dulce():
             print(f"Error en galletasDeAvena: {e}")
             print(traceback.format_exc())
 
-        boton_cerrar = tk.Button(
-            galletasDeAvena,
-            text="Atras",
-            command=galletasDeAvena.destroy,
-            **STYLES_boton_dulce
-        )
-        boton_cerrar.place(x=450, y=550)
-
 
     def bocaditosDeAvenaYMiel():
         try:
@@ -680,14 +641,6 @@ def abrir_ventana_dulce():
         except Exception as e:
             print(f"Error en bocaditosDeAvenaYMiel: {e}")
             print(traceback.format_exc())
-
-        boton_cerrar = tk.Button(
-            bocaditosDeAvenaYMiel, 
-            text="Atras", 
-            command=bocaditosDeAvenaYMiel.destroy,
-            **STYLES_boton_dulce
-        )
-        boton_cerrar.place(x=450, y=550)
 
 
     def flan():
@@ -714,14 +667,6 @@ def abrir_ventana_dulce():
             print(f"Error en flan: {e}")
             print(traceback.format_exc())
 
-        boton_cerrar = tk.Button(
-            flan, 
-            text="Atras", 
-            command=flan.destroy,
-            **STYLES_boton_dulce
-        )
-        boton_cerrar.place(x=450, y=565)
-
 
     def tartaDeYogur():
         try:
@@ -746,14 +691,6 @@ def abrir_ventana_dulce():
         except Exception as e:
             print(f"Error en tartaDeYogur: {e}")
             print(traceback.format_exc())
-
-        boton_cerrar = tk.Button(
-            tartaDeYogur, 
-            text="Atras", 
-            command=tartaDeYogur.destroy,
-            **STYLES_boton_dulce
-        )
-        boton_cerrar.place(x=450, y=550)
 
 
     def tartaDeNaranja():
@@ -780,14 +717,6 @@ def abrir_ventana_dulce():
             print(f"Error en tartaDeNaranja: {e}")
             print(traceback.format_exc())
 
-        boton_cerrar = tk.Button(
-            tartaDeNaranja,
-            text="Atras",
-            command=tartaDeNaranja.destroy,
-            **STYLES_boton_dulce
-        )
-        boton_cerrar.place(x=450, y=550)
-
 
     def choco():
         try:
@@ -812,14 +741,6 @@ def abrir_ventana_dulce():
         except Exception as e:
             print(f"Error en choco: {e}")
             print(traceback.format_exc())
-
-        boton_cerrar = tk.Button(
-            choco, 
-            text="Atras", 
-            command=choco.destroy,
-            **STYLES_boton_dulce
-        )
-        boton_cerrar.place(x=450, y=550)
 
 
     def arrozCLeche():
@@ -846,14 +767,6 @@ def abrir_ventana_dulce():
             print(f"Error en arrozCLeche: {e}")
             print(traceback.format_exc())
 
-        boton_cerrar = tk.Button(
-            arrozCLeche, 
-            text="Atras", 
-            command=arrozCLeche.destroy,
-            **STYLES_boton_dulce
-        )
-        boton_cerrar.place(x=450, y=482)
-
 
     def gelatina():
         try:
@@ -879,13 +792,6 @@ def abrir_ventana_dulce():
             print(f"Error en gelatina: {e}")
             print(traceback.format_exc())
 
-        boton_cerrar = tk.Button(
-            gelatina, 
-            text="Atras", 
-            command=gelatina.destroy,
-            **STYLES_boton_dulce
-        )
-        boton_cerrar.place(x=450, y=525)
 
     def brownie():
         try:
@@ -912,18 +818,9 @@ def abrir_ventana_dulce():
             print(traceback.format_exc())
 
 
-        boton_cerrar = tk.Button(
-            brownie, 
-            text="Atras",
-            command=brownie.destroy,
-            **STYLES_boton_dulce
-        )
-        boton_cerrar.place(x=450, y=550)
-
-
 #----------------------------------------------------- Botones de recetas dulces----------------------------------------------------------------
 
-    STYLES = {
+    STYLES_boton_dulce = {
     "font": ("Roboto Condensed", 12),
     "width": 16,
     "height": 2,
@@ -937,102 +834,106 @@ def abrir_ventana_dulce():
 
 # Boton 1: 'Crema de Limón 🍋
     boton_receta_uno = tk.Button(ventana_saludo, 
-                                text=''''Crema de Limón''',
+                                text='''Crema de Limón''',
                                 command=cremaDeLimon,
-                                **STYLES)
+                                **STYLES_boton_dulce)
     boton_receta_uno.pack()  
-    boton_receta_uno.place(x=48, y=175)
+    boton_receta_uno.place(x=40, y=175)
 
 
 # Boton 2: Vasito Oreo 🍪
     boton_receta_dos = tk.Button(ventana_saludo, 
                                 text='''Vasito Oreo''', 
                                 command=VasitoOreo,
-                                **STYLES)
+                                **STYLES_boton_dulce)
     boton_receta_dos.pack()  
-    boton_receta_dos.place(x=225, y=175)
+    boton_receta_dos.place(x=218, y=175)
 
 
 # Boton 3: Crepes 🫓
     boton_receta_tres = tk.Button(ventana_saludo, 
                             text='''Trufas de choclate''',
                             command=Trufas_de_chocolate,
-                            **STYLES)
+                            **STYLES_boton_dulce)
     boton_receta_tres.pack()  
-    boton_receta_tres.place(x=400, y=175)
+    boton_receta_tres.place(x=395, y=175)
 
 
 # Boton 4: Galletas de Avena🍪
     boton_receta_cuatro = tk.Button(ventana_saludo, 
                                 text='''Galletas de Avena''', 
                                 command=galletasDeAvena,
-                                **STYLES)
+                                **STYLES_boton_dulce)
     boton_receta_cuatro.pack()  
-    boton_receta_cuatro.place(x=48, y=265)
+    boton_receta_cuatro.place(x=40, y=265)
 
-# Boton 5: Budín de Pan🍮
+
+# Boton 5: Bocaditos de miel y avena🍮
+    button_text = "Bocados de miel y avena"
+    truncated_text = truncate_text(button_text)
+
     boton_receta_cinco = tk.Button(ventana_saludo, 
-                                text="Bocados de miel y avena", 
-                                command=bocaditosDeAvenaYMiel,
-                                **STYLES)
+                            text=truncated_text, 
+                            command=bocaditosDeAvenaYMiel,
+                               **STYLES_boton_dulce)
     boton_receta_cinco.pack()  
-    boton_receta_cinco.place(x=225, y=265)
+    boton_receta_cinco.place(x=218, y=265)
 
 # Boton 6: Flan🍮
     boton_receta_seis = tk.Button(ventana_saludo, 
                                 text='''Flan''', 
                                 command=flan,
-                                **STYLES)
+                                **STYLES_boton_dulce)
     boton_receta_seis.pack()  
-    boton_receta_seis.place(x=400, y=265)
+    boton_receta_seis.place(x=395, y=265)
 
 # Boton 7: Tarta de yogur al Horno 🥧
     boton_receta_siete = tk.Button(ventana_saludo, 
                                 text='''Tarta de yogur''', 
                                 command=tartaDeYogur,
-                                **STYLES)
+                                **STYLES_boton_dulce)
     boton_receta_siete.pack()  
-    boton_receta_siete.place(x=48, y=350)
+    boton_receta_siete.place(x=40, y=350)
 
 # Boton 8: Tarta de Naranja🍊
     boton_receta_ocho = tk.Button(ventana_saludo, 
                                 text='''Tarta de Naranja''', 
                                 command=tartaDeNaranja,
-                                **STYLES)
+                                **STYLES_boton_dulce)
     boton_receta_ocho.pack()  
-    boton_receta_ocho.place(x=225, y=350)
+    boton_receta_ocho.place(x=218, y=350)
 
 # Boton 9: Postrecito de Chocolate🍫
     boton_receta_nueve = tk.Button(ventana_saludo, 
                                 text='''Postre de Chocolate''', 
                                 command=choco,
-                                **STYLES)
+                                **STYLES_boton_dulce)
     boton_receta_nueve.pack()  
-    boton_receta_nueve.place(x=398, y=355)
+    boton_receta_nueve.place(x=395, y=355)
 
 # Boton 10: Arroz con Leche 🥣
     boton_receta_diez = tk.Button(ventana_saludo, 
                                 text='''Arroz con Leche''', 
                                 command=arrozCLeche,
-                                **STYLES)
+                                **STYLES_boton_dulce)
     boton_receta_diez.pack()  
-    boton_receta_diez.place(x=48, y=440)
+    boton_receta_diez.place(x=40, y=440)
 
 # Boton 11: Gelatina de Frutilla 🍓
     boton_receta_once = tk.Button(ventana_saludo, 
                                 text='''Gelatina de Frutilla''', 
                                 command=gelatina,
-                                **STYLES)
+                                **STYLES_boton_dulce)
     boton_receta_once.pack()  
-    boton_receta_once.place(x=225, y=440)
+    boton_receta_once.place(x=218, y=440)
 
 # Boton 12: 'Brownie 🍫'
     boton_receta_doce = tk.Button(ventana_saludo, 
                                 text='Brownie ', 
                                 command=brownie,
-                                **STYLES)
+                                **STYLES_boton_dulce)
     boton_receta_doce.pack()  
-    boton_receta_doce.place(x=400, y=440)
+    boton_receta_doce.place(x=395, y=440)
 
 
 # abre ventana de MIS RECETAS
@@ -1290,11 +1191,11 @@ def abrir_ventana_saludo(nombre):
         activebackground="#2B0E54",
         activeforeground="gold",
         relief="flat",
-        width=12,
+        width=10,
         height=4,
         command=abrir_ventana_salado,
     )
-    btn_salado.place(x=50, y=373)
+    btn_salado.place(x=45, y=373)
 
     btn_dulce = tk.Button(
         ventana_saludo,
@@ -1306,11 +1207,11 @@ def abrir_ventana_saludo(nombre):
         activebackground="#2B0E54",
         activeforeground="gold",
         relief="flat",
-        width=12,
+        width=10,
         height=4,
         command=abrir_ventana_dulce,
     )
-    btn_dulce.place(x=235, y=373)
+    btn_dulce.place(x=230, y=373)
 
     btn_mis_rece = tk.Button(
         ventana_saludo,
@@ -1322,11 +1223,11 @@ def abrir_ventana_saludo(nombre):
         activebackground="#2B0E54",
         activeforeground="gold",
         relief="flat",
-        width=12,
+        width=10,
         height=4,
         command=abrir_ventana_mis_rece,
     )
-    btn_mis_rece.place(x=415, y=373)
+    btn_mis_rece.place(x=410, y=373)
 
 
 # Función para mostrar el temporizador
