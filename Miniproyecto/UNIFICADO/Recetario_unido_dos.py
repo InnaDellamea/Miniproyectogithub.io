@@ -388,7 +388,7 @@ def abrir_ventana_salado():
         **STYLES_salado 
     )
     boton_receta_tres.pack()  
-    boton_receta_tres.place(x=390, y=175)
+    boton_receta_tres.place(x=395, y=175)
 
     # Boton 4: Asado con ensalada criolla
     boton_receta_cuatro = tk.Button(
