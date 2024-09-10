@@ -366,7 +366,7 @@ def abrir_ventana_salado():
         **STYLES_salado
     )
     boton_receta_uno.pack()  
-    boton_receta_uno.place(x=48, y=175)
+    boton_receta_uno.place(x=40, y=175)
 
     # Boton 2: Empanadas de carne
     boton_receta_dos = tk.Button(
@@ -377,7 +377,7 @@ def abrir_ventana_salado():
         **STYLES_salado
     )
     boton_receta_dos.pack() 
-    boton_receta_dos.place(x=225, y=175)
+    boton_receta_dos.place(x=218, y=175)
 
     # Boton 3: Milanesas de poll
     boton_receta_tres = tk.Button(
@@ -388,7 +388,7 @@ def abrir_ventana_salado():
         **STYLES_salado 
     )
     boton_receta_tres.pack()  
-    boton_receta_tres.place(x=400, y=175)
+    boton_receta_tres.place(x=390, y=175)
 
     # Boton 4: Asado con ensalada criolla
     boton_receta_cuatro = tk.Button(
@@ -399,7 +399,7 @@ def abrir_ventana_salado():
         **STYLES_salado
     )
     boton_receta_cuatro.pack()
-    boton_receta_cuatro.place(x=48, y=265)
+    boton_receta_cuatro.place(x=40, y=265)
 
     # Boton 5: Lentejas guisadas
     boton_receta_cinco = tk.Button(
@@ -409,7 +409,7 @@ def abrir_ventana_salado():
         **STYLES_salado
     )
     boton_receta_cinco.pack() 
-    boton_receta_cinco.place(x=225, y=265)
+    boton_receta_cinco.place(x=218, y=265)
 
     # Boton 6: Pastas con salsa bolognesa
     boton_receta_seis = tk.Button(
@@ -420,7 +420,7 @@ def abrir_ventana_salado():
         **STYLES_salado
     )
     boton_receta_seis.pack() 
-    boton_receta_seis.place(x=400, y=265)
+    boton_receta_seis.place(x=395, y=265)
 
     # Boton 7: Pollo al horno con papas
     boton_receta_siete = tk.Button(
@@ -431,7 +431,7 @@ def abrir_ventana_salado():
         **STYLES_salado
     )
     boton_receta_siete.pack() 
-    boton_receta_siete.place(x=48, y=350)
+    boton_receta_siete.place(x=40, y=350)
 
     # Boton 8: Empanadas de jamon y queso
     boton_receta_ocho = tk.Button(
@@ -442,7 +442,7 @@ def abrir_ventana_salado():
         **STYLES_salado
     )
     boton_receta_ocho.pack() 
-    boton_receta_ocho.place(x=225, y=350)
+    boton_receta_ocho.place(x=220, y=350)
 
     # Boton 9: Tarta de espinaca y queso
     boton_receta_nueve = tk.Button(
@@ -453,7 +453,7 @@ def abrir_ventana_salado():
         **STYLES_salado
     )
     boton_receta_nueve.pack() 
-    boton_receta_nueve.place(x=400, y=350)
+    boton_receta_nueve.place(x=395, y=350)
 
     # Boton 10: Guiso de res con papas
     boton_receta_diez = tk.Button(
@@ -464,7 +464,7 @@ def abrir_ventana_salado():
         **STYLES_salado
     )
     boton_receta_diez.pack() 
-    boton_receta_diez.place(x=48, y=440)
+    boton_receta_diez.place(x=40, y=440)
 
 
     # Boton 11: Quiche de jamon y queso
@@ -476,7 +476,7 @@ def abrir_ventana_salado():
         **STYLES_salado
     )
     boton_receta_once.pack()  
-    boton_receta_once.place(x=225, y=440)
+    boton_receta_once.place(x=215, y=440)
 
     # Boton 12: Fideos con tuco
     boton_receta_doce = tk.Button(
@@ -486,7 +486,7 @@ def abrir_ventana_salado():
         **STYLES_salado
     )
     boton_receta_doce.pack() 
-    boton_receta_doce.place(x=400, y=440)
+    boton_receta_doce.place(x=395, y=440)
 
 
     # ---------------------------------------------------------RECETAS DULCES (Ile) -----------------------------------------------------------------------------
@@ -1036,6 +1036,18 @@ def abrir_ventana_dulce():
 
 
 # abre ventana de MIS RECETAS
+STYLES_misRecetas = {
+    "width": 20,
+    "height": 5,
+    "fg": "white",
+    "bg": "#00E099",
+    "borderwidth": 0,
+    "relief": "flat",
+    "activebackground": "#19B583",
+    "activeforeground": "gold"
+}
+
+
 def abrir_ventana_mis_rece():
     ventana_saludo = tk.Toplevel()
     ventana_saludo.title("Mis Recetas")
@@ -1090,21 +1102,18 @@ def abrir_ventana_mis_rece():
 
     def añadir_receta():
         nombre_receta = simpledialog.askstring("Nueva Receta", "Nombre de la receta:")
+        nombre_receta = nombre_receta[:18] + '...' if len(nombre_receta) > 18 else nombre_receta
         if nombre_receta:
             recetas[nombre_receta] = ""
             actualizar_recetas()
 
+    
+
     añadir_boton = tk.Button(
         scrollbar_marco,
         text="+",
-        width=10,
-        height=2,
         command=añadir_receta,
-        font=("Roboto Condensed", 14),
-        fg="white",
-        bg="#2B5353", 
-        activebackground="#2B0E54",
-        relief=tk.FLAT
+        **STYLES_misRecetas
     )
     añadir_boton.grid(row=1, column=1, pady=10)
 
@@ -1113,19 +1122,12 @@ def abrir_ventana_mis_rece():
             if isinstance(widget, tk.Button) and widget != añadir_boton:
                 widget.destroy()
 
-        row, column = 2, 0
+        row, column = 1, 0
         for recipe in recetas:
             button = tk.Button(
                 scrollbar_marco,
-                text=recipe,
-                width=10,
-                height=2,
                 command=lambda r=recipe: editar_receta(r),
-                bg="#00E099",
-                fg="white",
-                font=("Roboto Condensed", 10),
-                relief=tk.FLAT,
-                activebackground="#2B5353"
+                **STYLES_misRecetas
             )
             button.grid(row=row, column=column, padx=5, pady=5)
             column += 1
@@ -1144,11 +1146,10 @@ def abrir_ventana_mis_rece():
         for recipe in recetas:
             button = tk.Button(
                 scrollbar_marco,
+                font= ("Roboto Condensed", 10),
                 text=recipe,
-                width=16,
-                height=5,
                 command=lambda r=recipe: editar_receta(r),
-                bg="#7585F1",
+                **STYLES_misRecetas
             )
             button.grid(row=row, column=column, padx=5, pady=5)
             column += 1
