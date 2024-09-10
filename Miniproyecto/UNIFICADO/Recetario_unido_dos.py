@@ -46,13 +46,13 @@ class PlaceholderEntry(tk.Entry):
 def abrir_ventana_salado():
     ventana_saludo = tk.Toplevel()
     ventana_saludo.title("Ventana de Salado")
-    ventana_saludo.geometry("670x700+300+0")
+    ventana_saludo.geometry("570x600+300+0")
     ventana_saludo.resizable(width=False, height=False)
 
 # Cargar la imagen de fondo
     try:
-        imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/FONDO3.png")
-        imagen_fondo = imagen_fondo.resize((670, 700), Image.Resampling.LANCZOS)
+        imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/FONDO RECETAS SALADAS.png")
+        imagen_fondo = imagen_fondo.resize((570, 600), Image.Resampling.LANCZOS)
         fondo_ventana_saludo = ImageTk.PhotoImage(imagen_fondo)
         
         # Crear un label para la imagen de fondo y agregarlo a la ventana
@@ -66,17 +66,16 @@ def abrir_ventana_salado():
         # Si hay un error, continúa sin la imagen de fondo
 
     # ------------------------------------------------------- RECETAS SALADAS (Cami) ---------------------------------------------------------------------------
-
     def milanesa_napo():
         try:
             ventana_mila_napo = tk.Toplevel()
             ventana_mila_napo.title("Milanesas a la napolitana")
-            ventana_mila_napo.geometry("670x700+300+0")
+            ventana_mila_napo.geometry("570x600+300+0")
             ventana_mila_napo.resizable(width=False, height=False)
 
             # Cargar la imagen de fondo
             imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Milas napo.png")
-            imagen_fondo = imagen_fondo.resize((670, 700), Image.Resampling.LANCZOS)
+            imagen_fondo = imagen_fondo.resize((570, 600), Image.Resampling.LANCZOS)
             fondo_ventana = ImageTk.PhotoImage(imagen_fondo)
         
             label_fondo = tk.Label(ventana_mila_napo, image=fondo_ventana)
@@ -94,12 +93,12 @@ def abrir_ventana_salado():
         try:
             ventana_empanadas_carne = tk.Toplevel()
             ventana_empanadas_carne.title("Empanadas de carne")
-            ventana_empanadas_carne.geometry("670x700+300+0")
+            ventana_empanadas_carne.geometry("570x600+300+0")
             ventana_empanadas_carne.resizable(width=False, height=False)
             
             # Cargar la imagen de fondo
             imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Empanadas de carne.png")
-            imagen_fondo = imagen_fondo.resize((670, 700), Image.Resampling.LANCZOS)
+            imagen_fondo = imagen_fondo.resize((570, 600), Image.Resampling.LANCZOS)
             fondo_ventana = ImageTk.PhotoImage(imagen_fondo)
             
             label_fondo = tk.Label(ventana_empanadas_carne, image=fondo_ventana)
@@ -117,12 +116,12 @@ def abrir_ventana_salado():
         try:
             ventana_milanesas_pollo = tk.Toplevel()
             ventana_milanesas_pollo.title("Milanesas de pollo")
-            ventana_milanesas_pollo.geometry("670x700+300+0")
+            ventana_milanesas_pollo.geometry("570x600+300+0")
             ventana_milanesas_pollo.resizable(width=False, height=False)
             
             # Cargar la imagen de fondo
-            imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Milanesas de pollo.png")
-            imagen_fondo = imagen_fondo.resize((670, 700), Image.Resampling.LANCZOS)
+            imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Milas de pollo.png")
+            imagen_fondo = imagen_fondo.resize((570, 600), Image.Resampling.LANCZOS)
             fondo_ventana = ImageTk.PhotoImage(imagen_fondo)
             
             label_fondo = tk.Label(ventana_milanesas_pollo, image=fondo_ventana)
@@ -140,12 +139,12 @@ def abrir_ventana_salado():
         try:
             ventana_asado_con_ensalada = tk.Toplevel()
             ventana_asado_con_ensalada.title("Asado con ensalada criolla")
-            ventana_asado_con_ensalada.geometry("670x700+300+0")
+            ventana_asado_con_ensalada.geometry("570x600+300+0")
             ventana_asado_con_ensalada.resizable(width=False, height=False)
 
             # Cargar la imagen de fondo
             imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Asado.png")
-            imagen_fondo = imagen_fondo.resize((670, 700), Image.Resampling.LANCZOS)
+            imagen_fondo = imagen_fondo.resize((570, 600), Image.Resampling.LANCZOS)
             fondo_ventana = ImageTk.PhotoImage(imagen_fondo)
             
             label_fondo = tk.Label(ventana_asado_con_ensalada, image=fondo_ventana)
@@ -159,17 +158,16 @@ def abrir_ventana_salado():
             print(traceback.format_exc())
 
 
-
     def lentejas_guisadas():
         try:
             ventana_lentejas_guisadas = tk.Toplevel()
             ventana_lentejas_guisadas.title("Lentejas guisadas")
-            ventana_lentejas_guisadas.geometry("670x700+300+0")
+            ventana_lentejas_guisadas.geometry("570x600+300+0")
             ventana_lentejas_guisadas.resizable(width=False, height=False)
             
             # Cargar la imagen de fondo
             imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Lentejas guisadas.png")
-            imagen_fondo = imagen_fondo.resize((670, 700), Image.Resampling.LANCZOS)
+            imagen_fondo = imagen_fondo.resize((570, 600), Image.Resampling.LANCZOS)
             fondo_ventana = ImageTk.PhotoImage(imagen_fondo)
             
             label_fondo = tk.Label(ventana_lentejas_guisadas, image=fondo_ventana)
@@ -183,18 +181,16 @@ def abrir_ventana_salado():
             print(traceback.format_exc())
 
 
-
-
     def pastas_bolognesa():
         try:
             ventana_pastas_bolognesa = tk.Toplevel()
             ventana_pastas_bolognesa.title("Pastas con salsa bolognesa")
-            ventana_pastas_bolognesa.geometry("670x700+300+0")
+            ventana_pastas_bolognesa.geometry("570x600+300+0")
             ventana_pastas_bolognesa.resizable(width=False, height=False)
             
             # Cargar la imagen de fondo
-            imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Pastas bolognesa.png")
-            imagen_fondo = imagen_fondo.resize((670, 700), Image.Resampling.LANCZOS)
+            imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Pastas bolognesas.png")
+            imagen_fondo = imagen_fondo.resize((570, 600), Image.Resampling.LANCZOS)
             fondo_ventana = ImageTk.PhotoImage(imagen_fondo)
             
             label_fondo = tk.Label(ventana_pastas_bolognesa, image=fondo_ventana)
@@ -208,17 +204,16 @@ def abrir_ventana_salado():
             print(traceback.format_exc())
 
 
-
     def pollo_papas():
         try:
             ventana_pollo_papas = tk.Toplevel()
             ventana_pollo_papas.title("Pollo al horno con papas")
-            ventana_pollo_papas.geometry("670x700+300+0")
+            ventana_pollo_papas.geometry("570x600+300+0")
             ventana_pollo_papas.resizable(width=False, height=False)
             
             # Cargar la imagen de fondo
             imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Pollo al horno con papas.png")
-            imagen_fondo = imagen_fondo.resize((670, 700), Image.Resampling.LANCZOS)
+            imagen_fondo = imagen_fondo.resize((570, 600), Image.Resampling.LANCZOS)
             fondo_ventana = ImageTk.PhotoImage(imagen_fondo)
             
             label_fondo = tk.Label(ventana_pollo_papas, image=fondo_ventana)
@@ -232,265 +227,128 @@ def abrir_ventana_salado():
             print(traceback.format_exc())
 
 
-
     def empanadas_jyq():
-        ventana_empanada_jyq = tk.Toplevel()
-        ventana_empanada_jyq.title("Empanadas de jamon y queso")
-        ventana_empanada_jyq.geometry("670x700+300+0")
-        ventana_empanada_jyq.resizable(width=False, height=False)
+        try:
+            ventana_empanada_jyq = tk.Toplevel()
+            ventana_empanada_jyq.title("Empanadas de jamon y queso")
+            ventana_empanada_jyq.geometry("570x600+300+0")
+            ventana_empanada_jyq.resizable(width=False, height=False)
+            
+            # Cargar la imagen de fondo
+            imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Empanadas de jyq.png")
+            imagen_fondo = imagen_fondo.resize((570, 600), Image.Resampling.LANCZOS)
+            fondo_ventana = ImageTk.PhotoImage(imagen_fondo)
+            
+            label_fondo = tk.Label(ventana_empanada_jyq, image=fondo_ventana)
+            label_fondo.place(x=0, y=0, relwidth=1, relheight=1)
+            
+            ventana_empanada_jyq.fondo_ventana = fondo_ventana
 
-        #   TITULO DE LA RECETA
-        titulo = tk.Label(
-            ventana_empanada_jyq,
-            text="""Empanadas de jamon y queso 🥟""",
-            font=("nunito", 20),
-        )
-        titulo.pack()
-        titulo.place(x=150, y=40)
+            print("Ventana de empanadas de jyq creada con éxito")
+        except Exception as e:
+            print(f"Error en ventana_empanada_jyq: {e}")
+            print(traceback.format_exc())
 
-        #   INGREDIENTES
-        ingredientes = tk.Label(
-            ventana_empanada_jyq,
-            text="""Ingredientes:
-
-Masa para empanadas
-200 g de jamón cocido picado
-200 g de queso mozzarella rallado
-1 huevo (para pincelar)""",
-            justify="left",
-            font=("nunito", 12),
-        )
-        ingredientes.pack()
-        ingredientes.place(x=15, y=100)
-
-        #   PREPARACIÓN
-        preparacion = tk.Label(
-            ventana_empanada_jyq,
-            text="""Preparación:
-
-Colocar una cucharada de jamón y queso en cada disco de masa para 
-empanadas. Cerrar y sellar los bordes.
-Pincelar con huevo batido y hornear a 200°C durante 15-20 minutos o 
-hasta que estén doradas.""",
-            justify="left",
-            font=("nunito", 12),
-        )
-        preparacion.pack()
-        preparacion.place(x=15, y=350)
 
     def tarta_espinaca():
-        ventana_tarta_espinaca = tk.Toplevel()
-        ventana_tarta_espinaca.title("Tarta de espinaca y queso")
-        ventana_tarta_espinaca.geometry("670x700+300+0")
-        ventana_tarta_espinaca.resizable(width=False, height=False)
+        try:
+            ventana_tarta_espinaca = tk.Toplevel()
+            ventana_tarta_espinaca.title("Tarta de espinaca y queso")
+            ventana_tarta_espinaca.geometry("570x600+300+0")
+            ventana_tarta_espinaca.resizable(width=False, height=False)
+            
+            # Cargar la imagen de fondo
+            imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Tarta de espinaca y queso.png")
+            imagen_fondo = imagen_fondo.resize((570, 600), Image.Resampling.LANCZOS)
+            fondo_ventana = ImageTk.PhotoImage(imagen_fondo)
+            
+            label_fondo = tk.Label(ventana_tarta_espinaca, image=fondo_ventana)
+            label_fondo.place(x=0, y=0, relwidth=1, relheight=1)
+            
+            ventana_tarta_espinaca.fondo_ventana = fondo_ventana
 
-        #   TITULO DE LA RECETA
-        titulo = tk.Label(
-            ventana_tarta_espinaca,
-            text="""Tarta de espinaca y queso 🥧""",
-            font=("nunito", 20),
-        )
-        titulo.pack()
-        titulo.place(x=150, y=40)
+            print("Ventana de Tarta de espinaca y queso creada con éxito")
+        except Exception as e:
+            print(f"Error en ventana_tarta_espinaca: {e}")
+            print(traceback.format_exc())
 
-        #   INGREDIENTES
-        ingredientes = tk.Label(
-            ventana_tarta_espinaca,
-            text="""Ingredientes:
-
-Masa para tarta
-300 g de espinacas frescas
-200 g de queso ricota
-100 g de queso parmesano rallado
-2 huevos
-Sal y pimienta al gusto
-Aceite de oliva""",
-            justify="left",
-            font=("nunito", 12),
-        )
-        ingredientes.pack()
-        ingredientes.place(x=15, y=100)
-
-        #   PREPARACIÓN
-        preparacion = tk.Label(
-            ventana_tarta_espinaca,
-            text="""Preparación:
-
-Precalentar el horno a 180°C.
-Sofreír las espinacas en un poco de aceite hasta que se reduzcan. 
-Escurrir el exceso de agua.
-Mezclar las espinacas con el queso ricota, parmesano, huevos, 
-sal y pimienta.
-Extender la masa en una fuente para tarta, rellenar con la mezcla 
-de espinacas y hornear durante 30-35 minutos.""",
-            justify="left",
-            font=("nunito", 12),
-        )
-        preparacion.pack()
-        preparacion.place(x=15, y=350)
 
     def guiso_res():
-        ventana_guiso_res = tk.Toplevel()
-        ventana_guiso_res.title("Guiso de res con papas")
-        ventana_guiso_res.geometry("670x700+300+0")
-        ventana_guiso_res.resizable(width=False, height=False)
+        try:
+            ventana_guiso_res = tk.Toplevel()
+            ventana_guiso_res.title("Guiso de res con papas")
+            ventana_guiso_res.geometry("570x600+300+0")
+            ventana_guiso_res.resizable(width=False, height=False)
+            
+            # Cargar la imagen de fondo
+            imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Guiso de res con papas.png")
+            imagen_fondo = imagen_fondo.resize((570, 600), Image.Resampling.LANCZOS)
+            fondo_ventana = ImageTk.PhotoImage(imagen_fondo)
+            
+            label_fondo = tk.Label(ventana_guiso_res, image=fondo_ventana)
+            label_fondo.place(x=0, y=0, relwidth=1, relheight=1)
+            
+            ventana_guiso_res.fondo_ventana = fondo_ventana
 
-        #   TITULO DE LA RECETA
-        titulo = tk.Label(
-            ventana_guiso_res, text="""Guiso de res con papas 🍵""", font=("nunito", 20)
-        )
-        titulo.pack()
-        titulo.place(x=195, y=40)
-
-        #   INGREDIENTES
-        ingredientes = tk.Label(
-            ventana_guiso_res,
-            text="""Ingredientes:
-
-500 g de carne de res en cubos
-2 papas, peladas y cortadas en cubos
-1 cebolla picada
-1 zanahoria picada
-2 dientes de ajo picados
-1 litro de caldo de carne
-1 cucharadita de comino
-Sal y pimienta al gusto
-Aceite para cocinar""",
-            justify="left",
-            font=("nunito", 12),
-        )
-        ingredientes.pack()
-        ingredientes.place(x=15, y=100)
-
-        #   PREPARACIÓN
-        preparacion = tk.Label(
-            ventana_guiso_res,
-            text="""Preparación:
-
-Sofreír la cebolla, zanahoria y ajo en aceite hasta que estén 
-tiernos. Añadir la carne y dorar.
-Incorporar las papas, caldo, comino, sal y pimienta. 
-Cocinar a fuego lento durante 1 hora, o hasta que la carne y 
-las papas estén tiernas.""",
-            justify="left",
-            font=("nunito", 12),
-        )
-        preparacion.pack()
-        preparacion.place(x=15, y=350)
-
-    def quiche_jyq():
-        ventana_quiche_jyq = tk.Toplevel()
-        ventana_quiche_jyq.title("Quiche de jamon y queso")
-        ventana_quiche_jyq.geometry("670x700+300+0")
-        ventana_quiche_jyq.resizable(width=False, height=False)
+            print("Ventana de Guiso de res con papas creada con éxito")
+        except Exception as e:
+            print(f"Error en ventana_guiso_res: {e}")
+            print(traceback.format_exc())
 
 
-        #   TITULO DE LA RECETA
-        titulo = tk.Label(
-            ventana_quiche_jyq,
-            text="""Quiche de jamon y queso 🥧""",
-            font=("nunito", 20),
-        )
-        titulo.pack()
-        titulo.place(x=195, y=40)
+    def quiche_jyq(): 
+        try: 
+            ventana_quiche_jyq = tk.Toplevel()
+            ventana_quiche_jyq.title("Quiche de jamon y queso")
+            ventana_quiche_jyq.geometry("570x600+300+0")
+            ventana_quiche_jyq.resizable(width=False, height=False)
 
-        #   INGREDIENTES
-        ingredientes = tk.Label(
-            ventana_quiche_jyq,
-            text="""Ingredientes:
+            # Cargar la imagen de fondo
+            imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Quiche de jyq.png")
+            imagen_fondo = imagen_fondo.resize((570, 600), Image.Resampling.LANCZOS)
+            fondo_ventana = ImageTk.PhotoImage(imagen_fondo)
+            
+            label_fondo = tk.Label(ventana_quiche_jyq, image=fondo_ventana)
+            label_fondo.place(x=0, y=0, relwidth=1, relheight=1)
+            
+            ventana_quiche_jyq.fondo_ventana = fondo_ventana
 
-Masa para quiche
-200 g de jamón picado
-200 g de queso cheddar rallado
-3 huevos
-200 ml de crema de leche
-Sal y pimienta al gusto""",
-            justify="left",
-            font=("nunito", 12),
-        )
-        ingredientes.pack()
-        ingredientes.place(x=15, y=100)
+            print("Ventana de Quiche de jyq creada con éxito")
+        except Exception as e:
+            print(f"Error en ventana_quiche_jyq: {e}")
+            print(traceback.format_exc())
 
-        #   PREPARACIÓN
-        preparacion = tk.Label(
-            ventana_quiche_jyq,
-            text="""Preparación:
-
-Precalentar el horno a 180°C.
-Mezclar los huevos con la crema, sal y pimienta. Agregar el 
-jamón y queso.
-Extender la masa en una fuente para quiche, verter la 
-mezcla y hornear durante 35-40 minutos.
-""",
-            justify="left",
-            font=("nunito", 12),
-        )
-        preparacion.pack()
-        preparacion.place(x=15, y=350)
 
     def fideos_tuco():
-        ventana_fideos_tuco = tk.Toplevel()
-        ventana_fideos_tuco.title("Fideos con tuco")
-        ventana_fideos_tuco.geometry("670x700+300+0")
-        ventana_fideos_tuco.resizable(width=False, height=False)
+        try:
+            ventana_fideos_tuco = tk.Toplevel()
+            ventana_fideos_tuco.title("Fideos con tuco")
+            ventana_fideos_tuco.geometry("570x600+300+0")
+            ventana_fideos_tuco.resizable(width=False, height=False)
+
+            # Cargar la imagen de fondo
+            imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Fideos con tuco.png")
+            imagen_fondo = imagen_fondo.resize((570, 600), Image.Resampling.LANCZOS)
+            fondo_ventana = ImageTk.PhotoImage(imagen_fondo)
+            
+            label_fondo = tk.Label(ventana_fideos_tuco, image=fondo_ventana)
+            label_fondo.place(x=0, y=0, relwidth=1, relheight=1)
+            
+            ventana_fideos_tuco.fondo_ventana = fondo_ventana
+
+            print("Ventana de Fideos con tuco creada con éxito")
+        except Exception as e:
+            print(f"Error en ventana_fideos_tuco: {e}")
+            print(traceback.format_exc())
 
 
-        #   TITULO DE LA RECETA
-        titulo = tk.Label(
-            ventana_fideos_tuco, text="""Fideos con tuco 🍝""", font=("nunito", 20)
-        )
-        titulo.pack()
-        titulo.place(x=195, y=40)
-
-        #   INGREDIENTES
-        ingredientes = tk.Label(
-            ventana_fideos_tuco,
-            text="""Ingredientes:
-
-250 g de fideos (espaguetis, penne, etc.)
-500 g de carne picada (res o cerdo)
-1 cebolla picada
-2 dientes de ajo picados
-1 zanahoria picada
-1 pimiento verde picado
-400 g de salsa de tomate
-1 taza de caldo de carne (o agua)
-1 cucharadita de orégano
-Sal y pimienta al gusto
-Aceite de oliva
-Queso rallado para servir""",
-            justify="left",
-            font=("nunito", 12),
-        )
-        ingredientes.pack()
-        ingredientes.place(x=15, y=100)
-
-        #   PREPARACIÓN
-        preparacion = tk.Label(
-            ventana_fideos_tuco,
-            text="""Preparación:
-
-Cocinar los fideos según las instrucciones del paquete.
-En una sartén grande, calentar aceite de oliva y sofreír la 
-cebolla, el ajo, la zanahoria y el pimiento hasta que 
-estén tiernos.
-Añadir la carne picada y cocinar hasta dorar.
-Incorporar la salsa de tomate, el caldo, el orégano, la sal 
-y la pimienta. Cocinar a fuego lento durante 20-30 minutos, 
-hasta que la salsa espese.
-Mezclar con los fideos cocidos y servir con queso rallado.""",
-            justify="left",
-            font=("nunito", 12),
-        )
-        preparacion.pack()
-        preparacion.place(x=15, y=430)
 
 #----------------------------------------------------- Botones de recetas saladas----------------------------------------------------------------
 
     STYLES_salado = {
     "font": ("Roboto Condensed", 12),
-    "width": 20,
-    "height": 3,
+    "width": 16,
+    "height": 2,
     "fg": "white",
     "bg": "#1B1270",
     "borderwidth": 0,
@@ -507,9 +365,8 @@ Mezclar con los fideos cocidos y servir con queso rallado.""",
         command=milanesa_napo,
         **STYLES_salado
     )
-    boton_receta_uno.pack()  # para que se vea
-    # para que aparezca dentro de la ventana
-    boton_receta_uno.place(x=55, y=205)
+    boton_receta_uno.pack()  
+    boton_receta_uno.place(x=48, y=175)
 
     # Boton 2: Empanadas de carne
     boton_receta_dos = tk.Button(
@@ -519,9 +376,8 @@ Mezclar con los fideos cocidos y servir con queso rallado.""",
         command=empanadas_carne,
         **STYLES_salado
     )
-    boton_receta_dos.pack()  # para que se vea
-    # para que aparezca dentro de la ventana
-    boton_receta_dos.place(x=260, y=205)
+    boton_receta_dos.pack() 
+    boton_receta_dos.place(x=225, y=175)
 
     # Boton 3: Milanesas de poll
     boton_receta_tres = tk.Button(
@@ -531,9 +387,8 @@ Mezclar con los fideos cocidos y servir con queso rallado.""",
         command=milanesa_pollo,
         **STYLES_salado 
     )
-    boton_receta_tres.pack()  # para que se vea
-    # para que aparezca dentro de la ventana
-    boton_receta_tres.place(x=460, y=205)
+    boton_receta_tres.pack()  
+    boton_receta_tres.place(x=400, y=175)
 
     # Boton 4: Asado con ensalada criolla
     boton_receta_cuatro = tk.Button(
@@ -543,9 +398,8 @@ Mezclar con los fideos cocidos y servir con queso rallado.""",
         command=asado_ensalada,
         **STYLES_salado
     )
-    boton_receta_cuatro.pack()  # para que se vea
-    # para que aparezca dentro de la ventana
-    boton_receta_cuatro.place(x=55, y=305)
+    boton_receta_cuatro.pack()
+    boton_receta_cuatro.place(x=48, y=265)
 
     # Boton 5: Lentejas guisadas
     boton_receta_cinco = tk.Button(
@@ -554,9 +408,8 @@ Mezclar con los fideos cocidos y servir con queso rallado.""",
         command=lentejas_guisadas,
         **STYLES_salado
     )
-    boton_receta_cinco.pack()  # para que se vea
-    # para que aparezca dentro de la ventana
-    boton_receta_cinco.place(x=260, y=305)
+    boton_receta_cinco.pack() 
+    boton_receta_cinco.place(x=225, y=265)
 
     # Boton 6: Pastas con salsa bolognesa
     boton_receta_seis = tk.Button(
@@ -566,9 +419,8 @@ Mezclar con los fideos cocidos y servir con queso rallado.""",
         command=pastas_bolognesa,
         **STYLES_salado
     )
-    boton_receta_seis.pack()  # para que se vea
-    # para que aparezca dentro de la ventana
-    boton_receta_seis.place(x=460, y=305)
+    boton_receta_seis.pack() 
+    boton_receta_seis.place(x=400, y=265)
 
     # Boton 7: Pollo al horno con papas
     boton_receta_siete = tk.Button(
@@ -578,9 +430,8 @@ Mezclar con los fideos cocidos y servir con queso rallado.""",
         command=pollo_papas,
         **STYLES_salado
     )
-    boton_receta_siete.pack()  # para que se vea
-    # para que aparezca dentro de la ventana
-    boton_receta_siete.place(x=55, y=405)
+    boton_receta_siete.pack() 
+    boton_receta_siete.place(x=48, y=350)
 
     # Boton 8: Empanadas de jamon y queso
     boton_receta_ocho = tk.Button(
@@ -590,9 +441,8 @@ Mezclar con los fideos cocidos y servir con queso rallado.""",
         command=empanadas_jyq,
         **STYLES_salado
     )
-    boton_receta_ocho.pack()  # para que se vea
-    # para que aparezca dentro de la ventana
-    boton_receta_ocho.place(x=260, y=405)
+    boton_receta_ocho.pack() 
+    boton_receta_ocho.place(x=225, y=350)
 
     # Boton 9: Tarta de espinaca y queso
     boton_receta_nueve = tk.Button(
@@ -602,9 +452,8 @@ Mezclar con los fideos cocidos y servir con queso rallado.""",
         command=tarta_espinaca,
         **STYLES_salado
     )
-    boton_receta_nueve.pack()  # para que se vea
-    # para que aparezca dentro de la ventana
-    boton_receta_nueve.place(x=465, y=410)
+    boton_receta_nueve.pack() 
+    boton_receta_nueve.place(x=400, y=350)
 
     # Boton 10: Guiso de res con papas
     boton_receta_diez = tk.Button(
@@ -614,9 +463,9 @@ Mezclar con los fideos cocidos y servir con queso rallado.""",
         command=guiso_res,
         **STYLES_salado
     )
-    boton_receta_diez.pack()  # para que se vea
-    # para que aparezca dentro de la ventana
-    boton_receta_diez.place(x=55, y=508)
+    boton_receta_diez.pack() 
+    boton_receta_diez.place(x=48, y=440)
+
 
     # Boton 11: Quiche de jamon y queso
     boton_receta_once = tk.Button(
@@ -626,9 +475,8 @@ Mezclar con los fideos cocidos y servir con queso rallado.""",
         command=quiche_jyq,
         **STYLES_salado
     )
-    boton_receta_once.pack()  # para que se vea
-    # para que aparezca dentro de la ventana
-    boton_receta_once.place(x=260, y=510)
+    boton_receta_once.pack()  
+    boton_receta_once.place(x=225, y=440)
 
     # Boton 12: Fideos con tuco
     boton_receta_doce = tk.Button(
@@ -637,9 +485,8 @@ Mezclar con los fideos cocidos y servir con queso rallado.""",
         command=fideos_tuco,
         **STYLES_salado
     )
-    boton_receta_doce.pack()  # para que se vea
-    # para que aparezca dentro de la ventana
-    boton_receta_doce.place(x=460, y=510)
+    boton_receta_doce.pack() 
+    boton_receta_doce.place(x=400, y=440)
 
 
     # ---------------------------------------------------------RECETAS DULCES (Ile) -----------------------------------------------------------------------------
@@ -648,13 +495,13 @@ Mezclar con los fideos cocidos y servir con queso rallado.""",
 def abrir_ventana_dulce():
     ventana_saludo = tk.Toplevel()
     ventana_saludo.title("Ventana de Dulce")
-    ventana_saludo.geometry("670x700+300+0")
+    ventana_saludo.geometry("570x600+300+0")
     ventana_saludo.resizable(width=False, height=False)
 
 # Cargar la imagen de fondo
     try:
-        imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/FONDO4.png")
-        imagen_fondo = imagen_fondo.resize((670, 700), Image.Resampling.LANCZOS)
+        imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/FONDO DULCE.png")
+        imagen_fondo = imagen_fondo.resize((570, 600), Image.Resampling.LANCZOS)
         fondo_ventana_saludo = ImageTk.PhotoImage(imagen_fondo)
         
         # Crear un label para la imagen de fondo y agregarlo a la ventana
@@ -668,694 +515,408 @@ def abrir_ventana_dulce():
         # Si hay un error, continúa sin la imagen de fondo
 
     # ------------------------------------------------------FUNCIONES RECETAS DULCES -------------------------------------------------------------------------
+    STYLES_boton_dulce = {
+    "font": ("Roboto Condensed", 10),
+    "fg": "white",
+    "bg": "#C6003F",
+    "borderwidth": 0,
+    "relief": "flat",
+    "activebackground": "#FB004F",
+    "activeforeground": "white"
+}
 
     def cremaDeLimon():
-        cremaDeLimon = tk.Toplevel()
-        cremaDeLimon.title("Crema de Limón🍋")
-        cremaDeLimon.geometry("670x700+300+0")
-        cremaDeLimon.focus()
-        cremaDeLimon.grab_set()
-        cremaDeLimon.config(cursor="heart")
-        cremaDeLimon.resizable(width=False, height=False)
+        try:
+            cremaDeLimon = tk.Toplevel()
+            cremaDeLimon.title("Crema de Limón🍋")
+            cremaDeLimon.geometry("570x600+300+0")
+            cremaDeLimon.focus()
+            cremaDeLimon.grab_set()
+            cremaDeLimon.resizable(width=False, height=False)
 
-        nombreReceta = tk.Label(
-            cremaDeLimon, text='"Crema de Limón🍋' "", font=("candara", 20)
-        )
-        nombreReceta.pack()
-        nombreReceta.place(x=195, y=40)
+            # Cargar la imagen de fondo
+            imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Crema de limon.png")
+            imagen_fondo = imagen_fondo.resize((570, 600), Image.Resampling.LANCZOS)
+            fondo_ventana = ImageTk.PhotoImage(imagen_fondo)
+            
+            label_fondo = tk.Label(cremaDeLimon, image=fondo_ventana)
+            label_fondo.place(x=0, y=0, relwidth=1, relheight=1)
+            
+            cremaDeLimon.fondo_ventana = fondo_ventana
 
-        ingredientes = tk.Label(
-            cremaDeLimon,
-            text="""Ingredientes:
+            print("Ventana de Crema de limon creada con éxito")
+        except Exception as e:
+            print(f"Error en cremaDeLimon: {e}")
+            print(traceback.format_exc())
 
- 1)  50 gramos de mantequilla sin sal
- 2)  100 gramos de azucar glass
- 3)  2 limones """,
-            justify="left",
-            font=("candara", 12),
-        )
-        ingredientes.pack()
-        ingredientes.place(x=15, y=100)
-
-        preparación = tk.Label(
-            cremaDeLimon,
-            text="""Preparación:
-
- 1) En un bowl, mezclar la mantequilla blanda con el azucar glass tamizada.
-    El resultado debe ser una crema blanda de consistencia homogénea.                          
- 2) Agregar el zumo de limon y mezclar de nuevo.
-    Comprueba la acidez, y si es necesario agrega mas zumo.
-    Dejar enfriar y disfrutar!! """,
-            justify="left",
-            font=("candara", 12),
-        )
-        preparación.pack()
-        preparación.place(x=15, y=250)
         boton_cerrar = tk.Button(
-            cremaDeLimon, text="Cerrar ventana", bg="pink", command=cremaDeLimon.destroy
+            cremaDeLimon, 
+            text="Atras", 
+            command=cremaDeLimon.destroy,
+            **STYLES_boton_dulce
         )
         boton_cerrar.place(x=450, y=550)
+
 
     def VasitoOreo():
-        VasitoOreo = tk.Toplevel()
-        VasitoOreo.title("Vasito Oreo🍪")
-        VasitoOreo.geometry("670x700+300+0")
-        VasitoOreo.focus()
-        VasitoOreo.grab_set()
-        VasitoOreo.config(cursor="heart")
-        VasitoOreo.resizable(width=False, height=False)
+        try:
+            VasitoOreo = tk.Toplevel()
+            VasitoOreo.title("Vasito Oreo🍪")
+            VasitoOreo.geometry("570x600+300+0")
+            VasitoOreo.focus()
+            VasitoOreo.grab_set()
+            VasitoOreo.resizable(width=False, height=False)
 
-        nombreReceta = tk.Label(
-            VasitoOreo, text='"Vasito Oreo🍪' "", font=("candara", 20)
-        )
-        nombreReceta.pack()
-        nombreReceta.place(x=195, y=40)
-        #   INGREDIENTES
-        ingredientes = tk.Label(
-            VasitoOreo,
-            text="""Ingredientes:
+            # Cargar la imagen de fondo
+            imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Vasito oreo.png")
+            imagen_fondo = imagen_fondo.resize((570, 600), Image.Resampling.LANCZOS)
+            fondo_ventana = ImageTk.PhotoImage(imagen_fondo)
+            
+            label_fondo = tk.Label(VasitoOreo, image=fondo_ventana)
+            label_fondo.place(x=0, y=0, relwidth=1, relheight=1)
+            
+            VasitoOreo.fondo_ventana = fondo_ventana
 
-1)	Restos de bizcochuelo, magdalena o vainillas
-2)	250 g de leche condensada
-3)	1 yogur
-4)	1 cda. de azúcar negra
-5)	1 trozo de chocolate negro
- """,
-            justify="left",
-            font=("candara", 12),
-        )
-        ingredientes.pack()
-        ingredientes.place(x=15, y=100)
+            print("Ventana de Vasito oreo creada con éxito")
+        except Exception as e:
+            print(f"Error en VasitoOreo: {e}")
+            print(traceback.format_exc())
 
-        #   PREPARACIÓN
-        preparación = tk.Label(
-            VasitoOreo,
-            text="""Preparación:
-
-1)  Desmenuza el bizcochuelo y colócalo como base en los vasitos.
-2)	Espolvorea azúcar negra para darle un toque terroso.
-3)	Bate el yogur y pon una cucharada en cada vasito.
-4)	Alterna cucharadas de leche condensada y yogur hasta llenar los vasitos.
-5)	Ralla el chocolate encima y listo! """,
-            justify="left",
-            font=("candara", 12),
-        )
-        preparación.pack()
-        preparación.place(x=15, y=250)
         boton_cerrar = tk.Button(
-            VasitoOreo, text="Cerrar ventana", bg="pink", command=VasitoOreo.destroy
+            VasitoOreo, 
+            text="Atras", 
+            command=VasitoOreo.destroy,
+            **STYLES_boton_dulce
         )
         boton_cerrar.place(x=450, y=550)
 
-    def Crepes():
-        Crepes = tk.Toplevel()
-        Crepes.title("Crepes")
-        Crepes.geometry("670x700+300+0")
-        Crepes.focus()
-        Crepes.grab_set()
-        Crepes.config(cursor="heart")
-        Crepes.resizable(width=False, height=False)
 
-        nombreReceta = tk.Label(Crepes, text='"Crepes 🫓"', font=("candara", 20))
-        nombreReceta.pack()
-        nombreReceta.place(x=150, y=20)
-        #   INGREDIENTES
-        ingredientes = tk.Label(
-            Crepes,
-            text="""Ingredientes:
-                                
-    1)  2 huevos
-    2)  150 g de harina
-    3)  1 cucharadita de azúcar (opcional)
-    4)  1 pizca de sal
-    5)  250 ml de leche
-    7)  aceite para engrasar la sartén de bizcochuelo, magdalena o vainillas
-    """,
-            justify="left",
-            font=("candara", 12),
-        )
-        ingredientes.pack()
-        ingredientes.place(x=15, y=80)
+    def Trufas_de_chocolate():
+        try:
+            Trufas_de_chocolate = tk.Toplevel()
+            Trufas_de_chocolate.title("Trufas de chocolate")
+            Trufas_de_chocolate.geometry("570x600+300+0")
+            Trufas_de_chocolate.focus()
+            Trufas_de_chocolate.grab_set()
+            Trufas_de_chocolate.resizable(width=False, height=False)
+            
+            # Cargar la imagen de fondo
+            imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Trufas de chocolate.png")
+            imagen_fondo = imagen_fondo.resize((570, 600), Image.Resampling.LANCZOS)
+            fondo_ventana = ImageTk.PhotoImage(imagen_fondo)
+            
+            label_fondo = tk.Label(Trufas_de_chocolate, image=fondo_ventana)
+            label_fondo.place(x=0, y=0, relwidth=1, relheight=1)
+            
+            Trufas_de_chocolate.fondo_ventana = fondo_ventana
 
-        #   PREPARACIÓN
-        preparación = tk.Label(
-            Crepes,
-            text="""Preparación:
-                            
-    1) En un bol ponemos los huevos, la pizca de sal, el azúcar, la harina y mezclamos bien.
-    2) Vamos incorporando la leche poco a poco batiendo siempre con unas varillas manuales o 
-    con la batidora eléctrica, hasta obtener un líquido denso.
-    Si nos han quedado grumos pasamos por un colador.
-    La consistencia tiene que ser líquida, pero con una cierta densidad: 
-    ni tan líquida como el agua ni tan densa como una crema. 
-    3) Dejamos reposar la mezcla en heladera 1 hora.
-    4) Calentamos una crepera o una sartén antiadherente. 
-    La engrasamos con apenas un chorrito de aceite que vamos a distribuir bien con papel 
-    absorbente.
-    Cuando la sartén esté caliente, con un cucharón vertemos la mezcla en el centro, 
-    e inmediatamente lo movemos inclinándolo de un lado a otro para que la mezcla 
-    se distribuya bien.
-    Tiene que ser un movimiento rápido para que los crepes nos queden finos y de un 
-    grosor homogéneo. 
-    La cantidad de masa depende del tamaño de la sartén.
-    Acompañalos con Dulce de Leche o Miel! y A Disfrutar!""",
-            justify="left",
-            font=("candara", 12),
-        )
-        preparación.pack()
-        preparación.place(x=15, y=250)
+            print("Ventana de Trufas de chocolate creada con éxito")
+        except Exception as e:
+            print(f"Error en Trufas_de_chocolate: {e}")
+            print(traceback.format_exc())
+
         boton_cerrar = tk.Button(
-            Crepes, text="Cerrar ventana", bg="pink", command=Crepes.destroy
+            Trufas_de_chocolate, 
+            text="Atras", 
+            command=Trufas_de_chocolate.destroy,
+            **STYLES_boton_dulce
         )
-        boton_cerrar.place(x=550, y=600)
+        boton_cerrar.place(x=450, y=558)
+
 
     def galletasDeAvena():
-        galletasDeAvena = tk.Toplevel()
-        galletasDeAvena.title("Galletas de Avena🍪")
-        galletasDeAvena.geometry("670x700+300+0")
-        galletasDeAvena.focus()
-        galletasDeAvena.grab_set()
-        galletasDeAvena.config(cursor="heart")
-        galletasDeAvena.resizable(width=False, height=False)
+        try:
+            galletasDeAvena = tk.Toplevel()
+            galletasDeAvena.title("Galletas de banana y avena🍪")
+            galletasDeAvena.geometry("570x600+300+0")
+            galletasDeAvena.focus()
+            galletasDeAvena.grab_set()
+            galletasDeAvena.resizable(width=False, height=False)
+            
+            # Cargar la imagen de fondo
+            imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Galletas de banana y avena.png")
+            imagen_fondo = imagen_fondo.resize((570, 600), Image.Resampling.LANCZOS)
+            fondo_ventana = ImageTk.PhotoImage(imagen_fondo)
+            
+            label_fondo = tk.Label(galletasDeAvena, image=fondo_ventana)
+            label_fondo.place(x=0, y=0, relwidth=1, relheight=1)
+            
+            galletasDeAvena.fondo_ventana = fondo_ventana
 
-        nombreReceta = tk.Label(
-            galletasDeAvena, text='"Galletas de Avena🍪' "", font=("candara", 20)
-        )
-        nombreReceta.pack()
-        nombreReceta.place(x=195, y=40)
-        #   INGREDIENTES
-        ingredientes = tk.Label(
-            galletasDeAvena,
-            text="""Ingredientes:
+            print("Ventana de Galletas de banana y avena creada con éxito")
+        except Exception as e:
+            print(f"Error en galletasDeAvena: {e}")
+            print(traceback.format_exc())
 
-1)	2 plátanos maduros
-2)	50 gramos pasas de uva
-3)	150 gramos de copos de avena
-4)	50 gramos de chips de chocolate negro
-
- """,
-            justify="left",
-            font=("candara", 12),
-        )
-        ingredientes.pack()
-        ingredientes.place(x=15, y=100)
-
-        #   PREPARACIÓN
-        preparación = tk.Label(
-            galletasDeAvena,
-            text="""Preparación:
-
-1)  Pela los plátanos, pártelos en trozos pequeños y pisalos con un tenedor.
-2)  Corta las pasas de uva, añádelas a los plátanos pisados y mezcla.
-3)  Agrega los copos de avena y mezcla bien.
-    Para esta receta de galletas de avena en microondas usaremos los copos enteros, 
-    ya que así la textura será más crujiente.
-4)  Incorpora los chips de chocolate negro y repártelos bien por la masa.
-5)  Toma pequeñas porciones de masa y dale forma redondeada con las manos.
-    Ve poniendo las galletas en un plato apto para el microondas, 
-    pero pon pocas a la vez para que se cocinen de manera uniforme.
-6)  Cocina las galletas de avena en microondas a potencia máxima durante 30 segundos. 
-    Con este tiempo debería ser suficiente, pero como cada microondas es distinto,
-    recomendamos revisar su cocción y valorar si necesitan unos segundos más.
-    Conforme se vayan haciendo, deja que se enfríen sobre una rejilla.
-    Una vez frías, ¡ya podrás comerlas!
- """,
-            justify="left",
-            font=("candara", 12),
-        )
-        preparación.pack()
-        preparación.place(x=15, y=250)
         boton_cerrar = tk.Button(
             galletasDeAvena,
-            text="Cerrar ventana",
-            bg="pink",
+            text="Atras",
             command=galletasDeAvena.destroy,
+            **STYLES_boton_dulce
         )
         boton_cerrar.place(x=450, y=550)
 
-    def budinDePan():
-        budinDePan = tk.Toplevel()
-        budinDePan.title("Budín de Pan🍮")
-        budinDePan.geometry("670x700+300+0")
-        budinDePan.focus()
-        budinDePan.grab_set()
-        budinDePan.config(cursor="heart")
-        budinDePan.resizable(width=False, height=False)
 
-        nombreReceta = tk.Label(
-            budinDePan, text='"Budín de Pan🍮' "", font=("candara", 20)
-        )
-        nombreReceta.pack()
-        nombreReceta.place(x=195, y=40)
-        #   INGREDIENTES
-        ingredientes = tk.Label(
-            budinDePan,
-            text="""Ingredientes:
-1)  3 huevos
-2)  500 mililitros de leche
-3)  1 cucharadita de esencia de vainilla
-4)  150 gramos de pan de barra o pan de molde
-5)  150 gramos de azúcar (¾ taza)
-6)  1 limón (ralladura)
-7)  200 gramos de azúcar (1 taza)
- """,
-            justify="left",
-            font=("candara", 12),
-        )
-        ingredientes.pack()
-        ingredientes.place(x=15, y=100)
+    def bocaditosDeAvenaYMiel():
+        try:
+            bocaditosDeAvenaYMiel = tk.Toplevel()
+            bocaditosDeAvenaYMiel.title("Bocaditos de avena y miel🍮")
+            bocaditosDeAvenaYMiel.geometry("570x600+300+0")
+            bocaditosDeAvenaYMiel.focus()
+            bocaditosDeAvenaYMiel.grab_set()
+            bocaditosDeAvenaYMiel.resizable(width=False, height=False)
+        
+            # Cargar la imagen de fondo
+            imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Bocaditos de miel y avena.png")
+            imagen_fondo = imagen_fondo.resize((570, 600), Image.Resampling.LANCZOS)
+            fondo_ventana = ImageTk.PhotoImage(imagen_fondo)
+            
+            label_fondo = tk.Label(bocaditosDeAvenaYMiel, image=fondo_ventana)
+            label_fondo.place(x=0, y=0, relwidth=1, relheight=1)
+            
+            bocaditosDeAvenaYMiel.fondo_ventana = fondo_ventana
 
-        #   PREPARACIÓN
-        preparación = tk.Label(
-            budinDePan,
-            text="""Preparación:
+            print("Ventana de Trufas de chocolate creada con éxito")
+        except Exception as e:
+            print(f"Error en bocaditosDeAvenaYMiel: {e}")
+            print(traceback.format_exc())
 
-1) Coloca la leche, la ralladura del limón, la esencia de vainilla y el azúcar
-   en un recipiente y mézclalo bien.
-2) Agrega el pan desmenuzado, remueve y deja que se empape bien.
-3) Prepara el caramelo líquido colocando un poco de azúcar en una olla y cocínalo a fuego
-   bajo-medio hasta que empiece a derretirse. Añade poco a poco más azúcar hasta acabar
-   con todo para que se vaya derritiendo de forma homogénea y no queden grumos.
-4) Bate los huevos enteros en otro recipiente y cuando estén listos agrégalos a la mezcla
-   de leche y pan. Mézclalo todo con un tenedor hasta que el pan empiece a desmenuzarse 
-   ligeramente o, si prefieres que no te queden grumos, con una batidora eléctrica. 
-5) Con el caramelo aún líquido y caliente, cubre el molde por toda la base y las paredes
-   de forma uniforme.
-6) Una vez que se haya secado completamente el caramelo líquido, vierte la mezcla reposada
-   y tápalo con film.
-7) Lleva el budin de pan al microondas y cocínalo durante 7 minutos a la mitad de la potencia 
-   Después, cocina otros 9 minutos a máxima potencia.
-   Una vez bien cocido, retíralo y déjalo enfriar como mínimo 1 hora antes de servirlo. 
- """,
-            justify="left",
-            font=("candara", 12),
-        )
-        preparación.pack()
-        preparación.place(x=15, y=260)
         boton_cerrar = tk.Button(
-            budinDePan, text="Cerrar ventana", bg="pink", command=budinDePan.destroy
+            bocaditosDeAvenaYMiel, 
+            text="Atras", 
+            command=bocaditosDeAvenaYMiel.destroy,
+            **STYLES_boton_dulce
         )
-        boton_cerrar.place(x=500, y=630)
+        boton_cerrar.place(x=450, y=550)
+
 
     def flan():
-        flan = tk.Toplevel()
-        flan.title("Flan🍮")
-        flan.geometry("670x700+300+0")
-        flan.focus()
-        flan.grab_set()
-        flan.config(cursor="heart")
-        flan.resizable(width=False, height=False)
+        try:
+            flan = tk.Toplevel()
+            flan.title("Flan🍮")
+            flan.geometry("570x600+300+0")
+            flan.focus()
+            flan.grab_set()
+            flan.resizable(width=False, height=False)
+            
+            # Cargar la imagen de fondo
+            imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Flan.png")
+            imagen_fondo = imagen_fondo.resize((570, 600), Image.Resampling.LANCZOS)
+            fondo_ventana = ImageTk.PhotoImage(imagen_fondo)
+            
+            label_fondo = tk.Label(flan, image=fondo_ventana)
+            label_fondo.place(x=0, y=0, relwidth=1, relheight=1)
+            
+            flan.fondo_ventana = fondo_ventana
 
+            print("Ventana de Flan creada con éxito")
+        except Exception as e:
+            print(f"Error en flan: {e}")
+            print(traceback.format_exc())
 
-        nombreReceta = tk.Label(flan, text='"Flan🍮' "", font=("candara", 20))
-        nombreReceta.pack()
-        nombreReceta.place(x=195, y=40)
-        #   INGREDIENTES
-        ingredientes = tk.Label(
-            flan,
-            text="""Ingredientes:
-
-1)  300 mililitros de Leche (1¼ tazas)
-2)	5 Huevos
-3)  135 gramos de Azúcar blanco
-4)  1 pizca de Esencia de vainilla
-5)  100 gramos de Azúcar blanco para el caramelo
-
- """,
-            justify="left",
-            font=("candara", 12),
-        )
-        ingredientes.pack()
-        ingredientes.place(x=15, y=100)
-
-        #   PREPARACIÓN
-        preparación = tk.Label(
-            flan,
-            text="""Preparación:
-
-1) Caramelo: colocamos los 100 gramos de azúcar en una sartén. 
-   Cuando observemos que comienza a derretirse, movemos con una espátula hasta que 
-   se convierta en caramelo líquido.
-2) Distribuimos el caramelo en moldes individuales, y reservamos.
-3) En un bol  batimos los huevos con el azúcar. 
-4) Colocamos en una olla, añadimos la leche, la esencia de vainilla y cocinamos 
-   hasta que alcance el primer hervor. 
-5) Cuando empiece a hervir la mezcla, la retiramos del fuego y la vertemos en los moldes
-   que reservamos con el caramelo. 
-6) Cocinamos durante 3 minutos a máxima potencia.
-   Retiramos y dejamos enfriar. 
-   Si observamos que el flan todavía no está listo, lo dejamos un minuto más y 
-   volvemos a comprobarlo.¡Listo! 
- """,
-            justify="left",
-            font=("candara", 12),
-        )
-        preparación.pack()
-        preparación.place(x=15, y=250)
         boton_cerrar = tk.Button(
-            flan, text="Cerrar ventana", bg="pink", command=flan.destroy
+            flan, 
+            text="Atras", 
+            command=flan.destroy,
+            **STYLES_boton_dulce
         )
-        boton_cerrar.place(x=450, y=550)
+        boton_cerrar.place(x=450, y=565)
+
 
     def tartaDeYogur():
-        tartaDeYogur = tk.Toplevel()
-        tartaDeYogur.title("Tarta de Yogur🥧")
-        tartaDeYogur.geometry("670x700+300+0")
-        tartaDeYogur.focus()
-        tartaDeYogur.grab_set()
-        tartaDeYogur.config(cursor="heart")
-        tartaDeYogur.resizable(width=False, height=False)
+        try:
+            tartaDeYogur = tk.Toplevel()
+            tartaDeYogur.title("Tarta de Yogur🥧")
+            tartaDeYogur.geometry("570x600+300+0")
+            tartaDeYogur.focus()
+            tartaDeYogur.grab_set()
+            tartaDeYogur.resizable(width=False, height=False)
 
+            # Cargar la imagen de fondo
+            imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Tarta de yogur.png")
+            imagen_fondo = imagen_fondo.resize((570, 600), Image.Resampling.LANCZOS)
+            fondo_ventana = ImageTk.PhotoImage(imagen_fondo)
+            
+            label_fondo = tk.Label(tartaDeYogur, image=fondo_ventana)
+            label_fondo.place(x=0, y=0, relwidth=1, relheight=1)
+            
+            tartaDeYogur.fondo_ventana = fondo_ventana
 
-        nombreReceta = tk.Label(
-            tartaDeYogur, text='"Tarta de Yogur🥧' "", font=("candara", 20)
-        )
-        nombreReceta.pack()
-        nombreReceta.place(x=195, y=40)
+            print("Ventana de tartaDeYogur creada con éxito")
+        except Exception as e:
+            print(f"Error en tartaDeYogur: {e}")
+            print(traceback.format_exc())
 
-        ingredientes = tk.Label(
-            tartaDeYogur,
-            text="""Ingredientes:
-
-1) 	625 g yogur griego sin azúcar
-2)	4 huevos 
-3)	50 g edulcorante
-4)	Unas gotitas de esencia de vainilla
- """,
-            justify="left",
-            font=("candara", 12),
-        )
-        ingredientes.pack()
-        ingredientes.place(x=15, y=100)
-
-        preparación = tk.Label(
-            tartaDeYogur,
-            text="""Preparación:
-
-1)	Batimos todos los ingredientes en un bol.
-2)	Vertemos la mezcla en un molde desmontable y forrado o engrasado.
-3)	Con el horno previamente precalentado a 170ºC, horneamos durante unos 70-90min, 
-    hasta que se doren los bordes.
-4)	Dejamos reposar y enfriamos por completo en la heladera.
-5)	Opcionalmente, podemos decorar con un poco de mermelada sin azúcar. 
-                    ¡Y lista!
- """,
-            justify="left",
-            font=("candara", 12),
-        )
-        preparación.pack()
-        preparación.place(x=15, y=250)
         boton_cerrar = tk.Button(
-            tartaDeYogur, text="Cerrar ventana", bg="pink", command=tartaDeYogur.destroy
+            tartaDeYogur, 
+            text="Atras", 
+            command=tartaDeYogur.destroy,
+            **STYLES_boton_dulce
         )
         boton_cerrar.place(x=450, y=550)
+
 
     def tartaDeNaranja():
-        tartaDeNaranja = tk.Toplevel()
-        tartaDeNaranja.title("Tarta de Naranja🍊")
-        tartaDeNaranja.geometry("670x700+300+0")
-        tartaDeNaranja.focus()
-        tartaDeNaranja.grab_set()
-        tartaDeNaranja.config(cursor="heart")
-        tartaDeNaranja.resizable(width=False, height=False)
+        try:
+            tartaDeNaranja = tk.Toplevel()
+            tartaDeNaranja.title("Tarta de Naranja🍊")
+            tartaDeNaranja.geometry("570x600+300+0")
+            tartaDeNaranja.focus()
+            tartaDeNaranja.grab_set()
+            tartaDeNaranja.resizable(width=False, height=False)
+        
+            # Cargar la imagen de fondo
+            imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Tarta de naranja.png")
+            imagen_fondo = imagen_fondo.resize((570, 600), Image.Resampling.LANCZOS)
+            fondo_ventana = ImageTk.PhotoImage(imagen_fondo)
+            
+            label_fondo = tk.Label(tartaDeNaranja, image=fondo_ventana)
+            label_fondo.place(x=0, y=0, relwidth=1, relheight=1)
+            
+            tartaDeNaranja.fondo_ventana = fondo_ventana
 
+            print("Ventana de tartaDeNaranja creada con éxito")
+        except Exception as e:
+            print(f"Error en tartaDeNaranja: {e}")
+            print(traceback.format_exc())
 
-        nombreReceta = tk.Label(
-            tartaDeNaranja, text='"Tarta de Naranja🍊' "", font=("candara", 20)
-        )
-        nombreReceta.pack()
-        nombreReceta.place(x=195, y=40)
-
-        ingredientes = tk.Label(
-            tartaDeNaranja,
-            text="""Ingredientes:
-
-1)  200 ml leche evaporada
-2)	200 ml nata líquida para montar (crema de leche)
-3)  100 ml zumo de naranja
-4)	3 láminas gelatina neutra (o 7,5g de gelatina en polvo)
-5)	Edulcorante al gusto (yo 60g eritritol)
-6)	La ralladura de una naranja
-""",
-            justify="left",
-            font=("candara", 12),
-        )
-        ingredientes.pack()
-        ingredientes.place(x=15, y=100)
-
-        preparación = tk.Label(
-            tartaDeNaranja,
-            text="""Preparación:
-
-1) Hidratamos la gelatina en agua fría hasta que esté blandita.
-2) En un cazo a fuego medio, ponemos el zumo de naranja. Escurrimos la gelatina 
-   y la integramos en el zumo. Añadimos el edulcorante hasta que se integre bien. Reservamos.
-3) En un bol, batimos la leche evaporada y la nata bien fría,añadimos la ralladura de 
-   naranja y batimos un poco más.
-4) Vertemos el zumo de naranja con gelatina, y lo integramos con movimientos envolventes.
-5) Ponemos nuestra mezcla en un molde, mejor si es de silicona, y congelamos durante al
-   menos 4 horas.
-   Desmoldamos, ¡y lista!""",
-            justify="left",
-            font=("candara", 12),
-        )
-        preparación.pack()
-        preparación.place(x=15, y=270)
         boton_cerrar = tk.Button(
             tartaDeNaranja,
-            text="Cerrar ventana",
-            bg="pink",
+            text="Atras",
             command=tartaDeNaranja.destroy,
+            **STYLES_boton_dulce
         )
         boton_cerrar.place(x=450, y=550)
+
 
     def choco():
-        choco = tk.Toplevel()
-        choco.title("Postre de Chocolate🍫")
-        choco.geometry("670x700+300+0")
-        choco.focus()
-        choco.grab_set()
-        choco.config(cursor="heart")
-        choco.resizable(width=False, height=False)
+        try:
+            choco = tk.Toplevel()
+            choco.title("Postre de Chocolate🍫")
+            choco.geometry("570x600+300+0")
+            choco.focus()
+            choco.grab_set()
+            choco.resizable(width=False, height=False)
 
+            # Cargar la imagen de fondo
+            imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Postre de chocolate.png")
+            imagen_fondo = imagen_fondo.resize((570, 600), Image.Resampling.LANCZOS)
+            fondo_ventana = ImageTk.PhotoImage(imagen_fondo)
+            
+            label_fondo = tk.Label(choco, image=fondo_ventana)
+            label_fondo.place(x=0, y=0, relwidth=1, relheight=1)
+            
+            choco.fondo_ventana = fondo_ventana
 
-        nombreReceta = tk.Label(
-            choco, text='"Postre de Chocolate🍫"', font=("candara", 20)
-        )
-        nombreReceta.pack()
-        nombreReceta.place(x=195, y=40)
+            print("Ventana de choco creada con éxito")
+        except Exception as e:
+            print(f"Error en choco: {e}")
+            print(traceback.format_exc())
 
-        ingredientes = tk.Label(
-            choco,
-            text="""Ingredientes:
-
-1) 125 ml. yogurt natural sin azúcar
-2) 1 sobrecito de sucralosa
-3) 1 cda. de semillas de chía
-4) 1 cda. de cacao en polvo sin azúcar
-5) Galletas de arroz
-6) Menta o hierba buena
-7) Almendras """,
-            justify="left",
-            font=("candara", 12),
-        )
-        ingredientes.pack()
-        ingredientes.place(x=15, y=100)
-
-        preparación = tk.Label(
-            choco,
-            text="""Preparación:
-                           
-1)  Colocá el yogur natural sin azúcar en un bol.
-2)  Vamos a endulzar el yogur con un sobre de sucralosa o stevia 
-3)  Agregar una cucharada de semillas de chia y mezclar.
-4)  Añadir una cucharada de cacao sin azúcar y mezclar bien con una cuchara 
-    hasta que esté totalmente integrado.                    
-5)  Cortar las galletas de arroz en trozos pequeños y colocarlas en vasitos.
-6)  Encima de las galletas de arroz vamos a agregar nuestro postre de chocolate 
-7)  Así como está vamos a llevarlo a la heladera como mínimo media hora. 
-8)  Decorado: le añadimos encima unas hojitas de menta o hierba buena. 
-    Después unos trocitos de galletita.
-    Por ultimo algunas almendras, que rico!""",
-            justify="left",
-            font=("candara", 12),
-        )
-        preparación.pack()
-        preparación.place(x=15, y=290)
         boton_cerrar = tk.Button(
-            choco, text="Cerrar ventana", bg="pink", command=choco.destroy
+            choco, 
+            text="Atras", 
+            command=choco.destroy,
+            **STYLES_boton_dulce
         )
         boton_cerrar.place(x=450, y=550)
+
 
     def arrozCLeche():
-        arrozCLeche = tk.Toplevel()
-        arrozCLeche.title("Arroz con Leche🥣")
-        arrozCLeche.geometry("670x700+300+0")
-        arrozCLeche.focus()
-        arrozCLeche.grab_set()
-        arrozCLeche.config(cursor="heart")
-        arrozCLeche.resizable(width=False, height=False)
+        try:
+            arrozCLeche = tk.Toplevel()
+            arrozCLeche.title("Arroz con Leche🥣")
+            arrozCLeche.geometry("570x600+300+0")
+            arrozCLeche.focus()
+            arrozCLeche.grab_set()
+            arrozCLeche.resizable(width=False, height=False)
 
+            # Cargar la imagen de fondo
+            imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Arroz con leche.png")
+            imagen_fondo = imagen_fondo.resize((570, 600), Image.Resampling.LANCZOS)
+            fondo_ventana = ImageTk.PhotoImage(imagen_fondo)
+            
+            label_fondo = tk.Label(arrozCLeche, image=fondo_ventana)
+            label_fondo.place(x=0, y=0, relwidth=1, relheight=1)
+            
+            arrozCLeche.fondo_ventana = fondo_ventana
 
-        nombreReceta = tk.Label(
-            arrozCLeche, text='"Arroz con Leche🥣' "", font=("candara", 20)
-        )
-        nombreReceta.pack()
-        nombreReceta.place(x=195, y=40)
+            print("Ventana de arrozCLeche creada con éxito")
+        except Exception as e:
+            print(f"Error en arrozCLeche: {e}")
+            print(traceback.format_exc())
 
-        ingredientes = tk.Label(
-            arrozCLeche,
-            text="""Ingredientes:
-
-1) 100g. de arroz (preferentemente para risotto)
-2) 1 litro de leche
-3) 150g. de azúcar
-4) canela (en rama y en polvo)
-5) cáscara de limón
- """,
-            justify="left",
-            font=("candara", 12),
-        )
-        ingredientes.pack()
-        ingredientes.place(x=15, y=100)
-
-        preparación = tk.Label(
-            arrozCLeche,
-            text="""Preparación:
-
-1)	Ponemos en una olla el arroz junto con el litro de leche.
-2)  Luego vamos a cortar unos pedazos de cáscara de limón y los vamos a agregar a la olla.
-3)  Agregar una ramita de canela. 
-4)  Esta mezcla, antes de ponerla al fuego, la vamos a dejar reposar entre 30 y 60 minutos.
-5)  Ponemos la mezcla a fuego bajo y lo vamos a tapar hasta que esté cerquita de hervir.
-6)  Una vez que esté cerca del hervor, destapamos y comenzamos a revolver cuidadosamente.
-7)  El momento de agregar el azúcar, es cuando prueben el arroz y sientan que está al dente.
-    Hay que seguir revolviendo el arroz con leche hasta que la misma comienza a evaporarse y 
-    el azúcar comienza a generar que la mezcla se ponga más espesa.
-8)  Cuando veamos que el arroz con leche esté cocido, apagamos el fuego, sacamos los pedazos
-    de canela y de cáscara de limón, y lo dejamos reposar unos minutos en la olla mientras
-    lo batimos un poco más intensamente para que se termine de evaporar el líquido que queda.
-9)  Reposo en heladera por 20 o 30 minutos y listo!  
-    
- """,
-            justify="left",
-            font=("candara", 12),
-        )
-        preparación.pack()
-        preparación.place(x=15, y=250)
         boton_cerrar = tk.Button(
-            arrozCLeche, text="Cerrar ventana", bg="pink", command=arrozCLeche.destroy
+            arrozCLeche, 
+            text="Atras", 
+            command=arrozCLeche.destroy,
+            **STYLES_boton_dulce
         )
-        boton_cerrar.place(x=450, y=550)
+        boton_cerrar.place(x=450, y=482)
+
 
     def gelatina():
-        gelatina = tk.Toplevel()
-        gelatina.title("Gelatina de Fresa🍓")
-        gelatina.geometry("670x700+300+0")
-        gelatina.focus()
-        gelatina.grab_set()
-        gelatina.config(cursor="heart")
-        gelatina.resizable(width=False, height=False)
+        try:
+            gelatina = tk.Toplevel()
+            gelatina.title("Gelatina de Fresa🍓")
+            gelatina.geometry("570x600+300+0")
+            gelatina.focus()
+            gelatina.grab_set()
+            gelatina.resizable(width=False, height=False)
 
+            # Cargar la imagen de fondo
+            imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Gelatina de fresa.png")
+            imagen_fondo = imagen_fondo.resize((570, 600), Image.Resampling.LANCZOS)
+            fondo_ventana = ImageTk.PhotoImage(imagen_fondo)
+            
+            label_fondo = tk.Label(gelatina, image=fondo_ventana)
+            label_fondo.place(x=0, y=0, relwidth=1, relheight=1)
+            
+            gelatina.fondo_ventana = fondo_ventana
 
-        nombreReceta = tk.Label(
-            gelatina, text='"Gelatina de Fresa🍓' "", font=("candara", 20)
-        )
-        nombreReceta.pack()
-        nombreReceta.place(x=195, y=40)
+            print("Ventana de gelatina creada con éxito")
+        except Exception as e:
+            print(f"Error en gelatina: {e}")
+            print(traceback.format_exc())
 
-        ingredientes = tk.Label(
-            gelatina,
-            text="""Ingredientes:
-
-1) 	3 sobres de gelatina sabor fresa de 120 gramos cada uno 
-2)  1 lata de media crema de 225 gramos 
-3)  1.5 litros de agua mas aparte otros 750 mililitros 
- """,
-            justify="left",
-            font=("candara", 12),
-        )
-        ingredientes.pack()
-        ingredientes.place(x=15, y=100)
-
-        preparación = tk.Label(
-            gelatina,
-            text="""Preparación:
-
-1) Vierte en un recipiente amplio de por lo menos 2 litros de capacidad el polvo de 2 sobres
-   de gelatina y agrega 1.5 litros de agua muy caliente, revuelve hasta disolver y deja enfriar 
-2) Cuando el liquido de la gelatina este frío lleva el recipiente al refrigerador por
-   tres horas aproximadamente.  
-3) Vierte el tercer sobre de gelatina en un recipiente y añade 750 mililitros de agua 
-   muy caliente, revuelve hasta disolver por completo y deja enfriar.
-4) Cuando el liquido de la gelatina este frío agrega la media crema y revuelve hasta mezclar
-   muy bien, lo puedes hacer mezclando a mano con un batidor o en la licuadora.
-5) Cuando la primer gelatina este con una consistencia firme corta en cubos pequeños y 
-   coloca cubos de gelatina hasta tres cuartas partes de capacidad, en recipientes individuales
-6) Agrega en cada vaso la mezcla que preparamos con el tercer sobre de gelatina y la media crema 
-   hasta llenar cada recipiente donde previamente colocaste los cubos de gelatina 
-7) Lleva al refrigerador y cuando las gelatinas de mosaico tengan una consistencia firme
-   estarán listas!
-
- """,
-            justify="left",
-            font=("candara", 12),
-        )
-        preparación.pack()
-        preparación.place(x=15, y=250)
         boton_cerrar = tk.Button(
-            gelatina, text="Cerrar ventana", bg="pink", command=gelatina.destroy
+            gelatina, 
+            text="Atras", 
+            command=gelatina.destroy,
+            **STYLES_boton_dulce
         )
-        boton_cerrar.place(x=450, y=550)
+        boton_cerrar.place(x=450, y=525)
 
     def brownie():
-        brownie = tk.Toplevel()
-        brownie.title("Brownie 🍫")
-        brownie.geometry("670x700+300+0")
-        brownie.focus()
-        brownie.grab_set()
-        brownie.config(cursor="heart")
-        brownie.resizable(width=False, height=False)
+        try:
+            brownie = tk.Toplevel()
+            brownie.title("Brownie 🍫")
+            brownie.geometry("570x600+300+0")
+            brownie.focus()
+            brownie.grab_set()
+            brownie.resizable(width=False, height=False)
+
+            # Cargar la imagen de fondo
+            imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Brownie.png")
+            imagen_fondo = imagen_fondo.resize((570, 600), Image.Resampling.LANCZOS)
+            fondo_ventana = ImageTk.PhotoImage(imagen_fondo)
+            
+            label_fondo = tk.Label(brownie, image=fondo_ventana)
+            label_fondo.place(x=0, y=0, relwidth=1, relheight=1)
+            
+            brownie.fondo_ventana = fondo_ventana
+
+            print("Ventana de brownie creada con éxito")
+        except Exception as e:
+            print(f"Error en brownie: {e}")
+            print(traceback.format_exc())
 
 
-        nombreReceta = tk.Label(brownie, text='"Brownie 🍫' "", font=("candara", 20))
-        nombreReceta.pack()
-        nombreReceta.place(x=195, y=40)
-
-        ingredientes = tk.Label(
-            brownie,
-            text="""Ingredientes:
-
-1) 3 huevos
-2) 1 taza azúcar
-3) 1/2 taza aceite
-4) 1 taza cacao
-5) 1/2 taza harina 0000
- """,
-            justify="left",
-            font=("candara", 12),
-        )
-        ingredientes.pack()
-        ingredientes.place(x=15, y=100)
-
-        preparación = tk.Label(
-            brownie,
-            text="""Preparación:
-
-1)  En un bol batir los tres huevos con el azúcar hasta espumar.
-2)  Agregar el aceite y batir.
-3)  Integrar la taza de cacao a la mezcla anterior.
-4)  Agregar la media taza de harina mientras batimos.
-5)  Llevar a horno precalentando por unos 30/40 minutos en un molde previamente
-    enmantecado. Y Listo!
- """,
-            justify="left",
-            font=("candara", 12),
-        )
-        preparación.pack()
-        preparación.place(x=15, y=250)
         boton_cerrar = tk.Button(
-            brownie, text="Cerrar ventana", bg="pink", command=brownie.destroy
+            brownie, 
+            text="Atras",
+            command=brownie.destroy,
+            **STYLES_boton_dulce
         )
         boton_cerrar.place(x=450, y=550)
 
@@ -1364,8 +925,8 @@ def abrir_ventana_dulce():
 
     STYLES = {
     "font": ("Roboto Condensed", 12),
-    "width": 20,
-    "height": 3,
+    "width": 16,
+    "height": 2,
     "fg": "white",
     "bg": "#863808",
     "borderwidth": 0,
@@ -1376,127 +937,115 @@ def abrir_ventana_dulce():
 
 # Boton 1: 'Crema de Limón 🍋
     boton_receta_uno = tk.Button(ventana_saludo, 
-                                text=''''Crema de Limón 🍋''',
+                                text=''''Crema de Limón''',
                                 command=cremaDeLimon,
                                 **STYLES)
-    boton_receta_uno.pack()  # para que se vea
-# para que aparezca dentro de la ventana
-    boton_receta_uno.place(x=55, y=205)
+    boton_receta_uno.pack()  
+    boton_receta_uno.place(x=48, y=175)
 
 
 # Boton 2: Vasito Oreo 🍪
     boton_receta_dos = tk.Button(ventana_saludo, 
-                                text='''Vasito Oreo 🍪''', 
+                                text='''Vasito Oreo''', 
                                 command=VasitoOreo,
                                 **STYLES)
-    boton_receta_dos.pack()  # para que se vea
-# para que aparezca dentro de la ventana
-    boton_receta_dos.place(x=258, y=205)
+    boton_receta_dos.pack()  
+    boton_receta_dos.place(x=225, y=175)
 
 
 # Boton 3: Crepes 🫓
     boton_receta_tres = tk.Button(ventana_saludo, 
-                            text='''Crepes 🫓''',
-                            command=Crepes,
+                            text='''Trufas de choclate''',
+                            command=Trufas_de_chocolate,
                             **STYLES)
-    boton_receta_tres.pack()  # para que se vea
-# para que aparezca dentro de la ventana
-    boton_receta_tres.place(x=460, y=205)
+    boton_receta_tres.pack()  
+    boton_receta_tres.place(x=400, y=175)
 
 
 # Boton 4: Galletas de Avena🍪
     boton_receta_cuatro = tk.Button(ventana_saludo, 
-                                text='''Galletas de Avena🍪''', 
+                                text='''Galletas de Avena''', 
                                 command=galletasDeAvena,
                                 **STYLES)
-    boton_receta_cuatro.pack()  # para que se vea
-# para que aparezca dentro de la ventana
-    boton_receta_cuatro.place(x=55, y=305)
+    boton_receta_cuatro.pack()  
+    boton_receta_cuatro.place(x=48, y=265)
 
 # Boton 5: Budín de Pan🍮
     boton_receta_cinco = tk.Button(ventana_saludo, 
-                                text="Budín de Pan🍮", 
-                                command=budinDePan,
+                                text="Bocados de miel y avena", 
+                                command=bocaditosDeAvenaYMiel,
                                 **STYLES)
-    boton_receta_cinco.pack()  # para que se vea
-# para que aparezca dentro de la ventana
-    boton_receta_cinco.place(x=258, y=305)
+    boton_receta_cinco.pack()  
+    boton_receta_cinco.place(x=225, y=265)
 
 # Boton 6: Flan🍮
     boton_receta_seis = tk.Button(ventana_saludo, 
-                                text='''Flan🍮''', 
+                                text='''Flan''', 
                                 command=flan,
                                 **STYLES)
-    boton_receta_seis.pack()  # para que se vea
-# para que aparezca dentro de la ventana
-    boton_receta_seis.place(x=460, y=305)
+    boton_receta_seis.pack()  
+    boton_receta_seis.place(x=400, y=265)
 
 # Boton 7: Tarta de yogur al Horno 🥧
     boton_receta_siete = tk.Button(ventana_saludo, 
-                                text='''Tarta de yogur al Horno 🥧''', 
+                                text='''Tarta de yogur''', 
                                 command=tartaDeYogur,
                                 **STYLES)
-    boton_receta_siete.pack()  # para que se vea
-# para que aparezca dentro de la ventana
-    boton_receta_siete.place(x=55, y=406)
+    boton_receta_siete.pack()  
+    boton_receta_siete.place(x=48, y=350)
 
 # Boton 8: Tarta de Naranja🍊
     boton_receta_ocho = tk.Button(ventana_saludo, 
-                                text='''Tarta de Naranja🍊''', 
+                                text='''Tarta de Naranja''', 
                                 command=tartaDeNaranja,
                                 **STYLES)
-    boton_receta_ocho.pack()  # para que se vea
-# para que aparezca dentro de la ventana
-    boton_receta_ocho.place(x=258, y=405)
+    boton_receta_ocho.pack()  
+    boton_receta_ocho.place(x=225, y=350)
 
 # Boton 9: Postrecito de Chocolate🍫
     boton_receta_nueve = tk.Button(ventana_saludo, 
-                                text='''Postrecito de Chocolate🍫''', 
+                                text='''Postre de Chocolate''', 
                                 command=choco,
                                 **STYLES)
-    boton_receta_nueve.pack()  # para que se vea
-# para que aparezca dentro de la ventana
-    boton_receta_nueve.place(x=460, y=405)
+    boton_receta_nueve.pack()  
+    boton_receta_nueve.place(x=398, y=355)
 
 # Boton 10: Arroz con Leche 🥣
     boton_receta_diez = tk.Button(ventana_saludo, 
-                                text='''Arroz con Leche 🥣''', 
+                                text='''Arroz con Leche''', 
                                 command=arrozCLeche,
                                 **STYLES)
-    boton_receta_diez.pack()  # para que se vea
-# para que aparezca dentro de la ventana
-    boton_receta_diez.place(x=55, y=510)
+    boton_receta_diez.pack()  
+    boton_receta_diez.place(x=48, y=440)
 
 # Boton 11: Gelatina de Frutilla 🍓
     boton_receta_once = tk.Button(ventana_saludo, 
-                                text='''Gelatina de Frutilla 🍓''', 
+                                text='''Gelatina de Frutilla''', 
                                 command=gelatina,
                                 **STYLES)
-    boton_receta_once.pack()  # para que se vea
-# para que aparezca dentro de la ventana
-    boton_receta_once.place(x=258, y=510)
+    boton_receta_once.pack()  
+    boton_receta_once.place(x=225, y=440)
 
 # Boton 12: 'Brownie 🍫'
     boton_receta_doce = tk.Button(ventana_saludo, 
-                                text='Brownie 🍫', 
+                                text='Brownie ', 
                                 command=brownie,
                                 **STYLES)
-    boton_receta_doce.pack()  # para que se vea
-# para que aparezca dentro de la ventana
-    boton_receta_doce.place(x=460, y=510)
+    boton_receta_doce.pack()  
+    boton_receta_doce.place(x=400, y=440)
 
 
 # abre ventana de MIS RECETAS
 def abrir_ventana_mis_rece():
     ventana_saludo = tk.Toplevel()
     ventana_saludo.title("Mis Recetas")
-    ventana_saludo.geometry("670x700+300+0")
+    ventana_saludo.geometry("570x600+300+0")
     ventana_saludo.resizable(width=False, height=False)
     
     # Cargar la imagen de fondo
     try:
         imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/FONDO5.png")
-        imagen_fondo = imagen_fondo.resize((670, 700), Image.Resampling.LANCZOS)
+        imagen_fondo = imagen_fondo.resize((570, 600), Image.Resampling.LANCZOS)
         fondo_ventana_saludo = ImageTk.PhotoImage(imagen_fondo)
         
         # Crear un label para la imagen de fondo y agregarlo a la ventana
@@ -1514,7 +1063,8 @@ def abrir_ventana_mis_rece():
 
     # Creamos el frame de la ventana y lo asociamos a ventana_saludo
     frame = tk.Frame(ventana_saludo, bg='#2DC0A3')
-    frame.place(x=42.5, y=150, width=585, height=530)
+    frame.place(x=42.5, y=140, width=493, height=440)
+    
 
     # Usamos canvas para modificar de forma más fácil el diseño del marco
     canvas = tk.Canvas(frame, bg='#2DC0A3')
@@ -1612,7 +1162,7 @@ def abrir_ventana_mis_rece():
     def editar_receta(nombre_receta):
         editar_ventana = tk.Toplevel(ventana_saludo)
         editar_ventana.title(nombre_receta)
-        editar_ventana.geometry("670x700+300+0")
+        editar_ventana.geometry("570x600+300+0")
         editar_ventana.resizable(False, False)
         editar_ventana.configure(bg="#2DC0A3")
         ventana.resizable(width=False, height=False)
@@ -1871,13 +1421,13 @@ def cerrar_ventana(ventana):
 def mostrar_acerca_de():
     ventana_acerca_de = tk.Toplevel()
     ventana_acerca_de.title("Acerca de")
-    ventana_acerca_de.geometry("670x700+300+0")
+    ventana_acerca_de.geometry("570x600+300+0")
     ventana_acerca_de.resizable(width=False, height=False)
 
     # Cargar la imagen de fondo
     try:
         imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/FONDO7.png")
-        imagen_fondo = imagen_fondo.resize((670, 700), Image.Resampling.LANCZOS)
+        imagen_fondo = imagen_fondo.resize((570, 600), Image.Resampling.LANCZOS)
         fondo_ventana = ImageTk.PhotoImage(imagen_fondo)
         
         label_fondo = tk.Label(ventana_acerca_de, image=fondo_ventana)
@@ -1892,7 +1442,7 @@ def mostrar_acerca_de():
 
     # Crear un Frame para el texto con scroll
     frame_texto = tk.Frame(ventana_acerca_de, bg='#300039')
-    frame_texto.place(x=42.5, y=150, width=585, height=530)
+    frame_texto.place(x=42.5, y=140, width=493, height=440)
 
     # Crear un Text con Scrollbar
     texto_container = tk.Frame(frame_texto, bg='#300039')
@@ -1960,20 +1510,20 @@ Gracias por confiar en COWORKING. Estamos emocionados de llevar sus proyectos al
     texto.config(state=tk.DISABLED)
 
     # Botón Volver
-    btn_cerrar = tk.Button(
+    btn_volver = tk.Button(
         frame_texto,
         text="Volver",
         command=ventana_acerca_de.destroy,
         bg="#4A0E4E", 
-        fg="white",
+        fg="black",
         activebackground="#5C1262", 
         activeforeground="white",
-        font=("Roboto Condensed", 12, "bold"),
+        font=("Roboto Condensed", 8, "bold"),
         relief=tk.FLAT,
-        padx=20,
-        pady=10
+        pady=2,
+        padx=2
     )
-    btn_cerrar.pack(side=tk.BOTTOM, pady=20)
+    btn_volver.place(x=200, y=415)
 
     # Asegurarse de que la ventana se mantenga en primer plano
     ventana_acerca_de.transient(ventana_acerca_de.master)
