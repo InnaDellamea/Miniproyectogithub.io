@@ -863,7 +863,7 @@ def abrir_ventana_dulce():
                                 command=cremaDeLimon,
                                 **STYLES_boton_dulce)
     boton_receta_uno.pack()  
-    boton_receta_uno.place(x=40, y=175)
+    boton_receta_uno.place(x=40, y=178)
 
 
 # Boton 2: Vasito Oreo 🍪
@@ -872,7 +872,7 @@ def abrir_ventana_dulce():
                                 command=VasitoOreo,
                                 **STYLES_boton_dulce)
     boton_receta_dos.pack()  
-    boton_receta_dos.place(x=218, y=175)
+    boton_receta_dos.place(x=218, y=178)
 
 
 # Boton 3: Crepes 🫓
@@ -881,7 +881,7 @@ def abrir_ventana_dulce():
                             command=Trufas_de_chocolate,
                             **STYLES_boton_dulce)
     boton_receta_tres.pack()  
-    boton_receta_tres.place(x=395, y=175)
+    boton_receta_tres.place(x=395, y=178)
 
 
 # Boton 4: Galletas de Avena🍪
@@ -918,7 +918,7 @@ def abrir_ventana_dulce():
                                 command=tartaDeYogur,
                                 **STYLES_boton_dulce)
     boton_receta_siete.pack()  
-    boton_receta_siete.place(x=40, y=350)
+    boton_receta_siete.place(x=45, y=355)
 
 # Boton 8: Tarta de Naranja🍊
     boton_receta_ocho = tk.Button(ventana_saludo, 
@@ -926,7 +926,7 @@ def abrir_ventana_dulce():
                                 command=tartaDeNaranja,
                                 **STYLES_boton_dulce)
     boton_receta_ocho.pack()  
-    boton_receta_ocho.place(x=218, y=350)
+    boton_receta_ocho.place(x=220, y=355)
 
 # Boton 9: Postrecito de Chocolate🍫
     boton_receta_nueve = tk.Button(ventana_saludo, 
@@ -942,7 +942,7 @@ def abrir_ventana_dulce():
                                 command=arrozCLeche,
                                 **STYLES_boton_dulce)
     boton_receta_diez.pack()  
-    boton_receta_diez.place(x=40, y=440)
+    boton_receta_diez.place(x=40, y=445)
 
 # Boton 11: Gelatina de Frutilla 🍓
     boton_receta_once = tk.Button(ventana_saludo, 
@@ -950,7 +950,7 @@ def abrir_ventana_dulce():
                                 command=gelatina,
                                 **STYLES_boton_dulce)
     boton_receta_once.pack()  
-    boton_receta_once.place(x=218, y=440)
+    boton_receta_once.place(x=218, y=445)
 
 # Boton 12: 'Brownie 🍫'
     boton_receta_doce = tk.Button(ventana_saludo, 
@@ -958,7 +958,7 @@ def abrir_ventana_dulce():
                                 command=brownie,
                                 **STYLES_boton_dulce)
     boton_receta_doce.pack()  
-    boton_receta_doce.place(x=395, y=440)
+    boton_receta_doce.place(x=395, y=445)
 
 
 # abre ventana de MIS RECETAS
@@ -1148,7 +1148,7 @@ def abrir_ventana_saludo(nombre):
     ventana_saludo.geometry("570x600+300+0")
     nombre_capitalizado = nombre.capitalize()
     ventana_saludo.resizable(width=False, height=False)
-    #ventana_saludo.iconbitmap("./Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico") ARREGLAR
+    ventana_saludo.iconbitmap("./Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico") 
 
     #Cargar la imagen de fondo
     from PIL import Image, ImageTk
@@ -1188,9 +1188,9 @@ def abrir_ventana_saludo(nombre):
         font=("Roboto Condensed", 16),
         bg="#2B0E54",
         fg="#FFFFFF",
-        wraplength=600,  #Ajustar el wraplength si es necesario
+        wraplength=600, 
     )
-    etiqueta_saludo.place(x=205, y=12)
+    etiqueta_saludo.place(x=205, y=2)
 
 #Creación de la barra de menú
     barra_menu = tk.Menu(ventana_saludo)
@@ -1223,7 +1223,7 @@ def abrir_ventana_saludo(nombre):
         height=4,
         command=abrir_ventana_salado,
     )
-    btn_salado.place(x=45, y=373)
+    btn_salado.place(x=45, y=365)
 
     btn_dulce = tk.Button(
         ventana_saludo,
@@ -1239,7 +1239,7 @@ def abrir_ventana_saludo(nombre):
         height=4,
         command=abrir_ventana_dulce,
     )
-    btn_dulce.place(x=230, y=373)
+    btn_dulce.place(x=230, y=365)
 
     btn_mis_rece = tk.Button(
         ventana_saludo,
@@ -1255,7 +1255,7 @@ def abrir_ventana_saludo(nombre):
         height=4,
         command=abrir_ventana_mis_rece,
     )
-    btn_mis_rece.place(x=410, y=373)
+    btn_mis_rece.place(x=410, y=365)
 
 
 # Función para mostrar el temporizador
