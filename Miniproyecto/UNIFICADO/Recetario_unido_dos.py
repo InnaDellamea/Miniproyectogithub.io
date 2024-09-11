@@ -1026,18 +1026,33 @@ def abrir_ventana_mis_rece():
         fg='white' 
     )
     title_label.grid(row=0, column=0, columnspan=3, pady=10)
+    def pedir_nombre_receta():
+        # Crear una ventana Toplevel personalizada para pedir el nombre de la receta
+        dialogo = tk.Toplevel(ventana_saludo)
+        dialogo.title("Nueva Receta")
+        dialogo.config(bg= "#2DC0A3")
+        dialogo.iconbitmap("Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico")
+        dialogo.geometry("250x200")  
 
-    def añadir_receta():
-        nombre_receta = simpledialog.askstring("Nueva Receta", "Nombre de la receta:")
-        nombre_receta = nombre_receta[:18] + '...' if len(nombre_receta) > 18 else nombre_receta
-        if nombre_receta:
-            recetas[nombre_receta] = ""
-            actualizar_recetas()
+        tk.Label(dialogo,bg="#2DC0A3",text="Nombre de la receta:",font=("Arial")).pack(pady=10)
+        
+        nombre_receta_var = tk.StringVar()
+        tk.Entry(dialogo,bg="#C3E8E6",textvariable=nombre_receta_var).pack(pady=10)
+        
+        def enviar():
+            nombre_receta = nombre_receta_var.get()
+            nombre_receta = nombre_receta[:18] + '...' if len(nombre_receta) > 18 else nombre_receta
+            if nombre_receta:
+                recetas[nombre_receta] = ""
+                actualizar_recetas()
+            dialogo.destroy()
+
+        tk.Button(dialogo,bg="#C3E8E6", text="Aceptar", command=enviar).pack(pady=10)
 
     añadir_boton = tk.Button(
         scrollbar_marco,
         text="+",
-        command=añadir_receta,
+        command=pedir_nombre_receta,
         **STYLES_misRecetas
     )
     añadir_boton.grid(row=1, column=1, pady=10)
@@ -1051,27 +1066,7 @@ def abrir_ventana_mis_rece():
         for recipe in recetas:
             button = tk.Button(
                 scrollbar_marco,
-                command=lambda r=recipe: editar_receta(r),
-                **STYLES_misRecetas
-            )
-            button.grid(row=row, column=column, padx=5, pady=5)
-            column += 1
-            if column == 3:
-                column = 0
-                row += 1
-
-        añadir_boton.grid(row=row, column=column, padx=5, pady=10)
-
-    def actualizar_recetas():  # cuando se crea la receta se actualiza la cantidad ya creadas y se agrega el boton
-        for widget in scrollbar_marco.winfo_children():
-            if isinstance(widget, tk.Button) and widget != añadir_boton:
-                widget.destroy()
-
-        row, column = 1, 0  #coloca en orden los botones
-        for recipe in recetas:
-            button = tk.Button(
-                scrollbar_marco,
-                font= ("Roboto Condensed", 10),
+                font=("Roboto Condensed", 10),
                 text=recipe,
                 command=lambda r=recipe: editar_receta(r),
                 **STYLES_misRecetas
@@ -1084,14 +1079,12 @@ def abrir_ventana_mis_rece():
 
         añadir_boton.grid(row=row, column=column, padx=5, pady=10)
 
-# esta funcion permite al entrar a la receta creada, poder editarla como si fuera un bloc de notas
     def editar_receta(nombre_receta):
         editar_ventana = tk.Toplevel(ventana_saludo)
         editar_ventana.title(nombre_receta)
         editar_ventana.geometry("570x600+300+0")
         editar_ventana.resizable(False, False)
         editar_ventana.configure(bg="#2DC0A3")
-        ventana.resizable(width=False, height=False)
         editar_ventana.iconbitmap("Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico")
 
         bloc_notas = tk.Text(editar_ventana, bg="#C3E8E6", font=("Arial"))
