@@ -50,6 +50,7 @@ def abrir_ventana_salado():
     ventana_saludo.title("Ventana de Salado")
     ventana_saludo.geometry("570x600+300+0")
     ventana_saludo.resizable(width=False, height=False)
+    ventana_saludo.iconbitmap("Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico")
 
 # Cargar la imagen de fondo
     try:
@@ -74,6 +75,7 @@ def abrir_ventana_salado():
             ventana_mila_napo.title("Milanesas a la napolitana")
             ventana_mila_napo.geometry("570x600+300+0")
             ventana_mila_napo.resizable(width=False, height=False)
+            ventana_mila_napo.iconbitmap("Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico")
 
             # Cargar la imagen de fondo
             imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Milas napo.png")
@@ -97,6 +99,7 @@ def abrir_ventana_salado():
             ventana_empanadas_carne.title("Empanadas de carne")
             ventana_empanadas_carne.geometry("570x600+300+0")
             ventana_empanadas_carne.resizable(width=False, height=False)
+            ventana_empanadas_carne.iconbitmap("Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico")
             
             # Cargar la imagen de fondo
             imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Empanadas de carne.png")
@@ -120,6 +123,7 @@ def abrir_ventana_salado():
             ventana_milanesas_pollo.title("Milanesas de pollo")
             ventana_milanesas_pollo.geometry("570x600+300+0")
             ventana_milanesas_pollo.resizable(width=False, height=False)
+            ventana_milanesas_pollo.iconbitmap("Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico")
             
             # Cargar la imagen de fondo
             imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Milas de pollo.png")
@@ -143,6 +147,7 @@ def abrir_ventana_salado():
             ventana_asado_con_ensalada.title("Asado con ensalada criolla")
             ventana_asado_con_ensalada.geometry("570x600+300+0")
             ventana_asado_con_ensalada.resizable(width=False, height=False)
+            ventana_asado_con_ensalada.iconbitmap("Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico")
 
             # Cargar la imagen de fondo
             imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Asado.png")
@@ -166,6 +171,7 @@ def abrir_ventana_salado():
             ventana_lentejas_guisadas.title("Lentejas guisadas")
             ventana_lentejas_guisadas.geometry("570x600+300+0")
             ventana_lentejas_guisadas.resizable(width=False, height=False)
+            ventana_lentejas_guisadas.iconbitmap("Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico")
             
             # Cargar la imagen de fondo
             imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Lentejas guisadas.png")
@@ -189,6 +195,7 @@ def abrir_ventana_salado():
             ventana_pastas_bolognesa.title("Pastas con salsa bolognesa")
             ventana_pastas_bolognesa.geometry("570x600+300+0")
             ventana_pastas_bolognesa.resizable(width=False, height=False)
+            ventana_pastas_bolognesa.iconbitmap("Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico")
             
             # Cargar la imagen de fondo
             imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Pastas bolognesas.png")
@@ -212,6 +219,7 @@ def abrir_ventana_salado():
             ventana_pollo_papas.title("Pollo al horno con papas")
             ventana_pollo_papas.geometry("570x600+300+0")
             ventana_pollo_papas.resizable(width=False, height=False)
+            ventana_pollo_papas.iconbitmap("Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico")
             
             # Cargar la imagen de fondo
             imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Pollo al horno con papas.png")
@@ -235,6 +243,7 @@ def abrir_ventana_salado():
             ventana_empanada_jyq.title("Empanadas de jamon y queso")
             ventana_empanada_jyq.geometry("570x600+300+0")
             ventana_empanada_jyq.resizable(width=False, height=False)
+            ventana_empanada_jyq.iconbitmap("Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico")
             
             # Cargar la imagen de fondo
             imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Empanadas de jyq.png")
@@ -258,6 +267,7 @@ def abrir_ventana_salado():
             ventana_tarta_espinaca.title("Tarta de espinaca y queso")
             ventana_tarta_espinaca.geometry("570x600+300+0")
             ventana_tarta_espinaca.resizable(width=False, height=False)
+            ventana_tarta_espinaca.iconbitmap("Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico")
             
             # Cargar la imagen de fondo
             imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Tarta de espinaca y queso.png")
@@ -281,6 +291,7 @@ def abrir_ventana_salado():
             ventana_guiso_res.title("Guiso de res con papas")
             ventana_guiso_res.geometry("570x600+300+0")
             ventana_guiso_res.resizable(width=False, height=False)
+            ventana_guiso_res.iconbitmap("Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico")
             
             # Cargar la imagen de fondo
             imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Guiso de res con papas.png")
@@ -304,6 +315,7 @@ def abrir_ventana_salado():
             ventana_quiche_jyq.title("Quiche de jamon y queso")
             ventana_quiche_jyq.geometry("570x600+300+0")
             ventana_quiche_jyq.resizable(width=False, height=False)
+            ventana_quiche_jyq.iconbitmap("Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico")
 
             # Cargar la imagen de fondo
             imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Quiche de jyq.png")
@@ -327,6 +339,7 @@ def abrir_ventana_salado():
             ventana_fideos_tuco.title("Fideos con tuco")
             ventana_fideos_tuco.geometry("570x600+300+0")
             ventana_fideos_tuco.resizable(width=False, height=False)
+            ventana_fideos_tuco.iconbitmap("Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico")
 
             # Cargar la imagen de fondo
             imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Fideos con tuco.png")
@@ -499,6 +512,7 @@ def abrir_ventana_dulce():
     ventana_saludo.title("Ventana de Dulce")
     ventana_saludo.geometry("570x600+300+0")
     ventana_saludo.resizable(width=False, height=False)
+    ventana_saludo.iconbitmap("Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico")
 
 # Cargar la imagen de fondo
     try:
@@ -526,6 +540,7 @@ def abrir_ventana_dulce():
             cremaDeLimon.focus()
             cremaDeLimon.grab_set()
             cremaDeLimon.resizable(width=False, height=False)
+            cremaDeLimon.iconbitmap("Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico")
 
             # Cargar la imagen de fondo
             imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Crema de limon.png")
@@ -551,6 +566,7 @@ def abrir_ventana_dulce():
             VasitoOreo.focus()
             VasitoOreo.grab_set()
             VasitoOreo.resizable(width=False, height=False)
+            VasitoOreo.iconbitmap("Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico")
 
             # Cargar la imagen de fondo
             imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Vasito oreo.png")
@@ -576,6 +592,7 @@ def abrir_ventana_dulce():
             Trufas_de_chocolate.focus()
             Trufas_de_chocolate.grab_set()
             Trufas_de_chocolate.resizable(width=False, height=False)
+            Trufas_de_chocolate.iconbitmap("Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico")
             
             # Cargar la imagen de fondo
             imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Trufas de chocolate.png")
@@ -601,6 +618,7 @@ def abrir_ventana_dulce():
             galletasDeAvena.focus()
             galletasDeAvena.grab_set()
             galletasDeAvena.resizable(width=False, height=False)
+            galletasDeAvena.iconbitmap("Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico")
             
             # Cargar la imagen de fondo
             imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Galletas de banana y avena.png")
@@ -626,6 +644,7 @@ def abrir_ventana_dulce():
             bocaditosDeAvenaYMiel.focus()
             bocaditosDeAvenaYMiel.grab_set()
             bocaditosDeAvenaYMiel.resizable(width=False, height=False)
+            bocaditosDeAvenaYMiel.iconbitmap("Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico")
         
             # Cargar la imagen de fondo
             imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Bocaditos de miel y avena.png")
@@ -651,6 +670,7 @@ def abrir_ventana_dulce():
             flan.focus()
             flan.grab_set()
             flan.resizable(width=False, height=False)
+            flan.iconbitmap("Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico")
             
             # Cargar la imagen de fondo
             imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Flan.png")
@@ -676,6 +696,7 @@ def abrir_ventana_dulce():
             tartaDeYogur.focus()
             tartaDeYogur.grab_set()
             tartaDeYogur.resizable(width=False, height=False)
+            tartaDeYogur.iconbitmap("Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico")
 
             # Cargar la imagen de fondo
             imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Tarta de yogur.png")
@@ -701,6 +722,7 @@ def abrir_ventana_dulce():
             tartaDeNaranja.focus()
             tartaDeNaranja.grab_set()
             tartaDeNaranja.resizable(width=False, height=False)
+            tartaDeNaranja.iconbitmap("Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico")
         
             # Cargar la imagen de fondo
             imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Tarta de naranja.png")
@@ -726,6 +748,7 @@ def abrir_ventana_dulce():
             choco.focus()
             choco.grab_set()
             choco.resizable(width=False, height=False)
+            choco.iconbitmap("Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico")
 
             # Cargar la imagen de fondo
             imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Postre de chocolate.png")
@@ -751,6 +774,7 @@ def abrir_ventana_dulce():
             arrozCLeche.focus()
             arrozCLeche.grab_set()
             arrozCLeche.resizable(width=False, height=False)
+            arrozCLeche.iconbitmap("Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico")
 
             # Cargar la imagen de fondo
             imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Arroz con leche.png")
@@ -801,6 +825,7 @@ def abrir_ventana_dulce():
             brownie.focus()
             brownie.grab_set()
             brownie.resizable(width=False, height=False)
+            brownie.iconbitmap("Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico")
 
             # Cargar la imagen de fondo
             imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Brownie.png")
@@ -954,6 +979,7 @@ def abrir_ventana_mis_rece():
     ventana_saludo.title("Mis Recetas")
     ventana_saludo.geometry("570x600+300+0")
     ventana_saludo.resizable(width=False, height=False)
+    ventana_saludo.iconbitmap("Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico")
     
     # Cargar la imagen de fondo
     try:
@@ -1068,6 +1094,7 @@ def abrir_ventana_mis_rece():
         editar_ventana.resizable(False, False)
         editar_ventana.configure(bg="#2DC0A3")
         ventana.resizable(width=False, height=False)
+        editar_ventana.iconbitmap("Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico")
 
         bloc_notas = tk.Text(editar_ventana, bg="#C3E8E6", font=("Arial"))
         bloc_notas.insert(tk.END, recetas[nombre_receta])
@@ -1121,6 +1148,7 @@ def abrir_ventana_saludo(nombre):
     ventana_saludo.geometry("570x600+300+0")
     nombre_capitalizado = nombre.capitalize()
     ventana_saludo.resizable(width=False, height=False)
+    #ventana_saludo.iconbitmap("./Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico") ARREGLAR
 
     #Cargar la imagen de fondo
     from PIL import Image, ImageTk
@@ -1239,6 +1267,7 @@ def mostrar_temporizador():
     temporizador_ventana.geometry("300x300+300+0")
     temporizador_ventana.config(bg="#D8BFD8")
     temporizador_ventana.resizable(width=False, height=False)
+    temporizador_ventana.iconbitmap("Miniproyecto/UNIFICADO/IMAGENES/activity.ico")
 
     hora = tk.StringVar(value="00")
     minuto = tk.StringVar(value="00")
@@ -1325,6 +1354,7 @@ def mostrar_acerca_de():
     ventana_acerca_de.title("Acerca de")
     ventana_acerca_de.geometry("570x600+300+0")
     ventana_acerca_de.resizable(width=False, height=False)
+    ventana_acerca_de.iconbitmap("Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico")
 
     # Cargar la imagen de fondo
     try:
@@ -1439,7 +1469,7 @@ ventana = tk.Tk()
 ventana.title("Recetario")
 ventana.geometry("570x600+300+0")
 ventana.resizable(width=False, height=False)
-
+ventana.iconbitmap("./Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico")
 
 # Carga la imagen de fondo
 fondo = ImageTk.PhotoImage(
