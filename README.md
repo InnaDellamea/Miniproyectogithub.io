@@ -45,6 +45,10 @@ Este pdf se diseñó  como borrador para empezar a estructurar y trasladar las i
 
 
 [Interfaces de la app RECETARIO.pdf](https://github.com/user-attachments/files/16874330/Interfaces.de.la.app.RECETARIO.pdf)
+##
+
+IMPORTANTE:
+Debe instalar libreria PILL en python. 
 
 ## 
 
