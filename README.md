@@ -5,9 +5,9 @@ Es un programa de recetas, una herramienta digital diseñada para ayudar a los u
 
 Screenshots
 
-![Captura de pantalla (132)](https://github.com/user-attachments/assets/85395109-13ed-4672-8e89-2ec797bcbc77)
+![Captura de pantalla (144)](https://github.com/user-attachments/assets/c6ebf340-6957-4209-92a7-eb1766c47c37)
 
-![Captura de pantalla (133)](https://github.com/user-attachments/assets/b14f4f79-f385-4c3f-a849-976564ffd163)
+![Captura de pantalla (145)](https://github.com/user-attachments/assets/b0a10bd8-81c9-4038-9bde-66a38a7de9bd)
 
 Caracteristicas:
 + PROMPT DE RECETARIO: Se ingresa el nombre de usuario para comenzar a interactuar con la aplicación.
