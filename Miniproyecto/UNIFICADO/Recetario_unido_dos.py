@@ -1034,8 +1034,6 @@ def abrir_ventana_mis_rece():
             recetas[nombre_receta] = ""
             actualizar_recetas()
 
-    
-
     añadir_boton = tk.Button(
         scrollbar_marco,
         text="+",
