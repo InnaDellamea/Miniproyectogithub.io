@@ -918,7 +918,7 @@ def abrir_ventana_dulce():
                                 command=tartaDeYogur,
                                 **STYLES_boton_dulce)
     boton_receta_siete.pack()  
-    boton_receta_siete.place(x=45, y=355)
+    boton_receta_siete.place(x=40, y=355)
 
 # Boton 8: Tarta de Naranja🍊
     boton_receta_ocho = tk.Button(ventana_saludo, 
@@ -926,7 +926,7 @@ def abrir_ventana_dulce():
                                 command=tartaDeNaranja,
                                 **STYLES_boton_dulce)
     boton_receta_ocho.pack()  
-    boton_receta_ocho.place(x=220, y=355)
+    boton_receta_ocho.place(x=215, y=355)
 
 # Boton 9: Postrecito de Chocolate🍫
     boton_receta_nueve = tk.Button(ventana_saludo, 
