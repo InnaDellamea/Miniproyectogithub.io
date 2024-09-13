@@ -10,8 +10,6 @@ import traceback
 
 
 # Placeholder para la entrada de usuario
-
-
 class PlaceholderEntry(tk.Entry):
     def __init__(self, master=None, placeholder="", *args, **kwargs):
         super().__init__(master, *args, **kwargs)
@@ -37,14 +35,13 @@ class PlaceholderEntry(tk.Entry):
             self.insert(0, self.placeholder)
             self.config(fg=self.placeholder_color)
 
-    # Crear ventana de saludo
 
+# Funcion para puntos suspensivos en textos largos
 def truncate_text(text, max_length=18):
     return text[:max_length] + '...' if len(text) > max_length else text
 
-# Crea una nueva ventana que recibe el nombre de usuario
-# abre ventana de SALADO
 
+# abre ventana de SALADO
 def abrir_ventana_salado():
     ventana_saludo = tk.Toplevel()
     ventana_saludo.title("Ventana de Salado")
@@ -961,7 +958,7 @@ def abrir_ventana_dulce():
     boton_receta_doce.place(x=395, y=445)
 
 
-# abre ventana de MIS RECETAS
+# Estilos para los botones mis recetas
 STYLES_misRecetas = {
     "width": 20,
     "height": 5,
@@ -973,6 +970,7 @@ STYLES_misRecetas = {
     "activeforeground": "gold"
 }
 
+# abre ventana de MIS RECETAS
 
 def abrir_ventana_mis_rece():
     ventana_saludo = tk.Toplevel()
@@ -1130,8 +1128,6 @@ def botonvolver():
 
 
 # Función para abrir la ventana de saludo
-
-
 def abrir_ventana_saludo(nombre):
     # Crear la ventana secundaria
     ventana_saludo = tk.Toplevel()
@@ -1250,8 +1246,6 @@ def abrir_ventana_saludo(nombre):
 
 
 # Función para mostrar el temporizador
-
-
 def mostrar_temporizador():
     temporizador_ventana = tk.Toplevel()  # Usar Toplevel en lugar de Tk
     temporizador_ventana.title("Temporizador")
@@ -1324,17 +1318,13 @@ def mostrar_temporizador():
     btn_start = tk.Button(temporizador_ventana, text="Iniciar", bd="5", command=submit)
     btn_stop = tk.Button(temporizador_ventana, text="Detener", bd="5", command=stop)
     btn_reset = tk.Button(temporizador_ventana, text="Reiniciar", bd="5", command=reset)
-    #btn_pause = tk.Button(temporizador_ventana, text="Pausar/Reanudar", bd="5", command=pausa)
 
     btn_start.place(x=90, y=60)
     btn_stop.place(x=90, y=100)
     btn_reset.place(x=90, y=140)
-    #btn_pause.place(x=90, y=140)
     
 
 # Función para cerrar una ventana
-
-
 def cerrar_ventana(ventana):
     ventana.destroy()
 
@@ -1468,7 +1458,7 @@ fondo = ImageTk.PhotoImage(
 )
 
 
-# Crea y empaqueta la imagen de fondo
+# Crea y empaqueta la imagen de fondo para que no se rompa en caso de que tkinter no cargue la imagen
 label_fondo = tk.Label(ventana, image=fondo)
 label_fondo.place(relwidth=1, relheight=1)
 
@@ -1485,9 +1475,8 @@ entrada_usuario = PlaceholderEntry(
 # Ajusta la posición y tamaño de la entrada
 entrada_usuario.place(x=195, y=445, width=190, height=50)
 
+
 # MANEJO DEL BOTON "OK"
-
-
 def manejar_boton_ok():
     nombre = entrada_usuario.get()
     if (
