@@ -3,6 +3,10 @@
 Es un programa de recetas, una herramienta digital diseñada para ayudar a los usuarios a descubrir, organizar y preparar platos. Ofrece una colección de recetas categorizadas por tipo de comida, ingredientes o dificultad, proporcionando instrucciones paso a paso, listas de ingredientes y características adicionales como temporizador, una opcion de "mis recetas" donde se pueden agregar recetas propias, personalizadas según las preferencias del usuario. Ideal para cocineros de todos los niveles, desde principiantes hasta expertos.
 ##
 
+Se abre el proyecto desde la capeta "Unificado"
+
+##
+
 Screenshots
 
 ![Captura de pantalla (144)](https://github.com/user-attachments/assets/c6ebf340-6957-4209-92a7-eb1766c47c37)
