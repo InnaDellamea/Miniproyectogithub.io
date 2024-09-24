@@ -1693,7 +1693,7 @@ boton_ok = tk.Button(
     ventana,
     text="OK",
     command=manejar_boton_ok,
-    foreground="black",
+    foreground="white",
     bg="#380039",
     borderwidth=0,
     relief="flat",
