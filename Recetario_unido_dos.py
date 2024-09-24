@@ -8,7 +8,6 @@ from tkinter import messagebox, simpledialog
 from tkinter import Scrollbar, Text
 import traceback
 
-
 # Placeholder para la entrada de usuario
 class PlaceholderEntry(tk.Entry):
     def __init__(self, master=None, placeholder="", *args, **kwargs):
@@ -64,7 +63,17 @@ def abrir_ventana_salado():
     except Exception as e:
         print(f"Error al cargar la imagen: {e}")
         # Si hay un error, continúa sin la imagen de fondo
-
+        
+        # Botón Volver
+    boton_volver = tk.Button(
+        ventana_saludo,  # Aquí debe ser la ventana que creaste
+        text="Volver",
+        command=ventana_saludo.destroy,  # Cierra la ventana ventana_saludo
+        bg="#193eba", 
+        fg="white",
+        font=("Roboto Condensed", 15, "bold")
+    )
+    boton_volver.place(x=250, y=550) 
     # ------------------------------------------------------- RECETAS SALADAS (Cami) ---------------------------------------------------------------------------
     def milanesa_napo():
         try:
@@ -78,18 +87,22 @@ def abrir_ventana_salado():
             imagen_fondo = Image.open("./Miniproyecto/UNIFICADO/IMAGENES/Milas napo.png")
             imagen_fondo = imagen_fondo.resize((570, 600), Image.Resampling.LANCZOS)
             fondo_ventana = ImageTk.PhotoImage(imagen_fondo)
-        
+            
             label_fondo = tk.Label(ventana_mila_napo, image=fondo_ventana)
             label_fondo.place(x=0, y=0, relwidth=1, relheight=1)
-        
             ventana_mila_napo.fondo_ventana = fondo_ventana
-        
-            print("Ventana de milanesas creada con éxito")
+            # Botón Volver
+            boton_volver = tk.Button(
+                ventana_mila_napo,
+                text="Volver",
+                command=ventana_mila_napo.destroy,  # Cierra la ventana
+                bg="#1979d8", 
+                fg="white",
+                font=("Roboto Condensed", 10, "bold")
+            )
+            boton_volver.place(x=15, y=25)  # Posiciona el botón en la parte inferior
         except Exception as e:
             print(f"Error en milanesa_napo: {e}")
-            print(traceback.format_exc())
-
-
     def empanadas_carne():
         try:
             ventana_empanadas_carne = tk.Toplevel()
@@ -108,11 +121,18 @@ def abrir_ventana_salado():
             
             ventana_empanadas_carne.fondo_ventana = fondo_ventana
 
-            print("Ventana de Empanadas de carne creada con éxito")
+           # Botón Volver
+            boton_volver = tk.Button(
+                ventana_empanadas_carne,
+                text="Volver",
+                command=ventana_empanadas_carne.destroy,  # Cierra la ventana
+                bg="#1979d8", 
+                fg="white",
+                font=("Roboto Condensed", 10, "bold")
+            )
+            boton_volver.place(x=15, y=25)  # Posiciona el botón en la parte inferior
         except Exception as e:
             print(f"Error en empanadas_carne: {e}")
-            print(traceback.format_exc())
-
 
     def milanesa_pollo():
         try:
@@ -132,10 +152,20 @@ def abrir_ventana_salado():
             
             ventana_milanesas_pollo.fondo_ventana = fondo_ventana
 
-            print("Ventana de Milanesas de pollo creada con éxito")
+           
+           # Botón Volver
+            boton_volver = tk.Button(
+                ventana_milanesas_pollo,
+                text="Volver",
+                command=ventana_milanesas_pollo.destroy,  # Cierra la ventana
+                bg="#1979d8", 
+                fg="white",
+                font=("Roboto Condensed", 10, "bold")
+            )
+            boton_volver.place(x=15, y=25)  # Posiciona el botón en la parte inferior
         except Exception as e:
-            print(f"Error en milanesa_pollo: {e}")
-            print(traceback.format_exc())
+            print(f"Error en milanesas_pollo: {e}")
+
 
 
     def asado_ensalada():
@@ -156,10 +186,18 @@ def abrir_ventana_salado():
             
             ventana_asado_con_ensalada.fondo_ventana = fondo_ventana
 
-            print("Ventana de Asado creada con éxito")
+           # Botón Volver
+            boton_volver = tk.Button(
+                ventana_asado_con_ensalada,
+                text="Volver",
+                command=ventana_asado_con_ensalada.destroy,  # Cierra la ventana
+                bg="#1979d8", 
+                fg="white",
+                font=("Roboto Condensed", 10, "bold")
+            )
+            boton_volver.place(x=15, y=25)  # Posiciona el botón en la parte inferior
         except Exception as e:
-            print(f"Error en asado_ensalada: {e}")
-            print(traceback.format_exc())
+            print(f"Error en asado_con_ensalada: {e}")
 
 
     def lentejas_guisadas():
@@ -180,11 +218,19 @@ def abrir_ventana_salado():
             
             ventana_lentejas_guisadas.fondo_ventana = fondo_ventana
 
-            print("Ventana de Lentejas guisadas creada con éxito")
+            
+           # Botón Volver
+            boton_volver = tk.Button(
+                ventana_lentejas_guisadas,
+                text="Volver",
+                command=ventana_lentejas_guisadas.destroy,  # Cierra la ventana
+                bg="#1979d8", 
+                fg="white",
+                font=("Roboto Condensed", 10, "bold")
+            )
+            boton_volver.place(x=15, y=25)  # Posiciona el botón en la parte inferior
         except Exception as e:
-            print(f"Error en lentejas_guisadas: {e}")
-            print(traceback.format_exc())
-
+            print(f"Error enlentejas_guisadas.: {e}")
 
     def pastas_bolognesa():
         try:
@@ -203,11 +249,18 @@ def abrir_ventana_salado():
             label_fondo.place(x=0, y=0, relwidth=1, relheight=1)
             
             ventana_pastas_bolognesa.fondo_ventana = fondo_ventana
-
-            print("Ventana de Pastas bolognesa creada con éxito")
+            # Botón Volver
+            boton_volver = tk.Button(
+                ventana_pastas_bolognesa,
+                text="Volver",
+                command=ventana_pastas_bolognesa.destroy,  # Cierra la ventana
+                bg="#1979d8", 
+                fg="white",
+                font=("Roboto Condensed", 10, "bold")
+            )
+            boton_volver.place(x=15, y=25)  # Posiciona el botón en la parte inferior
         except Exception as e:
-            print(f"Error en pastas_bolognesa: {e}")
-            print(traceback.format_exc())
+            print(f"Error en pastas_bolognesa.: {e}")
 
 
     def pollo_papas():
@@ -228,10 +281,18 @@ def abrir_ventana_salado():
             
             ventana_pollo_papas.fondo_ventana = fondo_ventana
 
-            print("Ventana de Pollo al horno con papas creada con éxito")
+           # Botón Volver
+            boton_volver = tk.Button(
+                ventana_pollo_papas,
+                text="Volver",
+                command=ventana_pollo_papas.destroy,  # Cierra la ventana
+                bg="#1979d8", 
+                fg="white",
+                font=("Roboto Condensed", 10, "bold")
+            )
+            boton_volver.place(x=15, y=25)  # Posiciona el botón en la parte inferior
         except Exception as e:
-            print(f"Error en pollo_papas: {e}")
-            print(traceback.format_exc())
+            print(f"Error en pollo_papas.: {e}")
 
 
     def empanadas_jyq():
@@ -252,11 +313,18 @@ def abrir_ventana_salado():
             
             ventana_empanada_jyq.fondo_ventana = fondo_ventana
 
-            print("Ventana de empanadas de jyq creada con éxito")
+           # Botón Volver
+            boton_volver = tk.Button(
+                ventana_empanada_jyq,
+                text="Volver",
+                command=ventana_empanada_jyq.destroy,  # Cierra la ventana
+                bg="#1979d8", 
+                fg="white",
+                font=("Roboto Condensed", 10, "bold")
+            )
+            boton_volver.place(x=15, y=25)  # Posiciona el botón en la parte inferior
         except Exception as e:
-            print(f"Error en ventana_empanada_jyq: {e}")
-            print(traceback.format_exc())
-
+            print(f"Error enempanadas_jyq.: {e}")
 
     def tarta_espinaca():
         try:
@@ -276,10 +344,18 @@ def abrir_ventana_salado():
             
             ventana_tarta_espinaca.fondo_ventana = fondo_ventana
 
-            print("Ventana de Tarta de espinaca y queso creada con éxito")
+           # Botón Volver
+            boton_volver = tk.Button(
+                ventana_tarta_espinaca,
+                text="Volver",
+                command=ventana_tarta_espinaca.destroy,  # Cierra la ventana
+                bg="#1979d8", 
+                fg="white",
+                font=("Roboto Condensed", 10, "bold")
+            )
+            boton_volver.place(x=15, y=25)  # Posiciona el botón en la parte inferior
         except Exception as e:
-            print(f"Error en ventana_tarta_espinaca: {e}")
-            print(traceback.format_exc())
+            print(f"Error en tarata_espinaca.: {e}")
 
 
     def guiso_res():
@@ -300,11 +376,18 @@ def abrir_ventana_salado():
             
             ventana_guiso_res.fondo_ventana = fondo_ventana
 
-            print("Ventana de Guiso de res con papas creada con éxito")
+           # Botón Volver
+            boton_volver = tk.Button(
+                ventana_guiso_res,
+                text="Volver",
+                command=ventana_guiso_res.destroy,  # Cierra la ventana
+                bg="#1979d8", 
+                fg="white",
+                font=("Roboto Condensed", 10, "bold")
+            )
+            boton_volver.place(x=15, y=25)  # Posiciona el botón en la parte inferior
         except Exception as e:
-            print(f"Error en ventana_guiso_res: {e}")
-            print(traceback.format_exc())
-
+            print(f"Error en guiso_res.: {e}")
 
     def quiche_jyq(): 
         try: 
@@ -324,11 +407,18 @@ def abrir_ventana_salado():
             
             ventana_quiche_jyq.fondo_ventana = fondo_ventana
 
-            print("Ventana de Quiche de jyq creada con éxito")
+            # Botón Volver
+            boton_volver = tk.Button(
+                ventana_quiche_jyq,
+                text="Volver",
+                command=ventana_quiche_jyq.destroy,  # Cierra la ventana
+                bg="#1979d8", 
+                fg="white",
+                font=("Roboto Condensed", 10, "bold")
+            )
+            boton_volver.place(x=15, y=25)  # Posiciona el botón en la parte inferior
         except Exception as e:
-            print(f"Error en ventana_quiche_jyq: {e}")
-            print(traceback.format_exc())
-
+            print(f"Error en quiche_jyq.: {e}")
 
     def fideos_tuco():
         try:
@@ -348,11 +438,18 @@ def abrir_ventana_salado():
             
             ventana_fideos_tuco.fondo_ventana = fondo_ventana
 
-            print("Ventana de Fideos con tuco creada con éxito")
+            # Botón Volver
+            boton_volver = tk.Button(
+                ventana_fideos_tuco,
+                text="Volver",
+                command=ventana_fideos_tuco.destroy,  # Cierra la ventana
+                bg="#1979d8", 
+                fg="white",
+                font=("Roboto Condensed", 10, "bold")
+            )
+            boton_volver.place(x=15, y=25)  # Posiciona el botón en la parte inferior
         except Exception as e:
-            print(f"Error en ventana_fideos_tuco: {e}")
-            print(traceback.format_exc())
-
+            print(f"Error en fideos_tuco.: {e}")
 
 
 #----------------------------------------------------- Botones de recetas saladas----------------------------------------------------------------
@@ -390,7 +487,7 @@ def abrir_ventana_salado():
     )
     boton_receta_dos.pack() 
     boton_receta_dos.place(x=218, y=175)
-
+    
     # Boton 3: Milanesas de poll
     boton_receta_tres = tk.Button(
         ventana_saludo,
@@ -526,6 +623,17 @@ def abrir_ventana_dulce():
     except Exception as e:
         print(f"Error al cargar la imagen: {e}")
         # Si hay un error, continúa sin la imagen de fondo
+        
+         # Botón Volver
+    boton_volver = tk.Button(
+        ventana_saludo,  # Aquí debe ser la ventana que creaste
+        text="Volver",
+        command=ventana_saludo.destroy,  # Cierra la ventana ventana_saludo
+        bg="#9c3c0f", 
+        fg="white",
+        font=("Roboto Condensed", 15, "bold")
+    )
+    boton_volver.place(x=250, y=550)  
 
     # ------------------------------------------------------FUNCIONES RECETAS DULCES -------------------------------------------------------------------------
 
@@ -535,7 +643,6 @@ def abrir_ventana_dulce():
             cremaDeLimon.title("Crema de Limón🍋")
             cremaDeLimon.geometry("570x600+300+0")
             cremaDeLimon.focus()
-            cremaDeLimon.grab_set()
             cremaDeLimon.resizable(width=False, height=False)
             cremaDeLimon.iconbitmap("Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico")
 
@@ -549,10 +656,18 @@ def abrir_ventana_dulce():
             
             cremaDeLimon.fondo_ventana = fondo_ventana
 
-            print("Ventana de Crema de limon creada con éxito")
+            # Botón Volver
+            boton_volver = tk.Button(
+                cremaDeLimon,
+                text="Volver",
+                command=cremaDeLimon.destroy,  # Cierra la ventana
+                bg="#a9111f", 
+                fg="white",
+                font=("Roboto Condensed", 10, "bold")
+            )
+            boton_volver.place(x=15, y=25)  # Posiciona el botón en la parte inferior
         except Exception as e:
-            print(f"Error en cremaDeLimon: {e}")
-            print(traceback.format_exc())
+            print(f"Error en cremaDeLimon.: {e}")
 
 
     def VasitoOreo():
@@ -561,7 +676,6 @@ def abrir_ventana_dulce():
             VasitoOreo.title("Vasito Oreo🍪")
             VasitoOreo.geometry("570x600+300+0")
             VasitoOreo.focus()
-            VasitoOreo.grab_set()
             VasitoOreo.resizable(width=False, height=False)
             VasitoOreo.iconbitmap("Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico")
 
@@ -575,10 +689,18 @@ def abrir_ventana_dulce():
             
             VasitoOreo.fondo_ventana = fondo_ventana
 
-            print("Ventana de Vasito oreo creada con éxito")
+           # Botón Volver
+            boton_volver = tk.Button(
+                VasitoOreo,
+                text="Volver",
+                command=VasitoOreo.destroy,  # Cierra la ventana
+                bg="#a9111f", 
+                fg="white",
+                font=("Roboto Condensed", 10, "bold")
+            )
+            boton_volver.place(x=15, y=25)  # Posiciona el botón en la parte inferior
         except Exception as e:
-            print(f"Error en VasitoOreo: {e}")
-            print(traceback.format_exc())
+            print(f"Error en VasitoOreo.: {e}")
 
 
     def Trufas_de_chocolate():
@@ -587,7 +709,6 @@ def abrir_ventana_dulce():
             Trufas_de_chocolate.title("Trufas de chocolate")
             Trufas_de_chocolate.geometry("570x600+300+0")
             Trufas_de_chocolate.focus()
-            Trufas_de_chocolate.grab_set()
             Trufas_de_chocolate.resizable(width=False, height=False)
             Trufas_de_chocolate.iconbitmap("Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico")
             
@@ -601,10 +722,18 @@ def abrir_ventana_dulce():
             
             Trufas_de_chocolate.fondo_ventana = fondo_ventana
 
-            print("Ventana de Trufas de chocolate creada con éxito")
+           # Botón Volver
+            boton_volver = tk.Button(
+                Trufas_de_chocolate,
+                text="Volver",
+                command=Trufas_de_chocolate.destroy,  # Cierra la ventana
+                bg="#a9111f", 
+                fg="white",
+                font=("Roboto Condensed", 10, "bold")
+            )
+            boton_volver.place(x=15, y=25)  # Posiciona el botón en la parte inferior
         except Exception as e:
-            print(f"Error en Trufas_de_chocolate: {e}")
-            print(traceback.format_exc())
+            print(f"Error en Trufas_de_chocolate.: {e}")
 
 
     def galletasDeAvena():
@@ -613,7 +742,6 @@ def abrir_ventana_dulce():
             galletasDeAvena.title("Galletas de banana y avena🍪")
             galletasDeAvena.geometry("570x600+300+0")
             galletasDeAvena.focus()
-            galletasDeAvena.grab_set()
             galletasDeAvena.resizable(width=False, height=False)
             galletasDeAvena.iconbitmap("Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico")
             
@@ -627,10 +755,18 @@ def abrir_ventana_dulce():
             
             galletasDeAvena.fondo_ventana = fondo_ventana
 
-            print("Ventana de Galletas de banana y avena creada con éxito")
+            # Botón Volver
+            boton_volver = tk.Button(
+               galletasDeAvena,
+                text="Volver",
+                command=galletasDeAvena.destroy,  # Cierra la ventana
+                bg="#a9111f", 
+                fg="white",
+                font=("Roboto Condensed", 10, "bold")
+            )
+            boton_volver.place(x=15, y=25)  # Posiciona el botón en la parte inferior
         except Exception as e:
-            print(f"Error en galletasDeAvena: {e}")
-            print(traceback.format_exc())
+            print(f"Error en galletasDeAvena.: {e}")
 
 
     def bocaditosDeAvenaYMiel():
@@ -639,7 +775,6 @@ def abrir_ventana_dulce():
             bocaditosDeAvenaYMiel.title("Bocaditos de avena y miel🍮")
             bocaditosDeAvenaYMiel.geometry("570x600+300+0")
             bocaditosDeAvenaYMiel.focus()
-            bocaditosDeAvenaYMiel.grab_set()
             bocaditosDeAvenaYMiel.resizable(width=False, height=False)
             bocaditosDeAvenaYMiel.iconbitmap("Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico")
         
@@ -653,10 +788,18 @@ def abrir_ventana_dulce():
             
             bocaditosDeAvenaYMiel.fondo_ventana = fondo_ventana
 
-            print("Ventana de Trufas de chocolate creada con éxito")
+            # Botón Volver
+            boton_volver = tk.Button(
+                bocaditosDeAvenaYMiel,
+                text="Volver",
+                command= bocaditosDeAvenaYMiel.destroy,  # Cierra la ventana
+                bg="#a9111f", 
+                fg="white",
+                font=("Roboto Condensed", 10, "bold")
+            )
+            boton_volver.place(x=15, y=25)  # Posiciona el botón en la parte inferior
         except Exception as e:
-            print(f"Error en bocaditosDeAvenaYMiel: {e}")
-            print(traceback.format_exc())
+            print(f"Error en bocaditosDeAvenaYMiel.: {e}")
 
 
     def flan():
@@ -665,7 +808,6 @@ def abrir_ventana_dulce():
             flan.title("Flan🍮")
             flan.geometry("570x600+300+0")
             flan.focus()
-            flan.grab_set()
             flan.resizable(width=False, height=False)
             flan.iconbitmap("Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico")
             
@@ -679,10 +821,18 @@ def abrir_ventana_dulce():
             
             flan.fondo_ventana = fondo_ventana
 
-            print("Ventana de Flan creada con éxito")
+           # Botón Volver
+            boton_volver = tk.Button(
+                flan,
+                text="Volver",
+                command=flan.destroy,  # Cierra la ventana
+                bg="#a9111f", 
+                fg="white",
+                font=("Roboto Condensed", 10, "bold")
+            )
+            boton_volver.place(x=15, y=25)  # Posiciona el botón en la parte inferior
         except Exception as e:
-            print(f"Error en flan: {e}")
-            print(traceback.format_exc())
+            print(f"Error en flan.: {e}")
 
 
     def tartaDeYogur():
@@ -691,7 +841,6 @@ def abrir_ventana_dulce():
             tartaDeYogur.title("Tarta de Yogur🥧")
             tartaDeYogur.geometry("570x600+300+0")
             tartaDeYogur.focus()
-            tartaDeYogur.grab_set()
             tartaDeYogur.resizable(width=False, height=False)
             tartaDeYogur.iconbitmap("Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico")
 
@@ -705,10 +854,18 @@ def abrir_ventana_dulce():
             
             tartaDeYogur.fondo_ventana = fondo_ventana
 
-            print("Ventana de tartaDeYogur creada con éxito")
+            # Botón Volver
+            boton_volver = tk.Button(
+                tartaDeYogur,
+                text="Volver",
+                command=tartaDeYogur.destroy,  # Cierra la ventana
+                bg="#a9111f", 
+                fg="white",
+                font=("Roboto Condensed", 10, "bold")
+            )
+            boton_volver.place(x=15, y=25)  # Posiciona el botón en la parte inferior
         except Exception as e:
-            print(f"Error en tartaDeYogur: {e}")
-            print(traceback.format_exc())
+            print(f"Error en tartaDeYogur.: {e}")
 
 
     def tartaDeNaranja():
@@ -717,7 +874,6 @@ def abrir_ventana_dulce():
             tartaDeNaranja.title("Tarta de Naranja🍊")
             tartaDeNaranja.geometry("570x600+300+0")
             tartaDeNaranja.focus()
-            tartaDeNaranja.grab_set()
             tartaDeNaranja.resizable(width=False, height=False)
             tartaDeNaranja.iconbitmap("Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico")
         
@@ -731,10 +887,18 @@ def abrir_ventana_dulce():
             
             tartaDeNaranja.fondo_ventana = fondo_ventana
 
-            print("Ventana de tartaDeNaranja creada con éxito")
+            # Botón Volver
+            boton_volver = tk.Button(
+                tartaDeNaranja,
+                text="Volver",
+                command=tartaDeNaranja.destroy,  # Cierra la ventana
+                bg="#a9111f", 
+                fg="white",
+                font=("Roboto Condensed", 10, "bold")
+            )
+            boton_volver.place(x=15, y=25)  # Posiciona el botón en la parte inferior
         except Exception as e:
-            print(f"Error en tartaDeNaranja: {e}")
-            print(traceback.format_exc())
+            print(f"Error en tartaDeNaranja.: {e}")
 
 
     def choco():
@@ -743,7 +907,6 @@ def abrir_ventana_dulce():
             choco.title("Postre de Chocolate🍫")
             choco.geometry("570x600+300+0")
             choco.focus()
-            choco.grab_set()
             choco.resizable(width=False, height=False)
             choco.iconbitmap("Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico")
 
@@ -757,11 +920,18 @@ def abrir_ventana_dulce():
             
             choco.fondo_ventana = fondo_ventana
 
-            print("Ventana de choco creada con éxito")
+           # Botón Volver
+            boton_volver = tk.Button(
+                choco,
+                text="Volver",
+                command=choco.destroy,  # Cierra la ventana
+                bg="#a9111f", 
+                fg="white",
+                font=("Roboto Condensed", 10, "bold")
+            )
+            boton_volver.place(x=15, y=25)  # Posiciona el botón en la parte inferior
         except Exception as e:
-            print(f"Error en choco: {e}")
-            print(traceback.format_exc())
-
+            print(f"Error en choco.: {e}")
 
     def arrozCLeche():
         try:
@@ -769,7 +939,6 @@ def abrir_ventana_dulce():
             arrozCLeche.title("Arroz con Leche🥣")
             arrozCLeche.geometry("570x600+300+0")
             arrozCLeche.focus()
-            arrozCLeche.grab_set()
             arrozCLeche.resizable(width=False, height=False)
             arrozCLeche.iconbitmap("Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico")
 
@@ -783,10 +952,18 @@ def abrir_ventana_dulce():
             
             arrozCLeche.fondo_ventana = fondo_ventana
 
-            print("Ventana de arrozCLeche creada con éxito")
+            # Botón Volver
+            boton_volver = tk.Button(
+                arrozCLeche,
+                text="Volver",
+                command=arrozCLeche.destroy,  # Cierra la ventana
+                bg="#a9111f", 
+                fg="white",
+                font=("Roboto Condensed", 10, "bold")
+            )
+            boton_volver.place(x=15, y=25)  # Posiciona el botón en la parte inferior
         except Exception as e:
-            print(f"Error en arrozCLeche: {e}")
-            print(traceback.format_exc())
+            print(f"Error en arrozCLeche.: {e}")
 
 
     def gelatina():
@@ -795,7 +972,6 @@ def abrir_ventana_dulce():
             gelatina.title("Gelatina de Fresa🍓")
             gelatina.geometry("570x600+300+0")
             gelatina.focus()
-            gelatina.grab_set()
             gelatina.resizable(width=False, height=False)
 
             # Cargar la imagen de fondo
@@ -808,10 +984,18 @@ def abrir_ventana_dulce():
             
             gelatina.fondo_ventana = fondo_ventana
 
-            print("Ventana de gelatina creada con éxito")
+            # Botón Volver
+            boton_volver = tk.Button(
+                gelatina,
+                text="Volver",
+                command=gelatina.destroy,  # Cierra la ventana
+                bg="#a9111f", 
+                fg="white",
+                font=("Roboto Condensed", 10, "bold")
+            )
+            boton_volver.place(x=15, y=25)  # Posiciona el botón en la parte inferior
         except Exception as e:
-            print(f"Error en gelatina: {e}")
-            print(traceback.format_exc())
+            print(f"Error en gelatina.: {e}")
 
 
     def brownie():
@@ -820,7 +1004,6 @@ def abrir_ventana_dulce():
             brownie.title("Brownie 🍫")
             brownie.geometry("570x600+300+0")
             brownie.focus()
-            brownie.grab_set()
             brownie.resizable(width=False, height=False)
             brownie.iconbitmap("Miniproyecto/UNIFICADO/IMAGENES/035cook_113744.ico")
 
@@ -834,10 +1017,18 @@ def abrir_ventana_dulce():
             
             brownie.fondo_ventana = fondo_ventana
 
-            print("Ventana de brownie creada con éxito")
+           # Botón Volver
+            boton_volver = tk.Button(
+                brownie,
+                text="Volver",
+                command=brownie.destroy,  # Cierra la ventana
+                bg="#a9111f", 
+                fg="white",
+                font=("Roboto Condensed", 10, "bold")
+            )
+            boton_volver.place(x=15, y=25)  # Posiciona el botón en la parte inferior
         except Exception as e:
-            print(f"Error en brownie: {e}")
-            print(traceback.format_exc())
+            print(f"Error en brownie.: {e}")
 
 
 #----------------------------------------------------- Botones de recetas dulces----------------------------------------------------------------
@@ -962,7 +1153,7 @@ def abrir_ventana_dulce():
 STYLES_misRecetas = {
     "width": 20,
     "height": 5,
-    "fg": "white",
+    "fg": "black",
     "bg": "#00E099",
     "borderwidth": 0,
     "relief": "flat",
@@ -995,6 +1186,18 @@ def abrir_ventana_mis_rece():
         print("Imagen de fondo cargada con éxito")
     except Exception as e:
         print(f"Error al cargar la imagen: {e}")
+        
+             # Botón Volver
+    boton_volver = tk.Button(
+        ventana_saludo,  # Aquí debe ser la ventana que creaste
+        text="Volver",
+        command=ventana_saludo.destroy,  # Cierra la ventana ventana_saludo
+        bg="#4bc40b", 
+        fg="white",
+        font=("Roboto Condensed", 12, "bold")
+    )
+    boton_volver.place(x=55, y=65)  
+
 
     recetas = {}  # las recetas que se agreguen se añaden en este conjunto
 
@@ -1049,7 +1252,7 @@ def abrir_ventana_mis_rece():
 
     añadir_boton = tk.Button(
         scrollbar_marco,
-        text="+",
+        text="Agregar recetas",
         command=pedir_nombre_receta,
         **STYLES_misRecetas
     )
